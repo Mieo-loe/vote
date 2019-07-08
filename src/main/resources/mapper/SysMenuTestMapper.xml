@@ -250,7 +250,7 @@
         from SYS_MENU_TEST t
         where t.PARENT_ID IS NULL
     </select>
-    <!-- mysql版本
+     <!--mysql版本-->
      <select id="getAll" resultMap="ExtendResultMap" parameterType="map">
     select * from (
         select * from SYS_MENU_TEST t
@@ -272,9 +272,8 @@
         order by p.parent_menu_code asc, tt.code asc,tt.id desc
         limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
     </select>
-    -->
     <!--oracle 版本-->
-    <select id="getAll" resultMap="ExtendResultMap" parameterType="map">
+    <!--<select id="getAll" resultMap="ExtendResultMap" parameterType="map">
         select a.* from(
         select b.*,rownum row_num
         from( select * from (
@@ -298,7 +297,7 @@
         ) b
         where rownum &lt; #{end,jdbcType=DECIMAL}
         )a where row_num &gt; #{start,jdbcType=DECIMAL}
-    </select>
+    </select>-->
     <select id="countGetAll" resultType="Integer" parameterType="map">
         select count(1)
         from SYS_MENU_TEST t

@@ -166,15 +166,14 @@
         from SYS_USER_ROLE_TEST t
         where t.role_id = #{roleId,jdbcType=VARCHAR}
     </select>
-    <!-- mysql版本
+    <!-- mysql版本-->
     <delete id="deleteByUserId" parameterType="String">
         DELETE t from SYS_USER_ROLE_TEST t
           where t.user_id = #{userId,jdbcType=VARCHAR}
     </delete>
-    -->
     <!--oracle版本-->
-    <delete id="deleteByUserId" parameterType="String">
+    <!--<delete id="deleteByUserId" parameterType="String">
         DELETE from SYS_USER_ROLE_TEST t
           where t.user_id = #{userId,jdbcType=VARCHAR}
-    </delete>
+    </delete>-->
 </mapper>

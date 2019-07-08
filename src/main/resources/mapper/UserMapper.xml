@@ -42,7 +42,7 @@
         select * from USER_TEST t WHERE
         t.LOGIN_NAME = #{loginName,jdbcType=VARCHAR}
     </select>
-    <!--mysql版本
+    <!--mysql版本-->
     <select id="getAll" resultMap="BaseResultMap">
         select * from USER_TEST t
         where 1=1
@@ -58,9 +58,8 @@
         order by t.UPDATE_DATE desc,t.id desc
         limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
     </select>
-    -->
     <!--oracle版本-->
-    <select id="getAll" resultMap="BaseResultMap">
+    <!--<select id="getAll" resultMap="BaseResultMap">
         select a.* from(
         select b.*,rownum row_num
         from( select * from USER_TEST t
@@ -78,7 +77,7 @@
         ) b
         where rownum &lt; #{end,jdbcType=DECIMAL}
         )a where row_num &gt; #{start,jdbcType=DECIMAL}
-    </select>
+    </select>-->
     <select id="countGetAll" parameterType="map" resultType="Integer">
         select count(1) from USER_TEST t
         where 1=1

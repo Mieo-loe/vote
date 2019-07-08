@@ -187,17 +187,17 @@
       UPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP}
     where ID = #{id,jdbcType=VARCHAR}
   </update>
-  <!--mysql版本
+  <!--mysql版本 -->
   <delete id="deleteByMenuId" parameterType="java.lang.String" >
     delete t from SYS_MENU_ROLE_TEST t
     where t.menu_id = #{menuId,jdbcType=VARCHAR}
   </delete>
-  -->
+
   <!--oracle版本-->
-  <delete id="deleteByMenuId" parameterType="java.lang.String" >
+  <!--<delete id="deleteByMenuId" parameterType="java.lang.String" >
     delete from SYS_MENU_ROLE_TEST t
     where t.menu_id = #{menuId,jdbcType=VARCHAR}
-  </delete>
+  </delete>-->
   <select id="selectByMenuIdAndRoleId" parameterType="map" resultMap="BaseResultMap">
     select * from SYS_MENU_ROLE_TEST t
     where t.menu_id = #{menuId,jdbcType=VARCHAR}

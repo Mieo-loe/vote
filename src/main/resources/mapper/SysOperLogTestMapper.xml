@@ -154,7 +154,7 @@
         MEMO = #{memo,jdbcType=VARCHAR}
         where ID = #{id,jdbcType=VARCHAR}
     </update>
-    <!--mysql 版本
+    <!--mysql 版本-->
     <select id="selectAll" resultMap="BaseResultMap" parameterType="map">
 
         select * from SYS_OPER_LOG_TEST t
@@ -175,9 +175,9 @@
         limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
 
     </select>
-    -->
+
     <!--oracle 版本-->
-    <select id="selectAll" resultMap="BaseResultMap" parameterType="map">
+    <!--<select id="selectAll" resultMap="BaseResultMap" parameterType="map">
         select a.* from(
         select b.*,rownum row_num
         from(
@@ -199,7 +199,7 @@
         ) b
         where rownum &lt; #{end,jdbcType=DECIMAL}
         )a where row_num &gt; #{start,jdbcType=DECIMAL}
-    </select>
+    </select>-->
     <select id="countSelectAll" resultType="Integer" parameterType="map">
         select count(1) from SYS_OPER_LOG_TEST t
         where 1=1
@@ -216,7 +216,7 @@
             and t.CREATE_DATE &lt; #{endDate,jdbcType=VARCHAR}+1
         </if>
     </select>
-    <!--mysql 版本
+    <!--mysql 版本-->
     <delete id="deleteByQuery" parameterType="map">
         delete t from SYS_OPER_LOG_TEST t
         where 1=1
@@ -233,9 +233,9 @@
             and t.CREATE_DATE &lt; #{endDate,jdbcType=VARCHAR}+1
         </if>
     </delete>
-    -->
+
     <!--oracle 版本 -->
-    <delete id="deleteByQuery" parameterType="map">
+    <!--<delete id="deleteByQuery" parameterType="map">
         delete from SYS_OPER_LOG_TEST t
         where 1=1
         <if test="loginName !=null and loginName != ''">
@@ -250,9 +250,9 @@
         <if test="endDate !=null and endDate != ''">
             and t.CREATE_DATE &lt; #{endDate,jdbcType=VARCHAR}+1
         </if>
-    </delete>
-    <!--mysql 版本
-    <delete id="deleteByMap" parameterType="map">
+    </delete>-->
+    <!--mysql 版本-->
+    <!--<delete id="deleteByMap" parameterType="map">
         delete t from SYS_OPER_LOG_TEST t
         where 1=1
         <if test="loginName !=null and loginName != ''">
@@ -273,10 +273,9 @@
                 #{item,jdbcType=VARCHAR}
             </foreach>
         </if>
-    </delete>
-    -->
+    </delete>-->
     <!--oracle版本-->
-    <delete id="deleteByMap" parameterType="map">
+    <!--<delete id="deleteByMap" parameterType="map">
         delete from SYS_OPER_LOG_TEST t
         where 1=1
         <if test="loginName !=null and loginName != ''">
@@ -297,8 +296,8 @@
                 #{item,jdbcType=VARCHAR}
             </foreach>
         </if>
-    </delete>
-    <!--mysql 版本
+    </delete>-->
+    <!--mysql 版本-->
     <delete id="deleteByList" parameterType="map">
        delete t from SYS_OPER_LOG_TEST t
          where t.id in
@@ -306,13 +305,12 @@
            #{item,jdbcType=VARCHAR}
        </foreach>
    </delete>
-    -->
     <!--oracle 版本-->
-   <delete id="deleteByList" parameterType="map">
+   <!--<delete id="deleteByList" parameterType="map">
        delete from SYS_OPER_LOG_TEST t
          where t.id in
        <foreach collection="delIds" index="index" item="item" open="(" separator="," close=")">
            #{item,jdbcType=VARCHAR}
        </foreach>
-   </delete>
+   </delete>-->
 </mapper>

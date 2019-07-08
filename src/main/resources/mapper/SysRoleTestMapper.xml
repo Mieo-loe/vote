@@ -36,7 +36,7 @@
         where ID = #{id,jdbcType=VARCHAR}
         and is_deleted = '0'
     </select>
-    <!-- mysql版本
+    <!-- mysql版本-->
     <select id="selectAll" resultMap="BaseResultMap">
     select * from SYS_ROLE_TEST t
     where t.is_deleted = '0'
@@ -49,9 +49,8 @@
     order by t.id desc
     limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
 </select>
-    -->
     <!--oracle版本-->
-    <select id="selectAll" resultMap="BaseResultMap">
+    <!--<select id="selectAll" resultMap="BaseResultMap">
         select a.* from(
         select b.*,rownum row_num
         from( select * from SYS_ROLE_TEST t
@@ -66,7 +65,7 @@
         ) b
         where rownum &lt; #{end,jdbcType=DECIMAL}
         )a where row_num &gt; #{start,jdbcType=DECIMAL}
-    </select>
+    </select>-->
     <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
         <!--
           WARNING - @mbggenerated
