@@ -44,7 +44,7 @@ public class SysUserController {
     public IResult getUserList(String page, String limit, String loginName, String realName, String status){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new PageResultBean<Collection<UserTest>>(sysUserServiceImpl.getAll(page,limit,loginName,realName,status),sysUserServiceImpl.countGetAll(loginName,realName,status));
-    }
+}
 
 
     /**

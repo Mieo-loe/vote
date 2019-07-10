@@ -56,6 +56,7 @@ public class LoginServiceImpl implements LoginService{
         UsernamePasswordToken token = new UsernamePasswordToken(loginName, pwd);
         try {
             //提交认证，会调用Realm的doGetAuthenticationInfo，进行认证
+
             currentUser.login(token);
         } catch(UnknownAccountException e){
             log.info("用户不存在");

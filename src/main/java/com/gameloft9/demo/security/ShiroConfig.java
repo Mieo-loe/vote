@@ -51,7 +51,7 @@ public class ShiroConfig {
         //拦截链配置
         Map<String, String> filterChainDefinitionMap = constructFilterChainDefinitionMap();
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
-        log.info("ShiroFilterFactoryBean注入成功!");
+//        log.info("ShiroFilterFactoryBean注入成功!");
         return shiroFilterFactoryBean;
     }
 
