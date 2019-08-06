@@ -14,53 +14,38 @@ layui.config({
         $api = layui.$api;
 
     var tableIns;//表格实例
-
     /**
      * 页面初始化
      * */
     function init() {
 
-        //初始化下拉框
-        $api.GetFirstClassMenus(null,function (res) {
-            var data = res.data;
-            if(data.length > 0){
-                var html = '<option value="">--请选择--</option>';
-                for(var i=0;i<data.length;i++){
-                    html += '<option value="'+data[i].id+'">'+data[i].title+'</option>>';
-                }
-                $('#parentMenu').append($(html));
-                form.render();
-            }
-        });
     }
     init();
-
-
+    // layer.ready(function(){
+    //     layer.msg('很高兴一开场就见到你');
+    // });
     /**
      * 定义表格
      * */
     function defineTable() {
         tableIns = table.render({
-            elem: '#menu-data'
-            , height: 415
-            , url: $tool.getContext() + 'menu/menuList.do' //数据接口
+            elem: '#user-data'
+            , height: 350
+            , url: $tool.getContext() + 'yonghu/yonghuPage.do' //数据接口
             , method: 'post'
-            , page:true //开启分页
+            , limit: 5
+            , limits: [5,6,7,8,9,10]
+            , page: true //开启分页
             , cols: [[ //表头
                   {type:'numbers',title:'序号',fixed: 'left'},
-                  {field: 'title', title: '菜单名称', width: '10%'}
-                , {field: 'code', title: '菜单编号', width: '10%'}
-                , {field: 'href', title: '链接地址', width: '10%'}
-                , {field: 'requestUrl', title: '后台请求路径', width: '10%'}
-                , {field: 'sort', title: '排序号', width: '10%'}
-                , {field: 'parentMenuName', title: '父菜单名称', width: '10%'}
-                , {field: 'parentMenuCode', title: '父菜单编号', width: '10%'}
-                , {field: 'createTime', title: '创建时间', width: '20%'}
-                , {field: 'updateUser', title: '更新者', width: '10%'}
-                , {field: 'updateTime', title: '更新时间', width: '20%'}
+                  {field:'username',title:'用户名'}
+                , {field: 'uid', title: '姓名'}
+                , {field: 'tel', title: '手机号码'}
+                , {field: 'position', title: '用户角色'}
                 , {fixed: 'right', title: '操作', width: 200, align: 'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
             ]]
             , done: function (res, curr) {//请求完毕后的回调
+
                 //如果是异步请求数据方式，res即为你接口返回的信息.curr：当前页码
             }
         });
@@ -73,28 +58,22 @@ layui.config({
 
             //区分事件
             if (layEvent === 'del') { //删除
-                delMenu(row.id);
+                DeleteYongHu(row.username);
             } else if (layEvent === 'edit') { //编辑
                 //do something
-                editMenu(row.id);
+                editYongHu(row.username);
             }
         });
     }
     defineTable();
 
-
     //查询
-    form.on("submit(queryMenu)", function (data) {
-        var parentMenuId = data.field.parentMenuId;
-        var menuName = data.field.menuName;
-        var menuCode = data.field.menuCode;
-
+    form.on("submit(queryuser)", function (data) {
+        var username = data.field.username;
         //表格重新加载
         tableIns.reload({
             where:{
-                parentMenuId:parentMenuId,
-                menuName:menuName,
-                menuCode:menuCode
+                username:username
             }
         });
         return false;
@@ -103,12 +82,12 @@ layui.config({
     //添加角色
     $(".usersAdd_btn").click(function () {
         var index = layui.layer.open({
-            title: "添加菜单",
+            title: "添加角色",
             type: 2,
-            content: "addMenu.html",
+            content: "addUser.html",
             success: function (layero, index) {
                 setTimeout(function () {
-                    layui.layer.tips('点击此处返回菜单列表', '.layui-layer-setwin .layui-layer-close', {
+                    layui.layer.tips('点击此处返回评测打分模板', '.layui-layer-setwin .layui-layer-close', {
                         tips: 3
                     });
                 }, 500)
@@ -123,15 +102,15 @@ layui.config({
     });
 
     //删除
-    function delMenu(id){
+    function DeleteYongHu(username){
         layer.confirm('确认删除吗？', function (confirmIndex) {
             layer.close(confirmIndex);//关闭confirm
             //向服务端发送删除指令
             var req = {
-                menuId: id
+                username: username
             };
 
-            $api.DeleteMenu(req,function (data) {
+            $api.DeleteYongHu(req,function (data) {
                 layer.msg("删除成功",{time:1000},function(){
                     //obj.del(); //删除对应行（tr）的DOM结构
                     //重新加载表格
@@ -142,14 +121,14 @@ layui.config({
     }
 
     //编辑
-    function editMenu(id){
+    function editYongHu(username){
         var index = layui.layer.open({
-            title: "编辑菜单",
+            title: "编辑用户",
             type: 2,
-            content: "editMenu.html?id="+id,
+            content: "../../../page/system/GradeUser/editUser.html?username="+username,
             success: function (layero, index) {
                 setTimeout(function () {
-                    layui.layer.tips('点击此处返回菜单列表', '.layui-layer-setwin .layui-layer-close', {
+                    layui.layer.tips('点击此处返回用户管理', '.layui-layer-setwin .layui-layer-close', {
                         tips: 3
                     });
                 }, 500)

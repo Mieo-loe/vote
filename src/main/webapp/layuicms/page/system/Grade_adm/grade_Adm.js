@@ -13,54 +13,40 @@ layui.config({
         table = layui.table,
         $api = layui.$api;
 
-    var tableIns;//表格实例
+    var uid = new Array();
 
+    var tableIns;//表格实例
     /**
      * 页面初始化
      * */
     function init() {
 
-        //初始化下拉框
-        $api.GetFirstClassMenus(null,function (res) {
-            var data = res.data;
-            if(data.length > 0){
-                var html = '<option value="">--请选择--</option>';
-                for(var i=0;i<data.length;i++){
-                    html += '<option value="'+data[i].id+'">'+data[i].title+'</option>>';
-                }
-                $('#parentMenu').append($(html));
-                form.render();
-            }
-        });
     }
     init();
-
-
+    // layer.ready(function(){
+    //     layer.msg('很高兴一开场就见到你');
+    // });
     /**
      * 定义表格
      * */
     function defineTable() {
         tableIns = table.render({
-            elem: '#menu-data'
-            , height: 415
-            , url: $tool.getContext() + 'menu/menuList.do' //数据接口
+            elem: '#adm-data'
+            , id: 'adm_Id,res_Id'
+            , height: 350
+            , url: $tool.getContext() + 'dfmuban/dfmubanPage.do' //数据接口
             , method: 'post'
-            , page:true //开启分页
+            , limit: 5
+            , limits: [5,6,7,8,9,10]
+            , page: true //开启分页
             , cols: [[ //表头
                   {type:'numbers',title:'序号',fixed: 'left'},
-                  {field: 'title', title: '菜单名称', width: '10%'}
-                , {field: 'code', title: '菜单编号', width: '10%'}
-                , {field: 'href', title: '链接地址', width: '10%'}
-                , {field: 'requestUrl', title: '后台请求路径', width: '10%'}
-                , {field: 'sort', title: '排序号', width: '10%'}
-                , {field: 'parentMenuName', title: '父菜单名称', width: '10%'}
-                , {field: 'parentMenuCode', title: '父菜单编号', width: '10%'}
-                , {field: 'createTime', title: '创建时间', width: '20%'}
-                , {field: 'updateUser', title: '更新者', width: '10%'}
-                , {field: 'updateTime', title: '更新时间', width: '20%'}
-                , {fixed: 'right', title: '操作', width: 200, align: 'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+                  {field: 'a_time', title: '生成日期'}
+                , {field: 'templet_title', title: '模板标题'}
+                , {fixed: 'right', title: '操作', width: 400, align: 'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
             ]]
             , done: function (res, curr) {//请求完毕后的回调
+
                 //如果是异步请求数据方式，res即为你接口返回的信息.curr：当前页码
             }
         });
@@ -73,43 +59,46 @@ layui.config({
 
             //区分事件
             if (layEvent === 'del') { //删除
-                delMenu(row.id);
-            } else if (layEvent === 'edit') { //编辑
+                delMenu(row.admId);
+            } else if (layEvent === 'yulan') { //预览
                 //do something
-                editMenu(row.id);
+                yulan(row.admId);
+            } else if (layEvent === 'edit') { //使用
+                //do something
+                editMenu(row.admId);
+            } else if (layEvent === 'zhiding') { //置顶
+                //do something
+                zhiding(row.admId);
+            } else if (layEvent === 'qxzhiding') { //置顶
+                //do something
+                qxzhiding(row.admId);
             }
         });
     }
     defineTable();
 
-
     //查询
-    form.on("submit(queryMenu)", function (data) {
-        var parentMenuId = data.field.parentMenuId;
-        var menuName = data.field.menuName;
-        var menuCode = data.field.menuCode;
-
+    form.on("submit(queryAdm)", function (data) {
+        var adm_Id = data.field.admId;
+        console.log(tableIns)
         //表格重新加载
         tableIns.reload({
             where:{
-                parentMenuId:parentMenuId,
-                menuName:menuName,
-                menuCode:menuCode
+                adm_Id:adm_Id
             }
         });
-
         return false;
     });
 
-    //添加角色
+    //创建模板
     $(".usersAdd_btn").click(function () {
         var index = layui.layer.open({
-            title: "添加菜单",
+            title: "创建模板",
             type: 2,
-            content: "addMenu.html",
+            content: "../../../page/system/GradeRecord/addRecord.html",
             success: function (layero, index) {
                 setTimeout(function () {
-                    layui.layer.tips('点击此处返回菜单列表', '.layui-layer-setwin .layui-layer-close', {
+                    layui.layer.tips('点击此处返回评测打分模板', '.layui-layer-setwin .layui-layer-close', {
                         tips: 3
                     });
                 }, 500)
@@ -124,15 +113,15 @@ layui.config({
     });
 
     //删除
-    function delMenu(id){
+    function delMenu(adm_Id){
         layer.confirm('确认删除吗？', function (confirmIndex) {
             layer.close(confirmIndex);//关闭confirm
             //向服务端发送删除指令
             var req = {
-                menuId: id
+                adm_Id: adm_Id
             };
 
-            $api.DeleteMenu(req,function (data) {
+            $api.DeleteMuban(req,function (data) {
                 layer.msg("删除成功",{time:1000},function(){
                     //obj.del(); //删除对应行（tr）的DOM结构
                     //重新加载表格
@@ -142,15 +131,50 @@ layui.config({
         });
     }
 
-    //编辑
-    function editMenu(id){
+    //使用
+    function editMenu(adm_Id){
         var index = layui.layer.open({
-            title: "编辑菜单",
+            title: "使用模板",
             type: 2,
-            content: "editMenu.html?id="+id,
+            content: "../../../page/system/Grade_adm/editRecord.html?adm_Id="+adm_Id,
             success: function (layero, index) {
                 setTimeout(function () {
-                    layui.layer.tips('点击此处返回菜单列表', '.layui-layer-setwin .layui-layer-close', {
+                    layui.layer.tips('点击此处返回模板管理', '.layui-layer-setwin .layui-layer-close', {
+                        tips: 3
+                    });
+                }, 500)
+            },
+            // end:function () {
+            //     var req ={
+            //         adm_Id:adm_Id,
+            //     };
+            //     $api.GetTemplet(req,function (res) {
+            //         var data = res.data;
+            //         uid = data.uid;
+            //     });
+            //     var qq ={
+            //         uid:uid.toString(),
+            //     }
+            //     $api.Addrenyuan(qq,function (data) {});
+            // }
+        });
+
+        //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
+        $(window).resize(function () {
+            layui.layer.full(index);
+        });
+        layui.layer.full(index);
+    }
+
+    //预览
+    function yulan(adm_Id){
+        var index = layui.layer.open({
+            title: "预览",
+            type: 2,
+            content: "../../../page/system/Grade_adm/DaFenBiao.html?adm_Id="+adm_Id,
+            success: function (layero, index) {
+                setTimeout(function () {
+                    layui.layer.tips('点击此处返回模板管理', '.layui-layer-setwin .layui-layer-close', {
                         tips: 3
                     });
                 }, 500)
@@ -163,4 +187,44 @@ layui.config({
         });
         layui.layer.full(index);
     }
+
+    //置顶
+    function zhiding(adm_Id) {
+        layer.confirm('确定要置顶吗？', function (confirmIndex) {
+            layer.close(confirmIndex);//关闭confirm
+            //向服务端发送删除指令
+            var req = {
+                adm_Id: adm_Id
+            };
+
+            $api.ZhiDing(req,function (data) {
+                layer.msg("置顶成功",{time:1000},function(){
+                    //obj.del(); //删除对应行（tr）的DOM结构
+                    //重新加载表格
+                    tableIns.reload();
+                });
+            });
+        });
+    }
+
+    //置顶
+    function qxzhiding(adm_Id) {
+        layer.confirm('确定要取消置顶吗？', function (confirmIndex) {
+            layer.close(confirmIndex);//关闭confirm
+            //向服务端发送删除指令
+            var req = {
+                adm_Id: adm_Id
+            };
+
+            $api.QXZhiDing(req,function (data) {
+                layer.msg("取消置顶成功",{time:1000},function(){
+                    //obj.del(); //删除对应行（tr）的DOM结构
+                    //重新加载表格
+                    tableIns.reload();
+                });
+            });
+        });
+    }
+
+
 });

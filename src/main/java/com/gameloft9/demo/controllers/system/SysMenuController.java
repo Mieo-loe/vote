@@ -61,7 +61,7 @@ public class SysMenuController {
     @RequestMapping(value = "/menuList.do",method = RequestMethod.GET)
     @ResponseBody
     //@BizOperLog(operType = OperType.Query,memo = "获取角色菜单列表")
-    public IResult getMenuList(){
+    public Object getMenuList(){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Collection<MenuTreeResponse>>(sysMenuServiceImpl.getMenuByRoles((UserTest) SecurityUtils.getSubject().getPrincipal()));
     }
