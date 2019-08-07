@@ -70,7 +70,7 @@ public class TpGradeRecordController {
 
     @RequestMapping(value = "/delete.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.DELETE,memo = "删除记录")
+    @BizOperLog(operType = OperType.DELETE,memo = "删除记录", memos = "13")
     public IResult delete(Integer record_Id){
 
         return new ResultBean<Boolean>(tpGradeRecordService.del(record_Id));
@@ -80,7 +80,7 @@ public class TpGradeRecordController {
 
     @RequestMapping(value = "/updatestatus.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "改变发布状态")
+    @BizOperLog(operType = OperType.UPDATE,memo = "改变发布状态", memos = "11")
     public IResult updateStatus(Integer record_Id){//传递了数组，前台放在payload里面了，后台通过@RequestBody获取
         TpGraderecord tpGraderecord = tpGradeRecordService.findByRecord_Id(record_Id);
         if (tpGraderecord.getResId().equals("35")) {

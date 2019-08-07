@@ -43,7 +43,7 @@ public class TpGradeTempletController {
 
     @RequestMapping(value = "/add.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.ADD,memo = "添加标题、人员等")
+    @BizOperLog(operType = OperType.ADD,memo = "添加标题、人员等", memos = "2")
     public IResult add(TpGradePingCe tpGradePingCe){
 
         tpGradeTempletService.add(tpGradePingCe.getTitle(), tpGradePingCe.getExplains(), tpGradePingCe.getPeonum());
@@ -55,7 +55,7 @@ public class TpGradeTempletController {
 
     @RequestMapping(value = "/addry.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.ADD,memo = "添加人员")
+    @BizOperLog(operType = OperType.ADD,memo = "添加人员", memos = "9")
     public IResult addry(@RequestParam(value="uid") String []uid){
 
         uids = new String[uid.length];
@@ -68,7 +68,7 @@ public class TpGradeTempletController {
 
     @RequestMapping(value = "/addmuban.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.ADD,memo = "添加模板、人员等")
+    @BizOperLog(operType = OperType.ADD,memo = "添加模板、人员等", memos = "17")
     public IResult addmuban(TpGradeMuBan tpGradeMuBan){
 
         tpGradeTempletService.add(tpGradeMuBan.getTitle(), tpGradeMuBan.getExplains(), tpGradeMuBan.getPeonum());
@@ -90,7 +90,7 @@ public class TpGradeTempletController {
 
     @RequestMapping(value = "/bcmuban.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "保存模板")
+    @BizOperLog(operType = OperType.UPDATE,memo = "保存模板", memos = "7")
     public IResult bcmuban(TpGradeMuBan tpGradeMuBan){
         
         tpGradeTempletService.bcmuban(tpGradeMuBan);
@@ -103,7 +103,7 @@ public class TpGradeTempletController {
 
     @RequestMapping(value = "/tongji.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.ADD,memo = "添加统计数据")
+    @BizOperLog(operType = OperType.ADD,memo = "添加统计数据", memos = "3")
     public IResult tongji(String []answer_Id, String []uid, Integer templet_Id){
 
         int a = 0;
@@ -126,6 +126,7 @@ public class TpGradeTempletController {
 
     @RequestMapping(value = "/getzh.do",method = RequestMethod.POST)
     @ResponseBody
+    @BizOperLog(operType = OperType.Query,memo = "查看投票账号", memos = "16")
     public IResult getzh(Integer record_Id){
 
         List<String> list = tpGradeTempletService.getzh(record_Id);
@@ -135,7 +136,7 @@ public class TpGradeTempletController {
 
     @RequestMapping(value = "/delzh.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.DELETE,memo = "投票完成")
+    @BizOperLog(operType = OperType.DELETE,memo = "投票完成", memos = "31")
     public IResult delzh(String content){
 
         tpGradeTempletService.delzh(content);

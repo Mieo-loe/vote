@@ -59,14 +59,14 @@ public class Tp_Grade_AdmController {
 
     @RequestMapping(value = "/delete.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.DELETE,memo = "删除模板")
+    @BizOperLog(operType = OperType.DELETE,memo = "删除模板", memos = "28")
     public IResult delete(Integer adm_Id){
         return new ResultBean<Boolean>(tp_grade_admService.delete(adm_Id));
     }
 
     @RequestMapping(value = "/zhiding.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "置顶")
+    @BizOperLog(operType = OperType.UPDATE,memo = "置顶", memos = "15")
     public IResult zhiding(Integer adm_Id){
 
         TpGradeAdm tp_grade_adm = tp_grade_admService.findByAId(adm_Id);
@@ -76,7 +76,7 @@ public class Tp_Grade_AdmController {
 
     @RequestMapping(value = "/qxzhiding.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "取消置顶")
+    @BizOperLog(operType = OperType.UPDATE,memo = "取消置顶", memos = "5")
     public IResult qxzhiding(Integer adm_Id){
 
         TpGradeAdm tp_grade_adm = tp_grade_admService.findByAId(adm_Id);

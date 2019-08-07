@@ -56,7 +56,7 @@ public class TpGradeUserController {
 
     @RequestMapping(value = "/add.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.ADD,memo = "注册用户")
+    @BizOperLog(operType = OperType.ADD,memo = "注册用户", memos = "32")
     public IResult add(String username, String uid, String tel, String password){
 
         TpGradeUser tpGradeUser = new TpGradeUser(username, uid, tel, password);
@@ -66,7 +66,7 @@ public class TpGradeUserController {
 
     @RequestMapping(value = "/delete.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.DELETE,memo = "删除用户")
+    @BizOperLog(operType = OperType.DELETE,memo = "删除用户", memos = "10")
     public IResult delete(String username){
 
         return new ResultBean<Boolean>(tpGradeUserService.del(username));
@@ -118,7 +118,7 @@ public class TpGradeUserController {
 
     @RequestMapping(value = "/edit.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "编辑用户")
+    @BizOperLog(operType = OperType.UPDATE,memo = "编辑用户", memos = "6")
     public IResult edit(TpGradeUserTest tpGradeUserTest){
 
         TpGradeUser tpGradeUser = new TpGradeUser(tpGradeUserTest.getUsername(),tpGradeUserTest.getUid(),tpGradeUserTest.getTel(),tpGradeUserTest.getPassword());

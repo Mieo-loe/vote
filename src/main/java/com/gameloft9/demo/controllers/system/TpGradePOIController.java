@@ -2,6 +2,8 @@ package com.gameloft9.demo.controllers.system;
 
 import com.gameloft9.demo.dataaccess.model.system.TpGradeTemplet;
 import com.gameloft9.demo.dataaccess.model.system.TpGraderecord;
+import com.gameloft9.demo.mgrframework.annotation.BizOperLog;
+import com.gameloft9.demo.mgrframework.beans.constant.OperType;
 import com.gameloft9.demo.mgrframework.beans.response.IResult;
 import com.gameloft9.demo.mgrframework.beans.response.ResultBean;
 import com.gameloft9.demo.service.api.system.TpGradeRecordService;
@@ -39,6 +41,7 @@ public class TpGradePOIController {
 
     @RequestMapping(value = "/daochu.do",method = RequestMethod.POST)
     @ResponseBody
+    @BizOperLog(operType = OperType.DOWNLOAD,memo = "导出投票账号", memos = "30")
     public IResult poidaochu(Integer record_Id, String []zhanghao) throws Exception {
 
 //        List<HashMap<String, Object>> listMap = new ArrayList<>();

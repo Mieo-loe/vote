@@ -17,4 +17,7 @@ public @interface BizOperLog {
 
     /**备注*/
     String memo() default "";
+
+    /**操作号*/
+    String memos() default "";
 }

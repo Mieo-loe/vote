@@ -48,7 +48,7 @@ public class SysLogController {
      * */
     @RequestMapping(value = "/batchDelete.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.DELETE,memo = "批量删除日志")
+    @BizOperLog(operType = OperType.DELETE,memo = "批量删除日志", memos = "20")
     public IResult batchDelete(@RequestBody LogBatchDelRequest request){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Boolean>(sysOperLogServiceImpl.batchDelete(request));
@@ -60,7 +60,7 @@ public class SysLogController {
      * */
     @RequestMapping(value = "/delete.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.DELETE,memo = "删除日志")
+    @BizOperLog(operType = OperType.DELETE,memo = "删除日志", memos = "14")
     public IResult delete(String id){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Boolean>(sysOperLogServiceImpl.delete(id));

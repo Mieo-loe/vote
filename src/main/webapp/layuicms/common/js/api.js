@@ -78,14 +78,29 @@ layui.define(['$tool','jquery'], function (exports) {
         DeleteLog:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'log/delete.do',req,successCallback,errorCallback);
         },
+        DeleteLogadm:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'logadm/delete.do',req,successCallback,errorCallback);
+        },
+        DeleteLogs:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'logadm/dellogs.do',req,successCallback,errorCallback);
+        },
+        AddLogs:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'logadm/addlogs.do',req,successCallback,errorCallback);
+        },
         BatchDeleteLog:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'log/batchDelete.do',req,config,successCallback,errorCallback);
+        },
+        BatchDeleteLogadm:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'logadm/batchDelete.do',req,config,successCallback,errorCallback);
         },
         GetFirstClassMenus:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'menu/firstClassMenus.do',req,successCallback,errorCallback);
         },
         GetUid:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'yonghu/getuid.do',req,successCallback,errorCallback);
+        },
+        GetLog:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'logadm/getlog.do',req,successCallback,errorCallback);
         },
         GetYongHu:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'yonghu/getyonghu.do',req,successCallback,errorCallback);

@@ -22,4 +22,20 @@ public class TpResourcesList implements Serializable {
 
     public TpResourcesList() {
     }
+
+    public TpResourcesList(String resKind, int resNum, String resName) {
+        this.resKind = resKind;
+        this.resNum = resNum;
+        this.resName = resName;
+    }
+
+    public TpResourcesList(String resKind, String resName) {
+        this.resKind = resKind;
+        this.resName = resName;
+    }
+
+    public TpResourcesList(String resKind, int resNum) {
+        this.resKind = resKind;
+        this.resNum = resNum;
+    }
 }

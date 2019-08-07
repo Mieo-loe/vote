@@ -52,7 +52,7 @@ public class SysUserController {
      * */
     @RequestMapping(value = "/add.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.ADD,memo = "添加用户")
+    @BizOperLog(operType = OperType.ADD,memo = "添加用户", memos = "24")
     public IResult addUser(@RequestBody UserAddRequest request){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<String>(sysUserServiceImpl.addUser(request));
@@ -63,7 +63,7 @@ public class SysUserController {
      * */
     @RequestMapping(value = "/delete.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.DELETE,memo = "删除用户")
+    @BizOperLog(operType = OperType.DELETE,memo = "删除用户", memos = "10")
     public IResult deleteUser(String id){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Boolean>(sysUserServiceImpl.deleteById(id));
@@ -84,7 +84,7 @@ public class SysUserController {
      * */
     @RequestMapping(value = "/update.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "更新用户")
+    @BizOperLog(operType = OperType.UPDATE,memo = "更新用户", memos = "25")
     public IResult updateUser(@RequestBody @Valid UserUpdateRequest user, BindingResult result){//传递了数组，前台放在payload里面了，后台通过@RequestBody获取
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Boolean>(sysUserServiceImpl.updateUser(user));
@@ -96,7 +96,7 @@ public class SysUserController {
      * */
     @RequestMapping(value = "/initPwd.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "初始化密码")
+    @BizOperLog(operType = OperType.UPDATE,memo = "初始化密码", memos = "26")
     public IResult initPwd(String id){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<String>(sysUserServiceImpl.initPwd(id));
@@ -107,7 +107,7 @@ public class SysUserController {
      * */
     @RequestMapping(value = "/changePwd.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "更新密码")
+    @BizOperLog(operType = OperType.UPDATE,memo = "更新密码", memos = "27")
     public IResult changePwd(String loginName,String oldPwd,String newPwd){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Boolean>(sysUserServiceImpl.changePwd(loginName,oldPwd,newPwd));
