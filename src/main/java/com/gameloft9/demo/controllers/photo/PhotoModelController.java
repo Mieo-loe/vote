@@ -113,7 +113,7 @@ public class PhotoModelController {
             }
             photoModelServiceImpl.deleteContent(photoTitleTest.getTid());
         }
-        photoModelServiceImpl.deleteTitle(mid);
+        photoModelServiceImpl.deleteTitle(vid);
         photoModelServiceImpl.delete(mid);
         photoModelServiceImpl.deleteVote(vid);
         return new ResultBean<Boolean>();
