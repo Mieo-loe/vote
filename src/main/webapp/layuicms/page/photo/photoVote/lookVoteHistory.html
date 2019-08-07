@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../common/css/look.css">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 1459px;
+            width: 1440px;
+            background-color: rgba(242, 246, 249, 1);
+            margin: 0 auto;
+        }
+
+        .top1 {
+            top: 50px;
+            width: 169px;
+            margin: 0 auto;
+            /*只能水平居中*/
+        }
+
+        .top2 {
+            top: 80px;
+            width:860px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .top3 {
+            top: 110px;
+            width: 865px;
+            margin: 0 auto;
+        }
+
+        .top3p {
+            line-height: 0;
+            margin-bottom: 5px;
+            width: 865px;
+            text-align: center;
+        }
+
+        .mb--rich-text {
+            font-family: SourceHanSansSC;
+            font-weight: 400;
+            font-size: 36px;
+            color: rgb(16, 16, 16);
+            font-style: normal;
+            letter-spacing: 0px;
+            line-height: 54px;
+            text-decoration: none;
+        }
+
+        .--mb--rich-text {
+            font-family: SourceHanSansSC;
+            font-weight: 400;
+            font-size: 18px;
+            color: rgb(16, 16, 16);
+            font-style: normal;
+            letter-spacing: 0px;
+            line-height: 27px;
+            text-decoration: none;
+        }
+
+        .down {
+            width: 1000px;
+            z-index: 8;
+            background-color: white;
+            /*color: rgb(255, 255, 255);*/
+            box-shadow: rgb(170, 170, 170) 0px 0px 5px 0px;
+            font-size: 14px;
+            margin: 0 auto;
+        }
+
+        .photo img {
+            height: 231px;
+            width: 231px;
+        }
+
+
+
+        .bgi {
+            background-color: rgb(43, 117, 242);
+            background-image: url("../../../page/system/photo/gou.png");
+
+        }
+
+        .option img {
+            display: none;
+        }
+
+        .bgi img {
+            display: block;
+        }
+
+        .sumbit {
+            float: left;
+            height: 50px;
+            background-color: rgb(43, 117, 242);
+            display: inline-block;
+            margin-top: 25px;
+            margin-left: 345px;
+            border-radius: 5px;
+        }
+
+        .tijiao {
+            width: 280px;
+            height: 29px;
+            background-color: #2B75F2;
+            text-align: center;
+            font-size: 20px;
+            line-height: 29px;
+            margin-top: 11px;
+        }
+
+    </style>
+    <link rel="stylesheet" href="../../../lib/layui/css/layui.css" media="all"/>
+
+</head>
+<body>
+<div class="container">
+    <div class="top1">
+        <img class="tou" width="169" src="../../../page/system/photo/top.gif" alt="">
+    </div>
+    <div class="top2" style="text-align: center"><input type="text" class="layui-input mb--rich-text" style="border:none;background-color:#F2F6F9;text-align: center" name="title" readonly="true"></div>
+    <div class="top3" style="text-align: center">
+        <p class="top3p">
+            <input type="text" class="layui-input --mb--rich-text" style="border:none;background-color:#F2F6F9;text-align: center" name="votingInstruction" readonly="true">
+        </p>
+    </div>
+    <div class="down" id="diao">
+        <div class="question_coll" id="question_coll">
+
+        </div>
+<!--        <div class="question_coll">-->
+<!--            <div class="question_content">-->
+<!--                <div class="question_Title_coll">-->
+<!--                    <div class="question_Num">1</div>-->
+<!--                    <div class="question_Title">-->
+<!--                        <div class="question_img1">-->
+<!--                            <img class="title_Photo1" width="732" height="416"-->
+<!--                                 src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="answer_coll">-->
+<!--                    <div class="answer">-->
+<!--                        <div name="w" class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content">前前前前前前前前前前前前前前前前前前前</div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div name="w" class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>后</span></div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Checkbox" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>左</span></div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>右</span></div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="question_coll">-->
+<!--            <div class="question_content">-->
+<!--                <div class="question_Title_coll">-->
+<!--                    <div class="question_Num">2</div>-->
+<!--                    <div class="question_Title">-->
+<!--                        <div class="question_img2">-->
+<!--                            <img class="title_Photo2" src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                        <div class="question_img2">-->
+<!--                            <img class="title_Photo2" src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="answer_coll">-->
+<!--                    <div class="answer">-->
+<!--&lt;!&ndash;                        <input class="answer_Radio" type="radio" name="aaa">&ndash;&gt;-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content">前前前前前前前前前前前前前前前前前前前</div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>后</span></div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>左</span></div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>右</span></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="question_coll">-->
+<!--            <div class="question_content">-->
+<!--                <div class="question_Title_coll">-->
+<!--                    <div class="question_Num">3</div>-->
+<!--                    <div class="question_Title">-->
+<!--                        <div class="question_img3">-->
+<!--                            <img class="title_Photo2" src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                        <div class="question_img3">-->
+<!--                            <img class="title_Photo2" src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                        <div class="question_img3">-->
+<!--                            <img class="title_Photo2" src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="answer_coll">-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content">前前前前前前前前前前前前前前前前前前前</div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>后</span></div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>左</span></div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>右</span></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="question_coll">-->
+<!--            <div class="question_content">-->
+<!--                <div class="question_Title_coll">-->
+<!--                    <div class="question_Num">4</div>-->
+<!--                    <div class="question_Title">-->
+<!--                        <div class="question_img2">-->
+<!--                            <img class="title_Photo2" src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                        <div class="question_img2">-->
+<!--                            <img class="title_Photo2" src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                        <div class="question_img2">-->
+<!--                            <img class="title_Photo2" src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                        <div class="question_img2">-->
+<!--                            <img class="title_Photo2" src="../../../page/system/photo/1.jpg">-->
+<!--                            <img class="fangdaJ" src="../../../page/system/photo/fangda.png">-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--                <div class="answer_coll">-->
+
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content">前前前前前前前前前前前前前前前前前前前</div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>后</span></div>-->
+<!--                    </div>-->
+
+
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>左</span></div>-->
+<!--                    </div>-->
+<!--                    <div class="answer">-->
+<!--                        <div class="answer_Radio" ><img width="24" src="../../../page/system/photo/gou.png" alt=""></div>-->
+<!--                        <div class="answer_Content"><span>右</span></div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <hr>
+        <!--        <div class="sumbit"><p class="tijiao" onclick="#404">提交</p></div>-->
+        <div style="text-align:center">
+            <br>
+            <button class='layui-btn layui-btn-normal' style="width: 100px" lay-submit='' lay-filter='previewSubmit_btn'>提交</button>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <div>
+<!--        <button onclick="add()">新增数据</button>-->
+        <!--每点击一下，插入一条数据-->
+    </div>
+</div>
+
+<style>
+
+</style>
+<!--<div class="demo" >-->
+<!--    <img  width="24" src="../../../page/system/photo/gou.png" alt="">-->
+<!--</div>-->
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+<script type="text/javascript" src="../../../lib/layui/layui.js"></script>
+<script type="text/javascript" src="../../../common/js/config.js"></script>
+<script type="text/javascript" src="lookVoteHistory.js"></script>
+<script>
+    //定义的方法，不要写在ready里面
+    // function add() {
+    //     var parent = $('.container .down');
+    //
+    //     var item = $('<div></div>');//创建div标签
+    //
+    //     //序号
+    //     var div1 = $("<div></div>");
+    //     var num = $("<p></p>");
+    //     var font = $("<font  color=\"#FFFFFF\"></font>");
+    //     div1.addClass("num")
+    //     num.addClass("num1");
+    //     num.append(font);
+    //     div1.append(num);
+    //     item.append(div1);
+    //     //图片
+    //     var div2 = $("<div></div>");
+    //     var img = $("<img />");
+    //     img.attr("src", "../../../page/system/photo/timg.jpg");
+    //     img.attr("width", "height", "317", "231");
+    //     img.addClass("title");
+    //     div2.addClass("photo");
+    //     div2.append(img);
+    //     item.append(div2);
+    //
+    //     //放大镜
+    //     var div3 = $("<div></div>");
+    //     var img = $("<img />");
+    //     img.attr("src", "../../../page/system/photo/fangda.png");
+    //     img.attr("width", "18");
+    //     div3.addClass("fangda");
+    //     img.addClass("fdj");
+    //     div3.append(img);
+    //     item.append(div3);
+    //
+    //
+    //     //子标准
+    //     var div4 = $("<div></div>");
+    //     div4.addClass("zbz");
+    //     item.append(div4);
+    //
+    //
+    //     //整个答案
+    //     var div5 = $("<div></div>");
+    //     div5.addClass("daan");
+    //     div4.append(div5);
+    //
+    //
+    //     //选项1
+    //     var div6 = $("<div></div>");
+    //     var img = $("<img />");
+    //     img.attr("src", "../../../page/system/photo/gou.png");
+    //     img.attr("width", "24");
+    //     div6.addClass("option");
+    //     div6.append(img);
+    //     div5.append(div6);
+    //
+    //     //答案1
+    //     var div7 = $("<div></div>");
+    //     var span = $("<span></span>");
+    //     span.text("前");
+    //     div7.append(span);
+    //     div7.addClass("answer");
+    //     div5.append(div7);
+    //
+    //     //选项2
+    //     var div6 = $("<div></div>");
+    //     var img = $("<img />");
+    //     img.attr("src", "../../../page/system/photo/gou.png");
+    //     img.attr("width", "24");
+    //     div6.addClass("option");
+    //     div6.append(img);
+    //     div5.append(div6);
+    //
+    //     //答案2
+    //     var div7 = $("<div></div>");
+    //     var span = $("<span></span>");
+    //     span.text("后");
+    //     div7.append(span);
+    //     div7.addClass("answer");
+    //     div5.append(div7);
+    //
+    //     //选项3
+    //     var div6 = $("<div></div>");
+    //     var img = $("<img />");
+    //     img.attr("src", "../../../page/system/photo/gou.png");
+    //     img.attr("width", "24");
+    //     div6.addClass("option");
+    //     div6.append(img);
+    //     div5.append(div6);
+    //
+    //     //答案3
+    //     var div7 = $("<div></div>");
+    //     var span = $("<span></span>");
+    //     span.text("左");
+    //     div7.append(span);
+    //     div7.addClass("answer");
+    //     div5.append(div7);
+    //
+    //     //选项4
+    //     var div6 = $("<div></div>");
+    //     var img = $("<img />");
+    //     img.attr("src", "../../../page/system/photo/gou.png");
+    //     img.attr("width", "24");
+    //     div6.addClass("option");
+    //     div6.append(img);
+    //     div5.append(div6);
+    //
+    //     //答案4
+    //     var div7 = $("<div></div>");
+    //     var span = $("<span></span>");
+    //     span.text("右");
+    //     div7.append(span);
+    //     div7.addClass("answer");
+    //     div5.append(div7);
+    //
+    //
+    //     item.addClass('item');//添加class属性
+    //
+    //     parent.append(item);//作为子元素添加
+    // }
+
+    $(document).ready(function () {
+
+    });
+    //等价
+    $(function () {
+
+    })
+</script>
+</html>

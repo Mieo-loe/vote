@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>HTML5上传图片预览</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../../../lib/jquery-2.2.4/jquery.js"></script>
+    <style>
+        #imgList{
+            list-style:none;
+            overflow:hidden;
+            clear:both;
+        }
+        #imgList li{
+            float:left;
+            width:120px;height:120px;margin:10px 10px 0 0;
+            overflow:hidden;
+            border-radius:4px;
+            background-color:pink;
+        }
+        #imgList li img{
+            width:100%;
+        }
+        .input-file-box{
+            display: inline-block;
+            position: relative;
+            padding: 3px 5px;
+            overflow: hidden;
+            color:#fff;
+            background-color: #ccc;
+        }
+        .file-input{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            outline: none;
+            background-color: transparent;
+            filter:alpha(opacity=0);
+            -moz-opacity:0;
+            -khtml-opacity: 0;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<h3>请选择图片文件：JPG/GIF</h3>
+<form name="form0" id="form0" >
+    <!-- 这里特别说一下这个 multiple="multiple" 添加上这个之后可以一次选择多个文件进行上传，是 html5 的新属性-->
+    <!-- <input type="file" name="file0" id="file0" multiple="multiple" /><br> -->
+    <div class="input-file-box">
+        <input type="file" class="file-input" id="file0" multiple="multiple" />上传文件
+    </div>
+    <ul id="imgList">
+        <li><img src="" alt=""></li>
+        <li><img src="" alt=""></li>
+    </ul>
+</form>
+<script>
+    $("#file0").change(function(){
+        // this.files[0]代表的是选择的文件资源的第一个，因为上面写了 multiple="multiple" 就表示上传文件可能不止一个
+        console.log(this.files)
+        var arr = [];
+        for(var val of this.files){
+            var imgUrl = getObjectURL(val) ;
+            if (imgUrl) {
+                // 在这里修改图片的地址属性
+                arr.push('<li><img src="'+imgUrl+'"/></li>')
+            }
+            $('#imgList').html(arr.join(''))
+        }
+    }) ;
+    //建立一個可存取到該file的url
+    function getObjectURL(file) {
+        var url = null ;
+        // 下面函数执行的效果是一样的，只是需要针对不同的浏览器执行不同的 js 函数而已
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+</script>
+</body>
+<script>
+</script>
+</html>

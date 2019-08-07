@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photo.StudentTestMapper">
+
+    <resultMap id="StudentTest" type="com.gameloft9.demo.dataaccess.model.photo.StudentTest">
+        <id column="sid" property="sid" jdbcType="INTEGER"/>
+        <result column="sname" property="sname" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="VARCHAR"/>
+        <result column="clazz" property="clazz" jdbcType="VARCHAR"/>
+        <result column="password" property="password" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+    <sql id="student">
+        SID,SNAME,SEX,CLAZZ,PASSWORD
+    </sql>
+    <select id="findAll" resultMap="StudentTest">
+SELECT
+    *
+FROM
+	student
+where 1=1
+<if test="sid !=null and sid !=''">
+  and sid = #{sid,jdbcType=INTEGER}
+</if>
+	limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
+   </select>
+
+    <select id="countGetAll" parameterType="map" resultType="Integer">
+         select count(1) from student
+    </select>
+
+    <insert id="addStudent" parameterType="com.gameloft9.demo.dataaccess.model.photo.StudentTest">
+        INSERT INTO student(sname,sex,clazz,password)
+        VALUES (#{sname,jdbcType=VARCHAR},#{sex,jdbcType=VARCHAR},#{clazz,jdbcType=VARCHAR},#{password,jdbcType=INTEGER})
+    </insert>
+
+    <delete id="deleteStudent" parameterType="java.lang.Integer">
+        DELETE  FROM  student WHERE sid=#{0}
+    </delete>
+
+    <update id="update" parameterType="com.gameloft9.demo.dataaccess.model.photo.StudentTest">
+        UPDATE student SET sname=#{sname,jdbcType=VARCHAR},sex=#{sex,jdbcType=VARCHAR},clazz=#{clazz,jdbcType=VARCHAR},password=#{password,jdbcType=INTEGER}
+        WHERE  sid=#{sid,jdbcType=INTEGER}
+    </update>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.StudentTest">
+        SELECT * FROM  student WHERE sid=#{0}
+    </select>
+</mapper>

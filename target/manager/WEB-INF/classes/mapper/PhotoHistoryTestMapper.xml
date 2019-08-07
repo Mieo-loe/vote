@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photo.PhotoHistoryTestMapper">
+
+    <resultMap id="PhotoHistoryTest" type="com.gameloft9.demo.dataaccess.model.photo.PhotoHistoryTest">
+        <id column="hid" property="hid" jdbcType="INTEGER"/>
+        <result column="vid" property="vid" jdbcType="INTEGER"/>
+        <result column="issueTime" property="issueTime" jdbcType="TIMESTAMP"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="tp_photo_history">
+        HID,VID,ISSUETIME,STATUS,ID,RESKIND,RESNUM,RESNAME,VID,TITLE,VOTINGINSTRUCTION,VOTEDNUM
+    </sql>
+    <select id="findAll" resultMap="PhotoHistoryTest">
+   SELECT
+    hi.hid,
+	hi.vid title,
+	hi.issueTime issueTime,
+	res.resName status,
+	vo.title vid
+FROM
+	tp_photo_history AS hi,
+	tp_resourcelist AS res,
+	tp_photo_vote AS vo
+WHERE
+	vo.vid = hi.vid
+AND
+hi. STATUS = res.id
+ORDER BY
+	status,
+	issueTime desc
+	limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
+   </select>
+
+    <select id="countGetAll" parameterType="map" resultType="Integer">
+         select count(1) from tp_photo_history
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_history WHERE vid=#{0}
+    </delete>
+
+    <delete id="deleteAnswer" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_answer WHERE tid=#{tid,jdbcType=INTEGER}
+    </delete>
+
+    <delete id="deleteTitle" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_title WHERE vid=#{vid,jdbcType=INTEGER}
+    </delete>
+
+    <delete id="deleteVote" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_vote WHERE vid=#{0}
+    </delete>
+
+    <delete id="deleteVerification" parameterType="java.lang.String">
+        DELETE  FROM  tp_democratic_verification WHERE content=#{content}
+    </delete>
+
+    <delete id="deleteSum" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_sum WHERE hid=#{hid}
+    </delete>
+
+    <delete id="deleteVer" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_democratic_verification WHERE recordId=#{recordId}
+    </delete>
+
+    <delete id="deleteContent" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_content WHERE tid=#{0}
+    </delete>
+
+    <select id="findByVid" parameterType="java.lang.Integer" resultType="INTEGER">
+        SELECT vid FROM  tp_photo_history WHERE hid=#{0}
+    </select>
+
+    <select id="count" parameterType="java.lang.Integer" resultType="INTEGER">
+       SELECT COUNT(*) from tp_photo_sum WHERE aid=#{aid}
+    </select>
+
+    <select id="findByTid" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.PhotoTitleTest">
+        SELECT tid,vid,optionRule,isChar FROM  tp_photo_title WHERE vid=#{0}
+    </select>
+
+    <select id="findByAid" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.PhotoAnswerTest">
+        SELECT aid,tid,answer  FROM  tp_photo_answer WHERE tid=#{0}
+    </select>
+
+    <select id="verification" parameterType="java.lang.String" resultType="com.gameloft9.demo.dataaccess.model.photo.VerificationQueTest">
+        SELECT yid,id,content,recordId,isVote  FROM  tp_democratic_verification WHERE content=#{content,jdbcType=VARCHAR}
+    </select>
+
+    <insert id="addverificationQue" parameterType="com.gameloft9.demo.dataaccess.model.photo.VerificationQueTest">
+        INSERT INTO tp_democratic_verification(id,content,recordId,isVote)
+        VALUES (#{id,jdbcType=INTEGER},#{content,jdbcType=VARCHAR},#{recordId,jdbcType=INTEGER},#{isVote,jdbcType=INTEGER})
+    </insert>
+
+    <insert id="addSumbit" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoSumTest">
+        INSERT INTO tp_photo_sum(aid,hid)
+        VALUES (#{aid,jdbcType=INTEGER},#{hid,jdbcType=INTEGER})
+    </insert>
+
+    <select id="findByCid" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.PhotoContentTest">
+        SELECT cid,tid,content FROM  tp_photo_content WHERE tid=#{0}
+    </select>
+
+    <update id="cancel" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoHistoryTest">
+        UPDATE tp_photo_history SET status = 36
+        WHERE  hid=#{hid,jdbcType=INTEGER}
+    </update>
+
+    <insert id="addVote" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoVoteTest">
+        UPDATE tp_photo_history SET status = 36
+        WHERE  hid=#{hid,jdbcType=INTEGER}
+    </insert>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.PhotoVoteTest">
+        SELECT * FROM  tp_photo_vote WHERE vid=#{0}
+    </select>
+
+</mapper>

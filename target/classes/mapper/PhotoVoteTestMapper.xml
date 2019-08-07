@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photo.PhotoVoteTestMapper">
+
+    <resultMap id="PhotoVoteTest" type="com.gameloft9.demo.dataaccess.model.photo.PhotoVoteTest">
+        <id column="vid" property="vid" jdbcType="INTEGER"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="votingInstruction" property="votingInstruction" jdbcType="VARCHAR"/>
+        <result column="votedNum" property="votedNum" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="tp_photo_vote">
+        VID,TITLE,VOTINGINSTRUCTION,VOTEDNUM
+    </sql>
+
+    <select id="findAllVote" resultMap="PhotoVoteTest">
+        select * from tp_photo_vote where vid=#{0}
+    </select>
+
+    <insert id="addVote" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoVoteTest" useGeneratedKeys="true" keyProperty="vid">
+        INSERT INTO tp_photo_vote (title,votingInstruction,votedNum)
+        VALUES (#{title},#{votingInstruction},#{votedNum});
+    </insert>
+    <insert id="addTitle" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoTitleTest" useGeneratedKeys="true" keyProperty="tid">
+        INSERT INTO tp_photo_title (vid,optionRule,isChar)
+        VALUES (#{vid,jdbcType=INTEGER},#{optionRule,jdbcType=INTEGER},#{isChar,jdbcType=INTEGER});
+    </insert>
+    <insert id="addAnswer" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoAnswerTest" useGeneratedKeys="true" keyProperty="aid">
+        INSERT INTO tp_photo_answer (tid,answer)
+        VALUES (#{tid,jdbcType=INTEGER},#{answer,jdbcType=VARCHAR});
+    </insert>
+    <insert id="addHistory" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoHistoryTest" useGeneratedKeys="true" keyProperty="hid">
+        INSERT INTO tp_photo_history (vid,issueTime,status)
+        VALUES (#{vid,jdbcType=INTEGER},#{issueTime,jdbcType=TIMESTAMP},#{status,jdbcType=INTEGER});
+    </insert>
+
+    <insert id="addverificationQue" parameterType="com.gameloft9.demo.dataaccess.model.photo.VerificationQueTest">
+        INSERT INTO tp_democratic_verification(id,content,recordId,isVote)
+        VALUES (#{id,jdbcType=INTEGER},#{content,jdbcType=VARCHAR},#{recordId,jdbcType=INTEGER},#{isVote,jdbcType=INTEGER})
+    </insert>
+
+    <insert id="addContent" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoContentTest" useGeneratedKeys="true" keyProperty="cid">
+        INSERT INTO tp_photo_content (tid,content)
+        VALUES (#{tid,jdbcType=TIMESTAMP},#{content,jdbcType=VARCHAR});
+    </insert>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.PhotoVoteTest">
+        SELECT * FROM  tp_photo_vote WHERE vid=#{0}
+    </select>
+
+</mapper>
