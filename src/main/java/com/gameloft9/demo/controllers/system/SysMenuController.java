@@ -35,12 +35,17 @@ public class SysMenuController {
      * 获取所有菜单列表
      * @param page 页序
      * @param limit 分页大小
+     *  3.找到后台处理的控制器类
      * */
     @RequestMapping(value = "/menuList.do",method = RequestMethod.POST)
     @ResponseBody
     //@BizOperLog(operType = OperType.Query,memo = "获取所有菜单列表")
     public IResult getMenuList(String page, String limit, String menuName, String menuCode, String parentMenuId){
+        //1.接收参数
+        //2.调用servie
+        //3.返回结果(json数据)
         //返回json至前端的均返回ResultBean或者PageResultBean
+        //PageResultBean<List<Student>>
         return new PageResultBean<Collection<SysMenuTestExtend>>(sysMenuServiceImpl.getAll(page,limit,menuName,menuCode,parentMenuId),sysMenuServiceImpl.countGetAll(menuName,menuCode,parentMenuId));
     }
 

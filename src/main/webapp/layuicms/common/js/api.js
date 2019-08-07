@@ -75,6 +75,15 @@ layui.define(['$tool','jquery'], function (exports) {
         GetRoleList:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'personCenter/roleList.do',req,successCallback,errorCallback);
         },
+        Verification:function(req,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'photoVote/verification.do',req,successCallback,errorCallback);
+        },
+        GetPhotoUserList:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoUser/photoUserList.do',req,successCallback,errorCallback);
+        },
+        GetStudentList:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'student/studentList.do',req,successCallback,errorCallback);
+        },
         DeleteLog:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'log/delete.do',req,successCallback,errorCallback);
         },
@@ -84,6 +93,10 @@ layui.define(['$tool','jquery'], function (exports) {
         GetFirstClassMenus:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'menu/firstClassMenus.do',req,successCallback,errorCallback);
         },
+        GetFirstPhoto:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoUser/find.do',req,successCallback,errorCallback);
+        },
+        //有请求方式和请求路径
         AddMenu:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'menu/add.do',req,successCallback,errorCallback);
         },
@@ -93,8 +106,26 @@ layui.define(['$tool','jquery'], function (exports) {
         GetMenu:function(req,successCallback,errorCallback){
             doPost($tool.getContext()+'menu/get.do',req,successCallback,errorCallback);
         },
+        GetStudent:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'student/get.do',req,successCallback,errorCallback);
+        },
+        GetPhotoUser:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'photoUser/get.do',req,successCallback,errorCallback);
+        },
+        GetPhotoVote:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'photoVote/get.do',req,successCallback,errorCallback);
+        },
+        GetPhotoModel:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'photoModel/get.do',req,successCallback,errorCallback);
+        },
         UpdateMenu:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext()+'menu/update.do',req,config,successCallback,errorCallback);
+        },
+        UpdateStudent:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext()+'student/update.do',req,config,successCallback,errorCallback);
+        },
+        UpdatePhotoUser:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext()+'photoUser/update.do',req,config,successCallback,errorCallback);
         },
         GetAllOrg:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'org/getAll.do',req,successCallback,errorCallback);
@@ -126,8 +157,50 @@ layui.define(['$tool','jquery'], function (exports) {
         AddUser:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'sysUser/add.do',req,config,successCallback,errorCallback);
         },
+        AddVote:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'photoVote/votePhoto.do',req,config,successCallback,errorCallback);
+        },
+        VoteSuccess:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'photoVote/voteSuccess.do',req,config,successCallback,errorCallback);
+        },
+        AddModelVote:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'photoModel/votePhoto.do',req,config,successCallback,errorCallback);
+        },
+        AddModel:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'photoModel/modelPhoto.do',req,config,successCallback,errorCallback);
+        },
+        AddStudent:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'student/add.do',req,config,successCallback,errorCallback);
+        },
+        AddPhotoUser:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'photoUser/add.do',req,config,successCallback,errorCallback);
+        },
         DeleteUser:function(req,config,successCallback,errorCallback){
             doPost($tool.getContext() + 'sysUser/delete.do',req,config,successCallback,errorCallback);
+        },
+        DeleteVote:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoVote/delete.do',req,config,successCallback,errorCallback);
+        },
+        DeleteModel:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoModel/delete.do',req,config,successCallback,errorCallback);
+        },
+        CancelVote:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoVote/cancel.do',req,config,successCallback,errorCallback);
+        },
+        CancelModel:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoModel/cancel.do',req,config,successCallback,errorCallback);
+        },
+        TopModel:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoModel/top.do',req,config,successCallback,errorCallback);
+        },
+        PhotoUser:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoUser/deleteUser.do',req,config,successCallback,errorCallback);
+        },
+        AddMoreUser:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'photoUser/fileUpload.do',req,config,successCallback,errorCallback);
+        },
+        DeleteStudent:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'student/delete.do',req,config,successCallback,errorCallback);
         },
         InitPwd:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'sysUser/initPwd.do',req,successCallback,errorCallback);

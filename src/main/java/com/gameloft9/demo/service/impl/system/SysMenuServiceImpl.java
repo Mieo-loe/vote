@@ -111,6 +111,7 @@ public class SysMenuServiceImpl implements SysMenuService {
      * @return String 菜单id
      */
     public String addMenu(String menuName, String menuUrl, String menuType, String parentMenuId, String requestUrl, String sort) {
+        //调用了一个检验的工具类(提供了很多判断数据是否为null的方法)
         CheckUtil.notBlank(menuName, "菜单名称为空");
         CheckUtil.notBlank(menuUrl, "菜单访问链接为空");
         CheckUtil.notBlank(menuType, "菜单类型为空");

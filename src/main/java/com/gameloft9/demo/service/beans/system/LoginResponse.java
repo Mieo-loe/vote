@@ -21,7 +21,7 @@ public class LoginResponse implements Serializable{
     private String loginName;
 
     /**
-     * web上下文
+     * web上下文.
      * */
     private String webContext;
 }

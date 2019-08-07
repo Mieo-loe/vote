@@ -36,7 +36,7 @@ layui.config({
         var req = {
             id:id
         };
-
+        //findById
         $api.GetMenu(req,function (res) {
             var data = res.data;
             $("[name='menuName']").val(data.title);

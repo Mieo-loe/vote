@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photo.PhotoModelTestMapper">
+
+    <resultMap id="PhotoModelTest" type="com.gameloft9.demo.dataaccess.model.photo.PhotoModelTest">
+        <id column="mid" property="mid" jdbcType="INTEGER"/>
+        <result column="vid" property="vid" jdbcType="INTEGER"/>
+        <result column="modelTitle" property="modelTitle" jdbcType="VARCHAR"></result>
+        <result column="startTime" property="startTime" jdbcType="TIMESTAMP"/>
+        <result column="isTop" property="isTop" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="tp_photo_modelmanager">
+        HID,VID,MODELTITLE,STARTTIME,ISTOP
+    </sql>
+    <select id="findAll2" resultMap="PhotoModelTest">
+   SELECT
+    mo.mid,
+	mo.modelTitle,
+	mo.startTime startTime,
+	res.resName isTop,
+	vo.title vid
+FROM
+	tp_photo_modelmanager AS mo,
+	tp_photo_vote AS vo,
+	tp_resourcelist AS res
+WHERE
+	vo.vid = mo.vid
+AND
+mo. isTop = res.id
+ORDER BY
+	isTop desc,
+	startTime desc
+	limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
+   </select>
+    <select id="countGetAll" parameterType="map" resultType="Integer">
+         select count(1) from tp_photo_modelmanager
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+
+        DELETE  FROM  tp_photo_modelmanager WHERE mid=#{0}
+    </delete>
+
+    <delete id="deleteAnswer" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_answer WHERE tid=#{tid,jdbcType=INTEGER}
+    </delete>
+
+    <delete id="deleteTitle" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_title WHERE vid=#{vid,jdbcType=INTEGER}
+    </delete>
+
+    <delete id="deleteVote" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_vote WHERE vid=#{0}
+    </delete>
+
+    <delete id="deleteContent" parameterType="java.lang.Integer">
+        DELETE  FROM  tp_photo_content WHERE tid=#{0}
+    </delete>
+
+    <update id="cancel" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoModelTest">
+        UPDATE tp_photo_modelmanager SET isTop = 53
+        WHERE  mid=#{mid,jdbcType=INTEGER}
+    </update>
+
+    <update id="top" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoModelTest">
+        UPDATE tp_photo_modelmanager SET isTop = 52
+        WHERE  mid=#{mid,jdbcType=INTEGER}
+    </update>
+
+    <select id="findByVid" parameterType="java.lang.Integer" resultType="INTEGER">
+        SELECT vid FROM  tp_photo_modelmanager WHERE mid=#{0}
+    </select>
+
+    <select id="findByTid" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.PhotoTitleTest">
+        SELECT tid,vid,optionRule,isChar FROM  tp_photo_title WHERE vid=#{0}
+    </select>
+
+    <select id="findById" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.PhotoVoteTest">
+        SELECT * FROM  tp_photo_vote WHERE vid=#{0}
+    </select>
+
+    <select id="findByAid" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.PhotoAnswerTest">
+        SELECT aid,tid,answer FROM  tp_photo_answer WHERE tid=#{0}
+    </select>
+
+    <select id="findByCid" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.photo.PhotoContentTest">
+        SELECT cid,tid,content FROM  tp_photo_content WHERE tid=#{0}
+    </select>
+
+    <insert id="addVote" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoVoteTest" useGeneratedKeys="true" keyProperty="vid">
+        INSERT INTO tp_photo_vote (title,votingInstruction,votedNum)
+        VALUES (#{title},#{votingInstruction},#{votedNum});
+    </insert>
+
+    <insert id="addContent" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoContentTest" useGeneratedKeys="true" keyProperty="cid">
+        INSERT INTO tp_photo_content (tid,content)
+        VALUES (#{tid,jdbcType=TIMESTAMP},#{content,jdbcType=VARCHAR});
+    </insert>
+
+    <insert id="addTitle" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoTitleTest" useGeneratedKeys="true" keyProperty="tid">
+        INSERT INTO tp_photo_title (vid,optionRule,isChar)
+        VALUES (#{vid,jdbcType=INTEGER},#{optionRule,jdbcType=INTEGER},#{isChar,jdbcType=INTEGER});
+    </insert>
+    <insert id="addAnswer" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoAnswerTest" useGeneratedKeys="true" keyProperty="aid">
+        INSERT INTO tp_photo_answer (tid,answer)
+        VALUES (#{tid,jdbcType=INTEGER},#{answer,jdbcType=VARCHAR});
+    </insert>
+    <insert id="addModel" parameterType="com.gameloft9.demo.dataaccess.model.photo.PhotoModelTest" useGeneratedKeys="true" keyProperty="mid">
+        INSERT INTO tp_photo_modelmanager (vid,modelTitle,startTime,isTop)
+        VALUES (#{vid,jdbcType=INTEGER},#{modelTitle,jdbcType=VARCHAR},#{startTime,jdbcType=TIMESTAMP},#{isTop,jdbcType=INTEGER});
+    </insert>
+
+
+</mapper>
