@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper映射-->
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.system.CreatingQueMapper">
+    <resultMap id="CreatingResultMap" type="com.gameloft9.demo.dataaccess.model.system.CreatingQue">
+        <id column="cid" property="cid" jdbcType="INTEGER"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="explain" property="explain" jdbcType="VARCHAR"/>
+        <result column="manNum" property="manNum" jdbcType="INTEGER"/>
+        <association property="templateQue" javaType="com.gameloft9.demo.dataaccess.model.system.TemplateQue">
+            <id column="tid" property="tid" jdbcType="INTEGER"/>
+            <result column="cid" property="cid" jdbcType="INTEGER"/>
+            <result column="templateTitle" property="templateTitle" jdbcType="VARCHAR"/>
+            <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+            <result column="isTop" property="isTop" jdbcType="INTEGER"/>
+        </association>
+        <association property="investigationQue" javaType="com.gameloft9.demo.dataaccess.model.system.InvestigationQue">
+            <id column="qid" property="qid" jdbcType="INTEGER"/>
+            <result column="history" property="history" jdbcType="INTEGER"/>
+            <result column="startTime" property="startTime" jdbcType="TIMESTAMP"/>
+            <result column="status" property="status" jdbcType="INTEGER"/>
+        </association>
+        <collection property="timus" ofType="com.gameloft9.demo.dataaccess.model.system.SubjectQue">
+            <id column="sid" property="sid" jdbcType="INTEGER"/>
+            <result column="question" property="question" jdbcType="VARCHAR"/>
+            <result column="oid" property="oid" jdbcType="INTEGER"/>
+            <result column="option" property="option" jdbcType="VARCHAR"/>
+            <collection property="xuanxiang" ofType="com.gameloft9.demo.dataaccess.model.system.OptionQue">
+                <id column="oid" property="oid" jdbcType="INTEGER"/>
+                <result column="sid" property="sid" jdbcType="INTEGER"/>
+                <result column="options" property="options" jdbcType="VARCHAR"/>
+            </collection>
+        </collection>
+    </resultMap>
+    <!--根据ID查询-->
+    <select id="findById" resultMap="CreatingResultMap">
+        SELECT tqi.*,tqc.*,tqs.*,tqo.*
+        FROM tp_questionnaire_investigation AS tqi,
+        tp_questionnaire_creating as tqc,
+        tp_questionnaire_subject as tqs,
+        tp_questionnaire_option AS tqo
+        WHERE tqc.cid=tqs.oid
+        and tqc.cid=tqi.history
+        and tqs.sid=tqo.sid
+        and tqc.cid=#{cid,jdbcType=VARCHAR}
+    </select>
+    <!-- tp_questionnaire_creating 添加-->
+    <insert id="add" parameterType="java.lang.String" useGeneratedKeys="true" keyProperty="cid">
+        INSERT INTO tp_questionnaire_creating(title,`explain`,manNum)
+        VALUES (#{title,jdbcType=VARCHAR},#{explain,jdbcType=VARCHAR},#{manNum,jdbcType=VARCHAR})
+    </insert>
+    <!-- tp_questionnaire_subject 添加-->
+    <insert id="add3" parameterType="java.lang.String" useGeneratedKeys="true" keyProperty="sid">
+        INSERT INTO tp_questionnaire_subject(question,`option`,oid)
+        VALUES (#{question},#{option},#{oid});
+    </insert>
+    <!-- tp_questionnaire_option 添加-->
+    <insert id="add4" parameterType="java.lang.String">
+        INSERT INTO tp_questionnaire_option(sid,`options`)
+        VALUES (#{sid},#{options,jdbcType=VARCHAR})
+    </insert>
+    <!--tp_questionnaire_investigation 添加-->
+    <insert id="add5" parameterType="com.gameloft9.demo.dataaccess.model.system.InvestigationQue" useGeneratedKeys="true" keyProperty="qid">
+        INSERT INTO tp_questionnaire_investigation(history,startTime,status)
+        VALUES (#{history},#{startTime},#{status})
+    </insert>
+    <!--tp_democratic_verification添加-->
+    <insert id="addVerification" parameterType="com.gameloft9.demo.dataaccess.model.system.VerificationQue">
+        INSERT INTO tp_democratic_verification(content,recordId,isVote,id)
+        VALUES (#{content},#{recordId},#{isVote},#{id})
+    </insert>
+    <!--账号表的查询全部-->
+    <select id="findAccountAll" parameterType="java.lang.String" resultType="com.gameloft9.demo.dataaccess.model.system.VerificationQue">
+        SELECT tp_democratic_verification.*
+        FROM tp_democratic_verification
+        where recordId = #{qid}
+    </select>
+    <!--tp_questionnaire_template 添加-->
+    <insert id="add6" parameterType="com.gameloft9.demo.dataaccess.model.system.TemplateQue">
+        INSERT INTO tp_questionnaire_template(cid,templateTitle,createTime,isTop)
+        VALUES (#{cid},#{templateTitle},#{createTime},#{isTop})
+    </insert>
+    <!--修改-->
+    <!--tp_questionnaire_template -->
+<!--    <update id="update1" parameterType="java.lang.String">-->
+<!--        UPDATE tp_questionnaire_template-->
+<!--        SET templateTitle#{templateTitle,jdbcType=VARCHAR},createTime=#{createTime,jdbcType=VARCHAR},isTop=#{isTop,jdbcType=VARCHAR}-->
+<!--        WHERE tid = #{tid,jdbcType=VARCHAR}-->
+<!--    </update>-->
+<!--    &lt;!&ndash; tp_questionnaire_option &ndash;&gt;-->
+<!--    <update id="update2" parameterType="java.lang.String">-->
+<!--        UPDATE tp_questionnaire_option-->
+<!--        SET options=#{options,jdbcType=VARCHAR},sid=#{sid,jdbcType=VARCHAR}-->
+<!--        WHERE oid = #{oid,jdbcType=VARCHAR}-->
+<!--    </update>-->
+<!--    &lt;!&ndash; tp_questionnaire_subject &ndash;&gt;-->
+<!--    <update id="update3" parameterType="java.lang.String" useGeneratedKeys="true" keyProperty="sid">-->
+<!--        UPDATE tp_questionnaire_subject-->
+<!--        SET question=#{question,jdbcType=VARCHAR},oid=#{oid,jdbcType=VARCHAR},`option`=#{option,jdbcType=VARCHAR}-->
+<!--        WHERE sid = #{sid,jdbcType=VARCHAR}-->
+<!--    </update>-->
+<!--    &lt;!&ndash; tp_questionnaire_creating &ndash;&gt;-->
+<!--    <update id="update4" parameterType="java.lang.String" useGeneratedKeys="true" keyProperty="cid">-->
+<!--        UPDATE tp_questionnaire_creating-->
+<!--        SET title=#{title,jdbcType=VARCHAR},`explain`=#{explain,jdbcType=VARCHAR},manNum=#{manNum,jdbcType=VARCHAR}-->
+<!--        WHERE cid = #{cid,jdbcType=VARCHAR}-->
+<!--    </update>-->
+</mapper>
