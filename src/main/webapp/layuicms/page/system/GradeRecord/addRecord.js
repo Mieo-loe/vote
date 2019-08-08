@@ -192,12 +192,13 @@ layui.config({
                         tm:tm.toString(),
                     };
                     $api.AddDaFen(req,function (data) {
+                        var record_Id = data.data;
                         layer.msg("请查看你的投票账号", {time: 1000}, function () {
                             layer.open({
                                 type: 2,
                                 title: '发布成功',
                                 area : ['500px' , '400px'],
-                                content: '../../../page/system/GradeRecord/findZH.html',
+                                content: '../../../page/system/GradeRecord/findZH.html?record_Id='+record_Id,
                             })
 
                             // })

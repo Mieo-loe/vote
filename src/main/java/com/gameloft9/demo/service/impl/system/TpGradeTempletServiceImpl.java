@@ -70,7 +70,7 @@ public class TpGradeTempletServiceImpl implements TpGradeTempletService {
         return tpGradeTempletMapper.add(tpGradeTemplet);
     }
 
-    public boolean addrub(String []tmarr, String []daarr, String []tm) {
+    public Integer addrub(String []tmarr, String []daarr, String []tm) {
         int z = 0;
         for (int i = 0; i < tm.length; i++){
             TpGradeRubric tpGradeRubric = new TpGradeRubric(Integer.parseInt(tm[i]), tmarr[i], tpGradeTemplet.getTemplet_Id());
@@ -103,7 +103,7 @@ public class TpGradeTempletServiceImpl implements TpGradeTempletService {
             TpDemVerification tpDemVerification = new TpDemVerification(sb.toString(), tpGraderecord.getRecord_Id(),"1",49);
             tpDemVerificationMapper.addzh(tpDemVerification);
         }
-        return true;
+        return tpGraderecord.getRecord_Id();
     }
 
     public boolean addmub(String[] tmarr, String[] daarr, String[] tm) {

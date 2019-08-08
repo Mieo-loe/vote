@@ -35,6 +35,15 @@ layui.config({
      * 初始化用户
      */
     function loadUser() {
+
+
+    }
+
+    /**
+     * 初始化下拉框
+     * */
+    function initUid() {
+
         var queryArgs = $tool.getQueryParam();
         username = queryArgs['username'];
 
@@ -44,7 +53,7 @@ layui.config({
 
         $api.GetYongHu(req,function (res) {
             var data = res.data;
-            console.log(data)
+            // console.log(data)
 
             username = data.username;
             uid = data.uid;
@@ -56,29 +65,26 @@ layui.config({
             $("[name = 'tel']").val(tel);
             $("[name = 'password']").val(password);
 
-        });
-
-    }
-
-    /**
-     * 初始化下拉框
-     * */
-    function initUid() {
-        $api.GetUid(null,function (res) {
-            var data = res.data;
-            if (data.length > 0) {
-                var html = '';
-                for (var i = 0; i < data.length; i++) {
-                    if (uid==data[i].uid){
-                        html += '<option selected="selected" value="' + data[i].uid + '">' + data[i].uname + '</option>>';
-                    } else {
-                        html += '<option value="' + data[i].uid + '">' + data[i].uname + '</option>>';
+            $api.GetUid(null,function (res) {
+                var data2 = res.data;
+                if (data2.length > 0) {
+                    var html = '';
+                    for (var i = 0; i < data2.length; i++) {
+                        // console.log(data2[i].uid)
+                        if (uid == data2[i].uid){
+                            html += '<option selected="selected" value="' + data2[i].uid + '">' + data2[i].uname + '</option>>';
+                        } else {
+                            html += '<option value="' + data2[i].uid + '">' + data2[i].uname + '</option>>';
+                        }
                     }
+                    $('#uid').append($(html));
+                    form.render();
                 }
-                $('#uid').append($(html));
-                form.render();
-            }
+            });
+
         });
+
+
     }
     function initPosition() {
         $api.GetPosition(null,function (res) {

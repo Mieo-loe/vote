@@ -47,10 +47,10 @@ public class TpGradeTempletController {
     public IResult add(TpGradePingCe tpGradePingCe){
 
         tpGradeTempletService.add(tpGradePingCe.getTitle(), tpGradePingCe.getExplains(), tpGradePingCe.getPeonum());
-        tpGradeTempletService.addrub(tpGradePingCe.getTmarr(), tpGradePingCe.getDaarr(), tpGradePingCe.getTm());
+        Integer recordId = tpGradeTempletService.addrub(tpGradePingCe.getTmarr(), tpGradePingCe.getDaarr(), tpGradePingCe.getTm());
         tpGradeTempletService.addeva(uids);
 
-        return new ResultBean<String>("success");
+        return new ResultBean<Integer>(recordId);
     }
 
     @RequestMapping(value = "/addry.do",method = RequestMethod.POST)

@@ -18,7 +18,7 @@ public interface TpGradeTempletService {
 
     boolean add(String title, String explains, Integer peonum);
 
-    boolean addrub(String []tmarr, String []daarr, String []tm);
+    Integer addrub(String []tmarr, String []daarr, String []tm);
 
     boolean addmub(String []tmarr, String []daarr, String []tm);
 

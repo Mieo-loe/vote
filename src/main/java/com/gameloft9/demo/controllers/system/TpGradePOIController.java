@@ -53,7 +53,12 @@ public class TpGradePOIController {
 //        }
 
         TpGraderecord tpGraderecord = tpGradeRecordService.findByRecord_Id(record_Id);
-        Date r_time = tpGraderecord.getR_time();
+        Date r_time;
+        if(tpGraderecord.getR_time() != null){
+            r_time = tpGraderecord.getR_time();
+        } else {
+            r_time = new Date();
+        }
         String time = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(r_time).toString();
 
         Integer temid = tpGradeRecordService.findtemid(record_Id);
