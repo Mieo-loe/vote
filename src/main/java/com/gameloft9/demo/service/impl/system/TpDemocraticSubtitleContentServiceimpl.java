@@ -1,8 +1,8 @@
 package com.gameloft9.demo.service.impl.system;
 
-import com.gameloft9.demo.dataaccess.dao.system.SubtitleContentMapper;
+import com.gameloft9.demo.dataaccess.dao.system.TpDemocraticSubtitleContentMapper;
 import com.gameloft9.demo.dataaccess.model.system.TpSubtitleContent;
-import com.gameloft9.demo.service.api.system.SubtitleContentService;
+import com.gameloft9.demo.service.api.system.TpDemocraticSubtitleContentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,9 +13,9 @@ import java.util.List;
 @Service
 @Slf4j
 @Transactional
-public class SubtitleContentServiceimpl implements SubtitleContentService {
+public class TpDemocraticSubtitleContentServiceimpl implements TpDemocraticSubtitleContentService {
     @Autowired
-    SubtitleContentMapper DAO;
+    TpDemocraticSubtitleContentMapper DAO;
     public List<TpSubtitleContent> findBybigTitleId(int bigTitleId) {
         return DAO.findBybigTitleId(bigTitleId);
     }

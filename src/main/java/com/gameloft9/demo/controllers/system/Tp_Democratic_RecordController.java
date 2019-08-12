@@ -7,8 +7,6 @@ import com.gameloft9.demo.mgrframework.beans.response.IResult;
 import com.gameloft9.demo.mgrframework.beans.response.PageResultBean;
 import com.gameloft9.demo.mgrframework.beans.response.ResultBean;
 import com.gameloft9.demo.service.api.system.*;
-import com.gameloft9.demo.service.impl.system.Tp_Democratic_RecordServiceimpl;
-import com.gameloft9.demo.service.impl.system.VerfiCationServiceimpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,19 +25,19 @@ public class Tp_Democratic_RecordController {
     @Autowired
     Tp_Democratic_RecordService tp_Democratic_RecordServiceimpl;
     @Autowired
-    staandrdtService staandrdtServiceimpl;
+    TpDemocraticstaandrdtService tpDemocraticstaandrdtServiceimpl;
     @Autowired
-    substaandrdtService substaandrdServiceimpl;
+    TpDemocraticsubstaandrdtService substaandrdServiceimpl;
     @Autowired
     TpBigtitleService tpBigtitleServiceimpl;
     @Autowired
-    SubtitleContentService subtitleContentServiceimpl;
+    TpDemocraticSubtitleContentService tpDemocraticSubtitleContentServiceimpl;
     @Autowired
     TprelationshipService tprelationshipServiceimpl;
     @Autowired
     TpphotoUserService tpphotoUserServiceimpl;
     @Autowired
-    VerfiCationService verfiCationServiceimpl;
+    TpDemocraticVerfiCationService tpDemocraticVerfiCationServiceimpl;
 //    @RequestMapping(value = "/list.do",method = RequestMethod.POST)
 //    @ResponseBody
 //    public IResult findAll(){
@@ -92,7 +90,7 @@ public class Tp_Democratic_RecordController {
         List<String> coll = big.getColl();
         for (String coll1 : coll) {
             Tp_Democratic_Verification tp_democratic_verification = new Tp_Democratic_Verification(coll1,record.getRecordId(),"未投票",74);
-            verfiCationServiceimpl.addVerification(tp_democratic_verification);
+            tpDemocraticVerfiCationServiceimpl.addVerification(tp_democratic_verification);
         }
 
         return new ResultBean<String>("success");
@@ -106,16 +104,16 @@ public class Tp_Democratic_RecordController {
     public IResult delete(Integer recordId){
         //返回json至前端的均返回ResultBean或者PageResultBean
         int bigTitleId = tp_Democratic_RecordServiceimpl.selectByrecId(recordId);
-        List<TpSubtitleContent> tpSubtitleContent = subtitleContentServiceimpl.findBybigTitleId(bigTitleId);
+        List<TpSubtitleContent> tpSubtitleContent = tpDemocraticSubtitleContentServiceimpl.findBybigTitleId(bigTitleId);
         for (TpSubtitleContent subtitleContent : tpSubtitleContent) {
-            List<TpStandard> tpStandard = staandrdtServiceimpl.findBysubtitleId(subtitleContent.getSubtitleId());
+            List<TpStandard> tpStandard = tpDemocraticstaandrdtServiceimpl.findBysubtitleId(subtitleContent.getSubtitleId());
             for (TpStandard standard : tpStandard) {
                 substaandrdServiceimpl.delete(standard.getStandardId());
             }
             tprelationshipServiceimpl.delete(subtitleContent.getSubtitleId());
-            staandrdtServiceimpl.delete(subtitleContent.getSubtitleId());
+            tpDemocraticstaandrdtServiceimpl.delete(subtitleContent.getSubtitleId());
         }
-        subtitleContentServiceimpl.delete(bigTitleId);
+        tpDemocraticSubtitleContentServiceimpl.delete(bigTitleId);
         tp_Democratic_RecordServiceimpl.delete(recordId);
         tpBigtitleServiceimpl.delete(bigTitleId);
 
@@ -150,9 +148,9 @@ public class Tp_Democratic_RecordController {
     @BizOperLog(operType = OperType.DELETE,memo = "查看")
     public IResult chakan(Integer recordId){
         int bigTitleId = tp_Democratic_RecordServiceimpl.selectByrecId(recordId);
-        List<TpSubtitleContent> tpSubtitleContent = subtitleContentServiceimpl.findBybigTitleId(bigTitleId);
+        List<TpSubtitleContent> tpSubtitleContent = tpDemocraticSubtitleContentServiceimpl.findBybigTitleId(bigTitleId);
         for (TpSubtitleContent subtitleContent : tpSubtitleContent) {//根据标准的外键遍历子标题中的list
-            List<TpStandard> tpStandard = staandrdtServiceimpl.findBysubtitleId(subtitleContent.getSubtitleId());
+            List<TpStandard> tpStandard = tpDemocraticstaandrdtServiceimpl.findBysubtitleId(subtitleContent.getSubtitleId());
             List<Tprelationship> tprelationship = tprelationshipServiceimpl.findBysId(subtitleContent.getSubtitleId());
             //查看人员id
             for (Tprelationship tprelationship1 : tprelationship) {
@@ -187,7 +185,7 @@ public class Tp_Democratic_RecordController {
         for (TpSubtitleid subtitleid : tpSubtitleid) {
             tp_Democratic_RecordServiceimpl.insertpralationsub(subtitleid);
             String content =  subtitleid.getContent();
-            verfiCationServiceimpl.delete(content);
+            tpDemocraticVerfiCationServiceimpl.delete(content);
         }
 
 
@@ -201,7 +199,7 @@ public class Tp_Democratic_RecordController {
     @BizOperLog(operType = OperType.DELETE,memo = "校验")
     public IResult jiaoyan(@RequestBody Tp_Democratic_Verification tp_democratic_verification){
         String content = tp_democratic_verification.getContent();
-        Tp_Democratic_Verification ver = verfiCationServiceimpl.findbycontent(content);
+        Tp_Democratic_Verification ver = tpDemocraticVerfiCationServiceimpl.findbycontent(content);
         if(ver==null){//判断数据库是否有这个账号
             return new ResultBean<Boolean >(false);
         }

@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Data
-public class Template implements Serializable {
+public class TpDemocraticTemplate implements Serializable {
 
    private int templateId;
    private int bigTitleId;
@@ -16,12 +16,12 @@ public class Template implements Serializable {
    private Date generateDate;
    private String id;
 
-   public Template(int bigTitleId, Date generateDate, String id) {
+   public TpDemocraticTemplate(int bigTitleId, Date generateDate, String id) {
       this.bigTitleId = bigTitleId;
       this.generateDate = generateDate;
       this.id = id;
    }
-   public Template() {
+   public TpDemocraticTemplate() {
    }
 
 

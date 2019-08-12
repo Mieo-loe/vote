@@ -1,8 +1,8 @@
 package com.gameloft9.demo.service.impl.system;
 
-import com.gameloft9.demo.dataaccess.dao.system.TemplateMapper;
+import com.gameloft9.demo.dataaccess.dao.system.TpDemocraticTemplateMapper;
 import com.gameloft9.demo.dataaccess.model.system.*;
-import com.gameloft9.demo.service.api.system.TemplateService;
+import com.gameloft9.demo.service.api.system.TpDemocraticTemplateService;
 import com.gameloft9.demo.service.beans.system.PageRange;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +14,11 @@ import java.util.List;
 @Service
 @Slf4j
 @Transactional
-public class TemplateServiceimpl implements TemplateService {
+public class TpDemocraticTemplateServiceimpl implements TpDemocraticTemplateService {
     @Autowired
-    TemplateMapper dao;
+    TpDemocraticTemplateMapper dao;
 
-    public List<Template> alltemp(String page, String limit) {
+    public List<TpDemocraticTemplate> alltemp(String page, String limit) {
         PageRange pageRange = new PageRange(page, limit);
         return dao.alltemp(pageRange.getStart(), pageRange.getEnd());
     }
@@ -55,8 +55,8 @@ public class TemplateServiceimpl implements TemplateService {
         return substandardId;
     }
 
-    public int inserttem(Template template) {
-        int templateId = dao.inserttem(template);
+    public int inserttem(TpDemocraticTemplate tpDemocraticTemplate) {
+        int templateId = dao.inserttem(tpDemocraticTemplate);
         return templateId;
     }
 

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TpBigtitleMapper {
+public interface TpDemocraticTpBigtitleMapper {
 //    int insertbig(TpBigtitle big);
 //    int intsersubtitle(TpSubtitleContent subtitle);
 //    int intserstandard(TpStandard stanard);

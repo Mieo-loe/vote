@@ -1,8 +1,8 @@
 package com.gameloft9.demo.service.impl.system;
 
-import com.gameloft9.demo.dataaccess.dao.system.staandrdtMapper;
+import com.gameloft9.demo.dataaccess.dao.system.TpDemocraticstaandrdtMapper;
 import com.gameloft9.demo.dataaccess.model.system.TpStandard;
-import com.gameloft9.demo.service.api.system.staandrdtService;
+import com.gameloft9.demo.service.api.system.TpDemocraticstaandrdtService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,9 +13,9 @@ import java.util.List;
 @Service
 @Slf4j
 @Transactional
-public class StaandrdServiceimpl implements staandrdtService {
+public class TpDemocraticStaandrdServiceimpl implements TpDemocraticstaandrdtService {
     @Autowired
-    staandrdtMapper dao;
+    TpDemocraticstaandrdtMapper dao;
     public List<TpStandard> findBysubtitleId(int subtitleId) {
         return dao.findBysubtitleId(subtitleId);
     }

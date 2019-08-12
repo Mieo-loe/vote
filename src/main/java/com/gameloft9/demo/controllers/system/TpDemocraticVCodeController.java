@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Controller
 @Slf4j
-public class VCodeController {
+public class TpDemocraticVCodeController {
 
     @Autowired
     VCodeService vCodeServiceImpl;

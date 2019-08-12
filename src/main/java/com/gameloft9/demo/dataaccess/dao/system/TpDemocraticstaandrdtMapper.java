@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface staandrdtMapper {
+public interface TpDemocraticstaandrdtMapper {
     List<TpStandard> findBysubtitleId(int subtitleId);
     List<TpStandard> findBysubtitleId1(int subtitleId);
     int delete(int subtitleId);

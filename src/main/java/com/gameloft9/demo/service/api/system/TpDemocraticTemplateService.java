@@ -5,8 +5,8 @@ import com.gameloft9.demo.dataaccess.model.system.*;
 
 import java.util.List;
 
-public interface TemplateService {
-    List<Template> alltemp(String page, String limit);
+public interface TpDemocraticTemplateService {
+    List<TpDemocraticTemplate> alltemp(String page, String limit);
 
     /**
      * 获取所有角色个数
@@ -21,7 +21,7 @@ public interface TemplateService {
     int addsubtitle(TpSubtitleContent subtitle);
     int addstandard(TpStandard standard);
     int addsubstandard(TpSubstandard substandard);
-    int inserttem(Template template);
+    int inserttem(TpDemocraticTemplate tpDemocraticTemplate);
     int insertpralation(Tprelationship tprelationship);
 
     int qxzd(String templateTitleId);

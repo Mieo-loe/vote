@@ -6,8 +6,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface TemplateMapper {
-    List< Template> alltemp(
+public interface TpDemocraticTemplateMapper {
+    List<TpDemocraticTemplate> alltemp(
             @Param("start") int start,
             @Param("end") int end);
 
@@ -25,7 +25,7 @@ public interface TemplateMapper {
     int intsersubtitle(TpSubtitleContent subtitle);
     int intserstandard(TpStandard stanard);
     int intsersubstandard(TpSubstandard substanard);
-    int inserttem(Template template);
+    int inserttem(TpDemocraticTemplate tpDemocraticTemplate);
     //查看人员
     int insertpralation(Tprelationship tprelationship);
     //是否置顶

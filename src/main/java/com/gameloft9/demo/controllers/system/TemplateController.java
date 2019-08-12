@@ -23,15 +23,15 @@ import java.util.List;
 @RequestMapping("/temp")
 public class TemplateController {
     @Autowired
-    TemplateService TemplateServiceimpl;
+    TpDemocraticTemplateService tpDemocraticTemplateServiceimpl;
    @Autowired
-   staandrdtService  staandrdtServiceimpl;
+   TpDemocraticstaandrdtService tpDemocraticstaandrdtServiceimpl;
     @Autowired
-    substaandrdtService substaandrdServiceimpl;
+    TpDemocraticsubstaandrdtService substaandrdServiceimpl;
     @Autowired
     TpBigtitleService tpBigtitleServiceimpl;
     @Autowired
-    SubtitleContentService subtitleContentServiceimpl;
+    TpDemocraticSubtitleContentService tpDemocraticSubtitleContentServiceimpl;
     @Autowired
     TprelationshipService tprelationshipServiceimpl;
     @Autowired
@@ -42,8 +42,8 @@ public class TemplateController {
     @ResponseBody
     public IResult alltemp(String page, String limit) {
         //返回json至前端的均返回ResultBean或者PageResultBean
-        List<Template> data = TemplateServiceimpl.alltemp(page, limit);
-        return new ResultBean<Collection<Template>>(data);
+        List<TpDemocraticTemplate> data = tpDemocraticTemplateServiceimpl.alltemp(page, limit);
+        return new ResultBean<Collection<TpDemocraticTemplate>>(data);
     }
 
     @RequestMapping(value = "/add.do", method = RequestMethod.POST)
@@ -51,28 +51,28 @@ public class TemplateController {
     @BizOperLog(operType = OperType.ADD, memo = "添加模板")
     public IResult addbig(@RequestBody TpBigtitle big) {
         //返回json至前端的均返回ResultBean或者PageResultBean
-        int bigTitleId = TemplateServiceimpl.addbig(big);//添加单表大标题
+        int bigTitleId = tpDemocraticTemplateServiceimpl.addbig(big);//添加单表大标题
         for (TpSubtitleContent tpSubtitleContent : big.getList()) {//取list里面值 子标题
             tpSubtitleContent.setBigTitleId(big.getBigTitleId());//取id
-            TemplateServiceimpl.addsubtitle(tpSubtitleContent);
+            tpDemocraticTemplateServiceimpl.addsubtitle(tpSubtitleContent);
             //获取uid
             for (Tprelationship tprelationship:tpSubtitleContent.getBeice()){
                 tprelationship.setSubtitleId( tpSubtitleContent.getSubtitleId());
-                TemplateServiceimpl.insertpralation(tprelationship);
+                tpDemocraticTemplateServiceimpl.insertpralation(tprelationship);
             }
             for (TpStandard tpStandard : tpSubtitleContent.getBz_coll()) {//标准
                 tpStandard.setSubtitleId(tpSubtitleContent.getSubtitleId());
-                TemplateServiceimpl.addstandard(tpStandard);
+                tpDemocraticTemplateServiceimpl.addstandard(tpStandard);
                 for (TpSubstandard tpSubstandard : tpStandard.getZbz_coll()) {//子标准
                     tpSubstandard.setStandardId(tpStandard.getStandardId());
-                    TemplateServiceimpl.addsubstandard(tpSubstandard);
+                    tpDemocraticTemplateServiceimpl.addsubstandard(tpSubstandard);
                 }
             }
         }
         Date date = new Date();//获取时间
-        Template template = new Template(big.getBigTitleId(),date,"52");//添加并将数据库中INT类型转成String
-        template.setTemplateTitleId(big.getTemplateTitleId());
-        TemplateServiceimpl.inserttem(template);
+        TpDemocraticTemplate tpDemocraticTemplate = new TpDemocraticTemplate(big.getBigTitleId(),date,"52");//添加并将数据库中INT类型转成String
+        tpDemocraticTemplate.setTemplateTitleId(big.getTemplateTitleId());
+        tpDemocraticTemplateServiceimpl.inserttem(tpDemocraticTemplate);
         return new ResultBean<String>("success");
     }
     @RequestMapping(value = "/qxzd.do",method = RequestMethod.POST)
@@ -80,32 +80,32 @@ public class TemplateController {
     @BizOperLog(operType = OperType.UPDATE,memo = "取消置顶")
     public IResult qxzdRe(String templateTitleId){
         //返回json至前端的均返回ResultBean或者PageResultBean
-        return new ResultBean<Integer>(TemplateServiceimpl.qxzd(templateTitleId));
+        return new ResultBean<Integer>(tpDemocraticTemplateServiceimpl.qxzd(templateTitleId));
     }
     @RequestMapping(value = "/zd.do",method = RequestMethod.POST)
     @ResponseBody
     @BizOperLog(operType = OperType.UPDATE,memo = "置顶")
     public IResult zdRe(String templateTitleId){
         //返回json至前端的均返回ResultBean或者PageResultBean
-        return new ResultBean<Integer>(TemplateServiceimpl.zd(templateTitleId));
+        return new ResultBean<Integer>(tpDemocraticTemplateServiceimpl.zd(templateTitleId));
     }
     @RequestMapping(value = "/delete.do", method = RequestMethod.POST)
     @ResponseBody
     @BizOperLog(operType = OperType.ADD, memo = "s删除模块")
     public IResult deletebig(int templateId) {
         //返回json至前端的均返回ResultBean或者PageResultBean
-        int bigTitleId = TemplateServiceimpl.selectById(templateId);
-        List<TpSubtitleContent> tpSubtitleContent = subtitleContentServiceimpl.findBybigTitleId(bigTitleId);
+        int bigTitleId = tpDemocraticTemplateServiceimpl.selectById(templateId);
+        List<TpSubtitleContent> tpSubtitleContent = tpDemocraticSubtitleContentServiceimpl.findBybigTitleId(bigTitleId);
         for (TpSubtitleContent subtitleContent : tpSubtitleContent) {
-            List<TpStandard> tpStandard = staandrdtServiceimpl.findBysubtitleId(subtitleContent.getSubtitleId());
+            List<TpStandard> tpStandard = tpDemocraticstaandrdtServiceimpl.findBysubtitleId(subtitleContent.getSubtitleId());
             for (TpStandard standard : tpStandard) {
                 substaandrdServiceimpl.delete(standard.getStandardId());
             }
             tprelationshipServiceimpl.delete(subtitleContent.getSubtitleId());
-            staandrdtServiceimpl.delete(subtitleContent.getSubtitleId());
+            tpDemocraticstaandrdtServiceimpl.delete(subtitleContent.getSubtitleId());
         }
-        subtitleContentServiceimpl.delete(bigTitleId);
-        TemplateServiceimpl.delete(templateId);
+        tpDemocraticSubtitleContentServiceimpl.delete(bigTitleId);
+        tpDemocraticTemplateServiceimpl.delete(templateId);
         tpBigtitleServiceimpl.delete(bigTitleId);
 
         return new ResultBean<String>("success");
@@ -117,11 +117,11 @@ public class TemplateController {
     @ResponseBody
     public IResult getRe(Integer templateId){
         //返回json至前端的均返回ResultBean或者PageResultBean
-        int bigTitleId = TemplateServiceimpl.selectById(templateId);//根据主键获取大标题表的外键
+        int bigTitleId = tpDemocraticTemplateServiceimpl.selectById(templateId);//根据主键获取大标题表的外键
 
-        List<TpSubtitleContent> tpSubtitleContent = subtitleContentServiceimpl.findBybigTitleId1(bigTitleId);//根据子标题外键查询子标题内容
+        List<TpSubtitleContent> tpSubtitleContent = tpDemocraticSubtitleContentServiceimpl.findBybigTitleId1(bigTitleId);//根据子标题外键查询子标题内容
         for (TpSubtitleContent subtitleContent : tpSubtitleContent) {//根据标准的外键遍历子标题中的list
-            List<TpStandard> tpStandard = staandrdtServiceimpl.findBysubtitleId1(subtitleContent.getSubtitleId());
+            List<TpStandard> tpStandard = tpDemocraticstaandrdtServiceimpl.findBysubtitleId1(subtitleContent.getSubtitleId());
             List<Tprelationship> tprelationship = tprelationshipServiceimpl.findBysId(subtitleContent.getSubtitleId());
             //查看人员id
             for (Tprelationship tprelationship1 : tprelationship) {
