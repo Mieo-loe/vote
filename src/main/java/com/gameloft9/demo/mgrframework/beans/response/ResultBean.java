@@ -1,9 +1,11 @@
 package com.gameloft9.demo.mgrframework.beans.response;
 
+import com.gameloft9.demo.dataaccess.model.system.Tp_Democratic_Record;
 import com.gameloft9.demo.mgrframework.beans.error.IErrCode;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 普通返回统一封装
