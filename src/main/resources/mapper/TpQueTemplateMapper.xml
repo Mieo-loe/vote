@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper映射-->
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.system.TpQueTemplateMapper">
+    <resultMap id="TemplateResultMap" type="com.gameloft9.demo.dataaccess.model.system.TpQueTemplate">
+        <id column="tid" property="tid" jdbcType="INTEGER"/>
+        <result column="cid" property="cid" jdbcType="INTEGER"/>
+        <result column="templateTitle" property="templateTitle" jdbcType="VARCHAR"/>
+        <result column="createTime" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="isTop" property="isTop" jdbcType="INTEGER"/>
+    </resultMap>
+    <resultMap id="CreatingResultMap" type="com.gameloft9.demo.dataaccess.model.system.TpQueCreating">
+        <id column="cid" property="cid" jdbcType="INTEGER"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="explain" property="explain" jdbcType="VARCHAR"/>
+        <result column="manNum" property="manNum" jdbcType="INTEGER"/>
+    </resultMap>
+    <resultMap id="subjectMap" type="com.gameloft9.demo.dataaccess.model.system.TpQueSubject">
+        <id column="sid" property="sid" jdbcType="INTEGER"/>
+        <result column="question" property="question" jdbcType="VARCHAR"/>
+        <result column="oid" property="oid" jdbcType="INTEGER"/>
+        <result column="option" property="option" jdbcType="VARCHAR"/>
+    </resultMap>
+    <resultMap id="optionMap" type="com.gameloft9.demo.dataaccess.model.system.TpQueOption">
+        <id column="oid" property="oid" jdbcType="INTEGER"/>
+        <result column="sid" property="sid" jdbcType="INTEGER"/>
+        <result column="options" property="options" jdbcType="VARCHAR"/>
+    </resultMap>
+    <!--查询全部-->
+    <select id="findAll5" resultMap="TemplateResultMap">
+        SELECT tqt.templateTitle,tqt.createTime,res.resName isTop,tqt.tid,tqt.isTop cid
+        FROM tp_questionnaire_template AS tqt,
+             tp_questionnaire_creating AS tqc,
+             tp_resourcelist AS res
+        WHERE tqt.cid=tqc.cid
+        and tqt.`isTop`=res.id
+        order by cid,createTime desc
+        limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
+    </select>
+    <!--统计数据条数-->
+    <select id="getCount5" resultType="Integer" parameterType="map">
+        SELECT count(1)
+        FROM tp_questionnaire_template
+        WHERE 1=1
+        <if test="tid !=null and tid != ''">
+            and
+            tid = #{tid, jdbcType=VARCHAR}
+        </if>
+    </select>
+    <!--添加-->
+    <insert id="add6_1" parameterType="java.lang.String">
+        INSERT INTO tp_questionnaire_template(cid,templateTitle,createTime,isTop)
+        VALUES (#{cid},#{templateTitle},#{createTime},#{isTop})
+    </insert>
+
+    <!--修改-->
+    <update id="update5" parameterType="com.gameloft9.demo.dataaccess.model.system.TpQueTemplate">
+        UPDATE tp_questionnaire_template
+        SET isTop=52
+        WHERE tid = #{tid, jdbcType=VARCHAR}
+    </update>
+    <update id="update5_1" parameterType="com.gameloft9.demo.dataaccess.model.system.TpQueTemplate">
+        UPDATE tp_questionnaire_template
+        SET isTop=53
+        WHERE tid = #{tid, jdbcType=VARCHAR}
+    </update>
+
+    <!--根据Id查询表单数据-->
+    <select id="getForm" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT tqt.cid
+        FROM tp_questionnaire_template as tqt
+        WHERE tqt.tid=#{tid}
+    </select>
+    <select id="getForm4" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT tqi.history cid
+        FROM tp_questionnaire_investigation as tqi
+        WHERE tqi.qid=#{qid}
+    </select>
+    <select id="getForm1" parameterType="java.lang.String" resultMap="CreatingResultMap">
+        SELECT tqc.title,tqc.`explain`,tqc.manNum
+        FROM tp_questionnaire_creating as tqc
+        WHERE tqc.cid=#{cid}
+    </select>
+    <select id="getForm2" parameterType="java.lang.String" resultMap="subjectMap">
+        SELECT tqs.question,tqs.`option`,tqs.sid
+        FROM tp_questionnaire_subject as tqs,
+        tp_questionnaire_creating as tqc
+        WHERE tqs.oid=tqc.cid
+        and tqs.oid=#{cid}
+    </select>
+    <select id="getForm3" parameterType="java.lang.String" resultMap="optionMap">
+        SELECT tqo.`options`,tqo.oid
+        FROM tp_questionnaire_option as tqo
+        WHERE tqo.sid=#{sid}
+    </select>
+    <select id="totalOption" parameterType="java.lang.String" resultType="java.lang.String">
+        SELECT count(1)
+        FROM tp_questionnaire_total
+        where oid=#{oid}
+    </select>
+</mapper>

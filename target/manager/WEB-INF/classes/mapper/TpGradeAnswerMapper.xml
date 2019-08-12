@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.system.TpGradeAnswerMapper">
+
+    <resultMap id="BaseResultMap" type="com.gameloft9.demo.dataaccess.model.system.TpGradeAnswer">
+        <id column="answer_Id" property="answer_Id" jdbcType="INTEGER"/>
+        <result column="resId" property="resId" jdbcType="INTEGER"/>
+        <result column="rubric_Id" property="rubric_Id" jdbcType="INTEGER"/>
+        <result column="price" property="price" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+
+        answer_Id, resId, rubric_Id, price
+
+    </sql>
+
+    <select id="findPrice" resultType="String">
+        select
+        price
+        from tp_grade_answer
+        where
+        rubric_Id = #{rubric_Id}
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from tp_grade_answer
+        where rubric_Id = #{rubric_Id}
+    </delete>
+
+    <select id="findAnsId" resultType="java.lang.Integer">
+        select
+        answer_Id
+        from tp_grade_answer
+        where
+        rubric_Id = #{rubric_Id}
+    </select>
+
+    <select id="getPrice" resultType="String">
+        select
+        price
+        from tp_grade_answer
+        where
+        answer_Id = #{answer_Id}
+    </select>
+
+</mapper>

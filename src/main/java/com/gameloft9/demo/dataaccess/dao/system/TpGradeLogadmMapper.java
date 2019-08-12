@@ -1,12 +1,9 @@
 package com.gameloft9.demo.dataaccess.dao.system;
 
-import com.gameloft9.demo.dataaccess.model.system.SysOperLogTest;
 import com.gameloft9.demo.dataaccess.model.system.TpGradeLogadm;
 import com.gameloft9.demo.dataaccess.model.system.TpResourcesList;
 import org.apache.ibatis.annotations.Param;
-import schemasMicrosoftComVml.STTrueFalse;
 
-import java.util.Date;
 import java.util.List;
 
 public interface TpGradeLogadmMapper {
