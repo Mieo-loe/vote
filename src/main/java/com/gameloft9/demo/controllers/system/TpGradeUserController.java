@@ -1,7 +1,7 @@
 package com.gameloft9.demo.controllers.system;
 
 import com.gameloft9.demo.dataaccess.model.system.TpGradeUser;
-import com.gameloft9.demo.dataaccess.model.system.TpPhotoUser;
+import com.gameloft9.demo.dataaccess.model.system.TpGradePhotoUser;
 import com.gameloft9.demo.dataaccess.model.system.TpResourcesList;
 import com.gameloft9.demo.mgrframework.annotation.BizOperLog;
 import com.gameloft9.demo.mgrframework.beans.constant.OperType;
@@ -77,9 +77,9 @@ public class TpGradeUserController {
     @ResponseBody
     public IResult getUid(){
 
-        List<TpPhotoUser> uid = tpGradeUserService.getUid();
+        List<TpGradePhotoUser> uid = tpGradeUserService.getUid();
 
-        return new ResultBean<Collection<TpPhotoUser>>(uid);
+        return new ResultBean<Collection<TpGradePhotoUser>>(uid);
     }
 
     @RequestMapping(value = "/getposition.do",method = RequestMethod.POST)
@@ -129,5 +129,5 @@ public class TpGradeUserController {
 
         return new ResultBean<String>("success");
     }
-    
+
 }
