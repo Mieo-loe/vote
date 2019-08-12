@@ -38,10 +38,8 @@ layui.config({
             if (datalog.length > 0) {
                 var html = '';
                 for (var i = 0; i < datalog.length; i++) {
-                    html += '<option value="' + datalog[i].resNum + '">' + datalog[i].resNum + '</option>>';
+                    html += '<option value="' + datalog[i].resNum + '">' + datalog[i].resNum +"："+ datalog[i].resName + '</option>>';
                     resKind = datalog[i].resKind;
-                    // resName = data[i].resName;
-                    // $("#resName").val(data[i].resName);
                 }
                 $('#uid').append($(html));
                 form.render();

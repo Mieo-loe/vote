@@ -172,7 +172,6 @@ public class TpGradeTempletServiceImpl implements TpGradeTempletService {
         return true;
     }
 
-    @Override
     public boolean delzh(String content) {
         return tpDemVerificationMapper.delzh(content);
     }

@@ -285,12 +285,9 @@ layui.define(['$tool','jquery'], function (exports) {
         },
         UpdateUserInfo:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'personCenter/update.do',req,config,successCallback,errorCallback);
-<<<<<<< HEAD
-=======
         },
         DaoChu:function(req,successCallback,errorCallback){
             doPost($tool.getContext()+'poi/daochu.do',req,successCallback,errorCallback);
->>>>>>> group3
         }
     };
 

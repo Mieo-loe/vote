@@ -8,6 +8,742 @@
   <component name="ChangeListManager">
     <list default="true" id="5031d80b-5c1f-4bb6-9f75-57bd9789e1f7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/AccountController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/CreatingQueController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/FrameworkController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/InvestigationQueController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TemplateQueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TemplateQueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/AccountMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/CreatingQueMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/FrameworkMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/InvestigationQueMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TemplateQueMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/CreatingQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/FrameworkQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/InvestigationQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/OptionQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/OrgNodeResponseQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/ResourcelistQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/SubjectQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TemplateQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TotalQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/VerificationQue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/CreatingQueService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/FrameworkService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/InvestigationQueService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TemplateQueService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueAccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/AccountServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/CreatingQueServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/FrameworkServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/InvestigationQueServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TemplateQueServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpGradeTempletServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpGradeTempletServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueAccountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueCreatingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueCreatingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueInvestigationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueInvestigationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueTemplateServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueTemplateServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AccountMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CreatingQueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/FrameworkMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/InvestigationQueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TemplateQueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/layui-admin.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/AccountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/CreatingQueController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/FrameworkController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/InvestigationQueController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/PersonCenterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/SysLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/SysMenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/SysOrgController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/SysRoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/SysUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/TemplateQueController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/UploadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/VCodeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/AccountMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/CreatingQueMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/FrameworkMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/InvestigationQueMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/SysAccessPermissionTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/SysMenuRoleTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/SysMenuTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/SysOperLogTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/SysOrganizeTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/SysRoleTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/SysUserRoleTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/TemplateQueMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/Tp_Grade_AdmMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/interceptor/DialectStatementHandlerInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/CreatingQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/FrameworkQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/InvestigationQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/OptionQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/OrgNodeResponseQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/ResourcelistQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/SubjectQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/SysAccessPermissionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/SysMenuRoleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/SysMenuTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/SysOperLogTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/SysOrganizeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/SysRoleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/SysUserRoleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/TemplateQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/TotalQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/Tp_Grade_Adm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/UserTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/model/system/VerificationQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/annotation/BizOperLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/aop/ControllerAOP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/beans/constant/OperType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/beans/error/IErrCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/beans/modelview/ModelView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/beans/response/AbstractResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/beans/response/IResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/beans/response/PageResultBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/beans/response/ResultBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/exceptions/BizException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/exceptions/CheckException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/exceptions/UnloginException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/filters/UserFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/handler/ExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/utils/CheckUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/utils/IPUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/utils/ModelUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/mgrframework/utils/UserInfoUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/security/RoleOrAuthorizationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/security/ShiroConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/security/ShiroConfigService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/security/ShiroRealm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/CreatingQueService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/FrameworkService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/InvestigationQueService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/SysAccessPermissionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/SysMenuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/SysOperLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/SysOrgService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/SysRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/SysUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/TemplateQueService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/VCodeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/LogBatchDelRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/LoginResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/MenuTreeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/MenuUpdateRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/OrgNodeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/PageRange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/SysMenuTestExtend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/SysUserResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/UserAddRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/beans/system/UserUpdateRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/AccountServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/CreatingQueServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/FrameworkServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/InvestigationQueServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/LoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/SysAccessPermissionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/SysMenuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/SysOperLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/SysOrgServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/SysRoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/SysUserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/TemplateQueServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/VCodeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/Constants$AttachmentType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/Constants$MenuIcon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/Constants$MenuType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/Constants$OrgCodeRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/DateUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/NumberUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/PasswordUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/PropertyUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/SHA1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/ShiroFilterSortUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/SpringContextUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/UUIDUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/utils/VCodeUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/AccountMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CreatingQueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/FrameworkMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/InvestigationQueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TemplateQueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TpGradeUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/Tp_Grade_AdmMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/TradeOrder.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/META-INF/layui-admin.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/applicationContext-datasource.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/applicationContext-profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/applicationContext-security.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/applicationContext-springmvc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/AccountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/CreatingQueController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/FrameworkController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/InvestigationQueController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/PersonCenterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/SysLogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/SysMenuController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/SysOrgController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/SysRoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/SysUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TemplateQueController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradeLogadmController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradePOIController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradeRecordController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradeTempletController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradeUserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueAccountController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueCreatingController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueFrameworkController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueInvestigationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueTemplateController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/Tp_Grade_AdmController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/UploadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/VCodeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/AccountMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/CreatingQueMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/FrameworkMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/InvestigationQueMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/SysAccessPermissionTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/SysMenuRoleTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/SysMenuTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/SysOperLogTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/SysOrganizeTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/SysRoleTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/SysUserRoleTestMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TemplateQueMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpDemVerificationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeAdmMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeAnswerMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeEvaluatMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeLogadmMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeRecordMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeRubricMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeStatisticsMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeTempletMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeUserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueAccountMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueCreatingMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueFrameworkMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueInvestigationMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueTemplateMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/Tp_Grade_AdmMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/interceptor/DialectStatementHandlerInterceptor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/CreatingQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/FrameworkQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/InvestigationQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/OptionQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/OrgNodeResponseQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/ResourcelistQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/SubjectQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/SysAccessPermissionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/SysMenuRoleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/SysMenuTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/SysOperLogTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/SysOrganizeTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/SysRoleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/SysUserRoleTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TemplateQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TotalQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpDemVerification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeAdm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeAnswer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeEvaluat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeLogadm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeRubric.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeStatistics.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeTemplet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGraderecord.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpPhotoUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueCreating.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueFramework.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueInvestigation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueOption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueOrgNodeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueResourcelist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueSubject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueTemplate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueTotal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueVerification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpResourcesList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/Tp_Grade_Adm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/UserTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/VerificationQue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/annotation/BizOperLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/aop/ControllerAOP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/beans/constant/OperType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/beans/error/IErrCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/beans/modelview/ModelView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/beans/response/AbstractResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/beans/response/IResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/beans/response/PageResultBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/beans/response/ResultBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/exceptions/BizException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/exceptions/CheckException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/exceptions/UnloginException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/filters/UserFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/handler/ExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/utils/CheckUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/utils/IPUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/utils/ModelUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/utils/UserInfoUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/security/RoleOrAuthorizationFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/security/ShiroConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/security/ShiroConfigService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/security/ShiroRealm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/AccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/CreatingQueService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/FrameworkService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/InvestigationQueService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/LogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/SysAccessPermissionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/SysMenuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/SysOperLogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/SysOrgService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/SysRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/SysUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TemplateQueService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeAnswerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeEvaluatService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeLogadmService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeRecordService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeRubricService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeStatisticsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeTempletService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeUserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueAccountService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueCreatingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueFrameworkService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueInvestigationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueTemplateService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/Tp_Grade_AdmService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/VCodeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/GradeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/LogBatchDelRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/LoginResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/MenuTreeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/MenuUpdateRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/OrgNodeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/PageRange.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/SysMenuTestExtend.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/SysUserResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradeMuBan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradePingCe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradePingCeList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradeTongJi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradeUserTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradeUserTest2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/UserAddRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/UserUpdateRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/AccountServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/CreatingQueServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/FrameworkServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/InvestigationQueServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/LogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/LoginServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/SysAccessPermissionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/SysMenuServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/SysOperLogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/SysOrgServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/SysRoleServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/SysUserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TemplateQueServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeAnswerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeEvaluatServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeLogadmServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeRecordServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeRubricServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeStatisticsServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeTempletServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeUserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueAccountServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueCreatingServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueFrameworkServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueInvestigationServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueTemplateServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/Tp_Grade_AdmServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/VCodeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/Constants$AttachmentType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/Constants$MenuIcon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/Constants$MenuType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/Constants$OrgCodeRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/DateUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/ExcelUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/NumberUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/PasswordUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/PropertyUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/SHA1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/ShiroFilterSortUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/SpringContextUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/UUIDUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/VCodeUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/config/config_.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/config/config_uat.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/AccountMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/CreatingQueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/FrameworkMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/InvestigationQueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/SysAccessPermissionTestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/SysMenuRoleTestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/SysMenuTestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/SysOperLogTestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/SysOrganizeTestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/SysRoleTestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/SysUserRoleTestMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TemplateQueMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpDemVerificationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeAdmMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeAnswerMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeEvaluatMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeLogadmMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeRecordMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeRubricMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeStatisticsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeTempletMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueAccountMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueCreatingMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueFrameworkMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueInvestigationMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueTemplateMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/Tp_Grade_AdmMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mybatis-config.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/mysql版本/lauiadmin初始化存储过程.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/mysql版本/layui-admin建表语句mysql版本.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/mysql版本/layuiadmin初始化定时任务.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/oracle版本/初始化存储过程.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/oracle版本/应用日志表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/oracle版本/用户表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/oracle版本/用户角色表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/oracle版本/组织机构表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/oracle版本/菜单表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/oracle版本/菜单角色表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/oracle版本/角色表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/sql/oracle版本/访问权限表.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/aspectjweaver-1.8.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/classmate-1.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-beanutils-1.8.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-codec-1.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-collections-3.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-collections4-4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-compiler-2.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-fileupload-1.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-io-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-lang-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-lang3-3.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/curvesapi-1.04.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/druid-1.0.27.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/ezmorph-1.0.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/hibernate-validator-5.2.4.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/jackson-annotations-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/jackson-core-2.6.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/jackson-databind-2.6.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/janino-2.6.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/javax.servlet-api-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/jboss-logging-3.2.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/json-lib-2.4-jdk15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/jsp-api-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/logback-classic-1.0.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/logback-core-1.0.13.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/lombok-1.12.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/mybatis-3.2.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/mybatis-spring-1.2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/mysql-connector-java-5.1.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/poi-3.17-beta1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/poi-ooxml-3.16-beta1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/poi-ooxml-schemas-3.16-beta1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/shiro-core-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/shiro-spring-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/shiro-web-1.3.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/slf4j-api-1.7.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-aop-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-beans-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-context-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-context-support-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-core-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-expression-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-jdbc-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-jms-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-messaging-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-orm-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-tx-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-web-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/spring-webmvc-4.2.3.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/stax-api-1.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/validation-api-1.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/lib/xmlbeans-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/excel/product.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/.idea/layuicms.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/css/user.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/images/alipay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/images/face.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/images/img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/images/img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/images/img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/images/login_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/images/wxpay.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/js/ajaxExtention.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/js/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/js/bodyTab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/js/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/js/leftNav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/js/tool.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/common/picture/放大镜调查报告.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/dashang.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/filedownload/filedownload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/filedownload/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/jquery-2.2.4/jquery.cookie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/jquery-2.2.4/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/jquery-2.2.4/测试用.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/layui/version.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/lib/sha1/sha1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/401.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/addLogs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/addLogs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/allLogadm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/allLogadm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/editLog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/editLog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DaFenBiaoFB.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DaFenBiaoFB.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DaFenBiaoFB2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DafenBiao.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DafenBiao2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/GradeRecord.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/GradeRecord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/TongJi.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/TongJi.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/TongJi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/addRecord.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/addRecord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/addUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/addUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/findZH.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/findZH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/GradeUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/GradeUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/addUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/addUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/editUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/editUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/addAdm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/addAdm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/editRecord.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/editRecord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/editUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/editUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/grade_Adm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/grade_Adm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/framework/addFramework.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/framework/addFramework.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/framework/allFramework.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/framework/allFramework.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/personCenter/changePwd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/personCenter/changePwd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/personCenter/userInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/personCenter/userInfo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/photo/dagou.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/photo/fdjdcbg.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysLog/allLog.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysLog/allLog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysLog/allLogs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysLog/allLogs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysMenu/addMenu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysMenu/addMenu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysMenu/allMenus.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysMenu/allMenus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysMenu/editMenu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysMenu/editMenu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysOrg/addOrg.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysOrg/addOrg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysOrg/allOrgs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysOrg/allOrgs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysRole/addRole.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysRole/addRole.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysRole/allRoles.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysRole/allRoles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysRole/editRole.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysRole/editRole.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysUser/addUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysUser/addUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysUser/allUsers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysUser/allUsers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysUser/editUser.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysUser/editUser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/account.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/account.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/accountTem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/accountTem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/addTemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/addTemplate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/addWjdc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/addWjdc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/editTemplate.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/editTemplate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/history.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/preview.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/preview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/previewAdd.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/previewAdd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/previewLook.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/previewLook.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/previewTem.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/previewTem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/template.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/total.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/wjdc/total.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,37 +775,62 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueInvestigationController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueTemplateServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
+            <state relative-caret-position="-694">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/GradeLogadm/allLogadm.html">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+            <state relative-caret-position="120">
+              <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueResourcelist.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueAccountServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <state relative-caret-position="163">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+              <folding>
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpQueAccountMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="7" column="40" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TpQueAccountMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpGradePhotoUser.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/common/js/api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="65">
+              <caret line="226" column="10" lean-forward="true" selection-start-line="226" selection-start-column="10" selection-end-line="226" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -78,51 +839,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueAccountService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TpQueFrameworkMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueCreatingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3474#3475#0" expanded="true" />
-                <element signature="e#3560#3561#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueFrameworkServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3150">
-              <caret line="118" column="8" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueCreatingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -139,8 +856,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>widget</find>
-      <find>tid</find>
       <find>row</find>
       <find>getForm</find>
       <find>GetForm</find>
@@ -169,6 +884,8 @@
       <find>getAllQue</find>
       <find>组织机构列表为空</find>
       <find>Base_Column_List</find>
+      <find>findAccount</find>
+      <find>findAccount.do</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -191,13 +908,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/OptionQue.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/TemplateQueMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TemplateQueController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/total.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/previewAdd.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/total.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/accountTem.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/PoiController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/AccountController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/AccountMapper.java" />
@@ -242,6 +952,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/editTemplate.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/addWjdc.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/GradeLogadm/allLogadm.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpGradeTempletServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueCreatingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueInvestigationServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueTemplateServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueAccountServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueAccountService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TemplateQueController.java" />
       </list>
     </option>
   </component>
@@ -287,6 +1004,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -337,7 +1056,7 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="dataaccess" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
@@ -346,8 +1065,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
-              <item name="dataaccess" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -355,31 +1082,20 @@
               <item name="Vote" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
               <item name="Vote" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="layuicms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Vote" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="layuicms" type="462c0819:PsiDirectoryNode" />
-              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -666,7 +1382,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="748243000" />
+    <option name="totallyTimeSpent" value="750856000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -679,8 +1395,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.3494705" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.30559757" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.27458397" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -690,8 +1407,8 @@
       <window_info id="Web" order="7" sideWeight="0.502439" side_tool="true" weight="0.27458397" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.15384616" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.14729951" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48335856" weight="0.19312602" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.3617021" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48335856" weight="0.7806874" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
@@ -701,9 +1418,9 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.25040916" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49924356" visible="true" weight="0.25040916" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49924356" weight="0.25040916" />
       <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.48335856" visible="true" weight="0.34860885" />
+      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.48335856" weight="0.29623568" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24962178" />
@@ -741,54 +1458,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueFrameworkService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/SysOrgServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="137" column="12" selection-start-line="137" selection-start-column="12" selection-end-line="137" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3666#3683#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-aop/4.2.3.RELEASE/spring-aop-4.2.3.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="418" selection-start-line="418" selection-end-line="418" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-core/4.2.3.RELEASE/spring-core-4.2.3.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueOrgNodeResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/accountTem.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/total.html" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/total.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/wjdc/previewAdd.js" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/framework/addFramework.js" />
@@ -832,20 +1501,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpQueAccountMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueCreatingServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -904,9 +1559,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TpQueAccountMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/GradeLogadm/editLog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -950,13 +1602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueAccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueInvestigationController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
@@ -968,13 +1613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2040">
           <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueAccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -997,16 +1635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueFrameworkServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
-          <caret line="118" column="8" selection-start-line="118" selection-start-column="8" selection-end-line="118" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueCreatingService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -1014,17 +1642,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueResourcelist.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpGradePhotoUser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        <state relative-caret-position="750">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpGradePhotoUser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueResourcelist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="210">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpGradeTempletServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="44" column="4" lean-forward="true" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueCreatingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueInvestigationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-814">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueTemplateServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-694">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueFrameworkServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="22" column="8" lean-forward="true" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpGradeUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueAccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueAccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueAccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpQueAccountMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="7" column="40" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TpQueAccountMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TemplateQueController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/common/js/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="226" column="10" lean-forward="true" selection-start-line="226" selection-start-column="10" selection-end-line="226" selection-end-column="10" />
         </state>
       </provider>
     </entry>
