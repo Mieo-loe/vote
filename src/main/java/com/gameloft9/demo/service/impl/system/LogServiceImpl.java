@@ -22,7 +22,6 @@ public class LogServiceImpl implements LogService {
     @Autowired
     TpGradeLogadmMapper tpGradeLogadmMapper;
 
-    @Override
     public String updatememo(String memos) {
         String demo = tpGradeLogadmMapper.selectName(memos);
         if (demo == null || demo.equals("")){
@@ -35,22 +34,18 @@ public class LogServiceImpl implements LogService {
         return demo;
     }
 
-    @Override
     public List<TpResourcesList> getLog() {
         return tpGradeLogadmMapper.getLog("rizhi");
     }
 
-    @Override
     public boolean addLog(TpResourcesList resourcesList) {
         return tpGradeLogadmMapper.updLog(resourcesList);
     }
 
-    @Override
     public Integer selectid(TpResourcesList resourcesList) {
         return tpGradeLogadmMapper.selectid(resourcesList);
     }
 
-    @Override
     public boolean delLog(Integer id) {
         return tpGradeLogadmMapper.delLog(id);
 //        return tpGradeLogadmMapper.delLogs(String.valueOf(id));
