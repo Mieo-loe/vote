@@ -83,9 +83,9 @@ layui.config({
 
             //区分事件
             if (layEvent === 'del') { //删除
-                delLog(row.log_id);
+                delLogs(row.log_id);
             } else if (layEvent === 'delLog') { //删除
-                delLogs(row.operType);
+                delLogs(row.log_id);
             }
         });
     }

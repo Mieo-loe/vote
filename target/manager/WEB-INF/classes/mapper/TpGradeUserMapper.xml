@@ -17,7 +17,7 @@
         <result column="pst" property="position" jdbcType="VARCHAR"></result>
     </resultMap>
 
-    <resultMap id="PhotoUserResultMap" type="com.gameloft9.demo.dataaccess.model.system.TpPhotoUser">
+    <resultMap id="PhotoUserResultMap" type="com.gameloft9.demo.dataaccess.model.system.TpGradePhotoUser">
         <id column="uid" property="uid" jdbcType="INTEGER"/>
         <result column="uname" property="uname" jdbcType="VARCHAR"/>
         <result column="sex" property="sex" jdbcType="INTEGER"/>

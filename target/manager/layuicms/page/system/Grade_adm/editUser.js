@@ -66,10 +66,6 @@ layui.config({
                 var j = 0;
                 for (var i = 0; i < data.length; i++) {
                     if (xzrenyuan.length == 0) {
-                        // console.log(xzrenyuan[j]);
-                        // console.log(data[i].uid);
-                        // console.log(uid[j]);
-
                         if(data[i].uid == uid[j]){
                             html += '<input type="checkbox" checked name="' + data[i].uid + '" title="' + data[i].uname + '" value="' + data[i].uid + '"/>';
                             j++;
@@ -84,7 +80,6 @@ layui.config({
                             html += '<input type="checkbox" name="' + data[i].uid + '" title="' + data[i].uname + '" value="' + data[i].uid + '"/>';
                         }
                     }
-
                 }
                 $('#adduid').append($(html));
                 form.render();
