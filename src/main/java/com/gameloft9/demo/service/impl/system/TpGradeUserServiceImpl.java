@@ -2,7 +2,7 @@ package com.gameloft9.demo.service.impl.system;
 
 import com.gameloft9.demo.dataaccess.dao.system.TpGradeUserMapper;
 import com.gameloft9.demo.dataaccess.model.system.TpGradeUser;
-import com.gameloft9.demo.dataaccess.model.system.TpPhotoUser;
+import com.gameloft9.demo.dataaccess.model.system.TpGradePhotoUser;
 import com.gameloft9.demo.dataaccess.model.system.TpResourcesList;
 import com.gameloft9.demo.service.api.system.TpGradeUserService;
 import com.gameloft9.demo.service.beans.system.PageRange;
@@ -61,8 +61,8 @@ public class TpGradeUserServiceImpl implements TpGradeUserService{
         return tpGradeUserMapper.updpos(userTest2);
     }
 
-    public List<TpPhotoUser> getUid() {
-        List<TpPhotoUser> uidlist = new ArrayList<TpPhotoUser>();
+    public List<TpGradePhotoUser> getUid() {
+        List<TpGradePhotoUser> uidlist = new ArrayList<TpGradePhotoUser>();
         uidlist = tpGradeUserMapper.getUid();
         return uidlist;
     }

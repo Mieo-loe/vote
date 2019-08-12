@@ -1,7 +1,7 @@
 package com.gameloft9.demo.service.api.system;
 
 import com.gameloft9.demo.dataaccess.model.system.TpGradeUser;
-import com.gameloft9.demo.dataaccess.model.system.TpPhotoUser;
+import com.gameloft9.demo.dataaccess.model.system.TpGradePhotoUser;
 import com.gameloft9.demo.dataaccess.model.system.TpResourcesList;
 import com.gameloft9.demo.service.beans.system.TpGradeUserTest;
 import com.gameloft9.demo.service.beans.system.TpGradeUserTest2;
@@ -30,7 +30,7 @@ public interface TpGradeUserService {
 
     boolean updpos(TpGradeUserTest2 userTest2);
 
-    List<TpPhotoUser> getUid();
+    List<TpGradePhotoUser> getUid();
 
     List<TpResourcesList> getPosition();
 

@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @Description:
  */
 @Data
-public class TpPhotoUser implements Serializable {
+public class TpGradePhotoUser implements Serializable {
 
     private int uid;
 
