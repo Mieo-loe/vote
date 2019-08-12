@@ -10,13 +10,13 @@ public class Tprelationship implements Serializable {
    private int rid;
    private int subtitleId;
    private String uid;
-   private TpphotoUser tpphotoUser;
+   private TpPhotoUser tpphotoUser;
 
-   public TpphotoUser getTpphotoUser() {
+   public TpPhotoUser getTpphotoUser() {
       return tpphotoUser;
    }
 
-   public void setTpphotoUser(TpphotoUser tpphotoUser) {
+   public void setTpphotoUser(TpPhotoUser tpphotoUser) {
       this.tpphotoUser = tpphotoUser;
    }
 

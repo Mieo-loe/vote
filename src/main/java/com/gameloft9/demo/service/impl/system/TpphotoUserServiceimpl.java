@@ -1,9 +1,8 @@
 package com.gameloft9.demo.service.impl.system;
 
 import com.gameloft9.demo.dataaccess.dao.system.TpphotoUserMapper;
-import com.gameloft9.demo.dataaccess.model.system.TpphotoUser;
+import com.gameloft9.demo.dataaccess.model.system.TpPhotoUser;
 import com.gameloft9.demo.service.api.system.TpphotoUserService;
-import com.gameloft9.demo.service.beans.system.PageRange;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,12 +18,12 @@ public class TpphotoUserServiceimpl implements TpphotoUserService {
     TpphotoUserMapper dao;
 
 
-    public List<TpphotoUser> findAllUser() {
+    public List<TpPhotoUser> findAllUser() {
 
         return dao.findAllUser();
     }
 
-    public TpphotoUser findbyuid(int uid) {
+    public TpPhotoUser findbyuid(int uid) {
 
         return dao.findbyuid(uid);
     }

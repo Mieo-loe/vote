@@ -1,6 +1,6 @@
 package com.gameloft9.demo.dataaccess.dao.system;
 
-import com.gameloft9.demo.dataaccess.model.system.TpphotoUser;
+import com.gameloft9.demo.dataaccess.model.system.TpPhotoUser;
 
 import org.springframework.stereotype.Repository;
 
@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface TpphotoUserMapper {
-    List<TpphotoUser> findAllUser();
-    TpphotoUser findbyuid(int uid);
+    List<TpPhotoUser> findAllUser();
+    TpPhotoUser findbyuid(int uid);
 }

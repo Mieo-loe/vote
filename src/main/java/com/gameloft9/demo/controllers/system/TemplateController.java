@@ -125,7 +125,7 @@ public class TemplateController {
             List<Tprelationship> tprelationship = tprelationshipServiceimpl.findBysId(subtitleContent.getSubtitleId());
             //查看人员id
             for (Tprelationship tprelationship1 : tprelationship) {
-               TpphotoUser tpphotoUser =  tpphotoUserServiceimpl.findbyuid(Integer.parseInt(tprelationship1.getUid()));
+               TpPhotoUser tpphotoUser =  tpphotoUserServiceimpl.findbyuid(Integer.parseInt(tprelationship1.getUid()));
               tprelationship1.setTpphotoUser(tpphotoUser);
 
             }

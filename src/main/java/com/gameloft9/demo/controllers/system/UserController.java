@@ -1,8 +1,7 @@
 package com.gameloft9.demo.controllers.system;
 
-import com.gameloft9.demo.dataaccess.model.system.TpphotoUser;
+import com.gameloft9.demo.dataaccess.model.system.TpPhotoUser;
 import com.gameloft9.demo.mgrframework.beans.response.IResult;
-import com.gameloft9.demo.mgrframework.beans.response.PageResultBean;
 import com.gameloft9.demo.mgrframework.beans.response.ResultBean;
 import com.gameloft9.demo.service.api.system.TpphotoUserService;
 import lombok.extern.slf4j.Slf4j;
@@ -25,6 +24,6 @@ public class UserController {
     //@BizOperLog(operType = OperType.Query,memo = "获取所有角色列表")
     public IResult getdemorList(){
         //返回json至前端的均返回ResultBean或者PageResultBean
-        return new ResultBean<Collection<TpphotoUser>>(tpphotoUserServiceimpl.findAllUser());
+        return new ResultBean<Collection<TpPhotoUser>>(tpphotoUserServiceimpl.findAllUser());
     }
 }

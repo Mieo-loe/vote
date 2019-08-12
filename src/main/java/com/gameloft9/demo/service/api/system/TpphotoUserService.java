@@ -1,17 +1,16 @@
 package com.gameloft9.demo.service.api.system;
 
-import com.gameloft9.demo.dataaccess.model.system.TpphotoUser;
-import org.apache.ibatis.annotations.Param;
+import com.gameloft9.demo.dataaccess.model.system.TpPhotoUser;
 
 import java.util.List;
 
 public interface TpphotoUserService {
-    List<TpphotoUser> findAllUser();
+    List<TpPhotoUser> findAllUser();
 
 
     /**
      * 获取所有个数
      * */
 
-    TpphotoUser findbyuid(int uid);
+    TpPhotoUser findbyuid(int uid);
 }
