@@ -255,6 +255,42 @@ layui.define(['$tool','jquery'], function (exports) {
         templateUpdate:function(req,successCallback,errorCallback){
             doPost($tool.getContext()+'wjdc/update.do',req,successCallback,errorCallback);
         },
+        AddDemo:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'list/add.do',req,config,successCallback,errorCallback);
+        },
+        jioayan:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'list/jiaoyan.do',req,config,successCallback,errorCallback);
+        },
+        TijiaoDemo:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'list/tijiao.do',req,config,successCallback,errorCallback);
+        },
+        Addtemp:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'temp/add.do',req,config,successCallback,errorCallback);
+        },
+        Deletedemo:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'list/delete.do',req,successCallback,errorCallback);
+        },
+        Deletetemp:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'temp/delete.do',req,successCallback,errorCallback);
+        },
+        qxzd:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'temp/qxzd.do',req,successCallback,errorCallback);
+        },
+        zd:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'temp/zd.do',req,successCallback,errorCallback);
+        },
+        Guanbidemo:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'list/guanbi.do',req,successCallback,errorCallback);
+        },
+        Gettemp:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'temp/get.do',req,successCallback,errorCallback);
+        },
+        Getchakan:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'list/chakan.do',req,successCallback,errorCallback);
+        },
+        Updatedemo:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'list/update.do',req,successCallback,errorCallback);
+        },
         AddUser:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'sysUser/add.do',req,config,successCallback,errorCallback);
         },

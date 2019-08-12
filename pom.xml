@@ -11,6 +11,7 @@
   <properties>
     <spring-version>4.2.3.RELEASE</spring-version>
     <logback-version>1.0.13</logback-version>
+    <jackson.version>2.5.4</jackson.version>
   </properties>
 
   <!--添加pom依赖，maven会自动从仓库中下载依赖的jar包-->
@@ -196,6 +197,17 @@
       <artifactId>poi-ooxml</artifactId>
       <version>3.13</version>
     </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>manager</finalName>

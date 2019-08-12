@@ -12,6 +12,7 @@ import com.gameloft9.demo.service.beans.system.UserAddRequest;
 import com.gameloft9.demo.service.beans.system.UserUpdateRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,7 +28,7 @@ import java.util.Collection;
  * Created by gameloft9 on 2017/12/20.
  */
 @Slf4j
-@Service
+@Controller
 @RequestMapping("/sysUser")
 public class SysUserController {
 
