@@ -14,7 +14,9 @@ import java.lang.annotation.*;
 public @interface BizOperLog {
     /**操作类型*/
     OperType operType() default OperType.Query;
-
     /**备注*/
     String memo() default "";
+    /**操作号*/
+    String memos() default "";
+
 }

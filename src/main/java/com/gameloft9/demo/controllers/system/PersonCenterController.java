@@ -52,7 +52,7 @@ public class PersonCenterController {
      * */
     @RequestMapping(value = "/update.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "更新个人信息")
+    @BizOperLog(operType = OperType.UPDATE,memo = "更新个人信息", memos = "18")
     public IResult updateUser(@RequestBody @Valid UserUpdateRequest user, BindingResult result){//传递了数组，前台放在payload里面了，后台通过@RequestBody获取
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Boolean>(sysUserServiceImpl.updateUser(user));
@@ -63,7 +63,7 @@ public class PersonCenterController {
      * */
     @RequestMapping(value = "/changePwd.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "更新个人密码")
+    @BizOperLog(operType = OperType.UPDATE,memo = "更新个人密码", memos = "19")
     public IResult changePwd(String loginName,String oldPwd,String newPwd){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Boolean>(sysUserServiceImpl.changePwd(loginName,oldPwd,newPwd));

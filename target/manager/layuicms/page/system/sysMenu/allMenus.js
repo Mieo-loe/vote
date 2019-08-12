@@ -97,7 +97,6 @@ layui.config({
                 menuCode:menuCode
             }
         });
-
         return false;
     });
 

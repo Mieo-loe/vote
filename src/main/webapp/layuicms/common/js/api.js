@@ -78,20 +78,104 @@ layui.define(['$tool','jquery'], function (exports) {
         DeleteLog:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'log/delete.do',req,successCallback,errorCallback);
         },
+        DeleteLogadm:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'logadm/delete.do',req,successCallback,errorCallback);
+        },
+        DeleteLogs:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'logadm/dellogs.do',req,successCallback,errorCallback);
+        },
+        AddLogs:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'logadm/addlogs.do',req,successCallback,errorCallback);
+        },
         BatchDeleteLog:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'log/batchDelete.do',req,config,successCallback,errorCallback);
+        },
+        BatchDeleteLogadm:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'logadm/batchDelete.do',req,config,successCallback,errorCallback);
         },
         GetFirstClassMenus:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'menu/firstClassMenus.do',req,successCallback,errorCallback);
         },
+        GetUid:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'yonghu/getuid.do',req,successCallback,errorCallback);
+        },
+        GetLog:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'logadm/getlog.do',req,successCallback,errorCallback);
+        },
+        GetYongHu:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'yonghu/getyonghu.do',req,successCallback,errorCallback);
+        },
+        LoadRY:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'pingce/loadry.do',req,successCallback,errorCallback);
+        },
+        GetAdm:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'jilu/getAdm.do',req,successCallback,errorCallback);
+        },
+        FindZH:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'pingce/findzh.do',req,successCallback,errorCallback);
+        },
+        GetZH:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'pingce/getzh.do',req,successCallback,errorCallback);
+        },
+        DelZH:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'pingce/delzh.do',req,successCallback,errorCallback);
+        },
+        GetPosition:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'yonghu/getposition.do',req,successCallback,errorCallback);
+        },
         AddMenu:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'menu/add.do',req,successCallback,errorCallback);
+        },
+        SetTJ:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'pingce/tongji.do',req,successCallback,errorCallback);
+        },
+        AddDaFen:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'pingce/add.do',req,successCallback,errorCallback);
+        },
+        Addrenyuan:function(req, successCallback,errorCallback){
+            doPost($tool.getContext() + 'pingce/addry.do',req,successCallback,errorCallback);
+        },
+        AddYongHu:function(req, successCallback,errorCallback){
+            doPost($tool.getContext() + 'yonghu/add.do',req,successCallback,errorCallback);
+        },
+        EditYongHu:function(req, successCallback,errorCallback){
+            doPost($tool.getContext() + 'yonghu/edit.do',req,successCallback,errorCallback);
         },
         DeleteMenu:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'menu/delete.do',req,successCallback,errorCallback);
         },
+        DeleteMuban:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'dfmuban/delete.do',req,successCallback,errorCallback);
+        },
+        ZhiDing:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'dfmuban/zhiding.do',req,successCallback,errorCallback);
+        },
+        QXZhiDing:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'dfmuban/qxzhiding.do',req,successCallback,errorCallback);
+        },
+        DeleteYongHu:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'yonghu/delete.do',req,successCallback,errorCallback);
+        },
+        DeleteJiLu:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'jilu/delete.do',req,successCallback,errorCallback);
+        },
+        GetShuJu:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'yonghu/getshuju.do',req,successCallback,errorCallback);
+        },
+        editStatus:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'jilu/updatestatus.do',req,successCallback,errorCallback);
+        },
         GetMenu:function(req,successCallback,errorCallback){
             doPost($tool.getContext()+'menu/get.do',req,successCallback,errorCallback);
+        },
+        GetTemplet:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'dfmuban/get.do',req,successCallback,errorCallback);
+        },
+        GetJIILU:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'dfmuban/getjilu.do',req,successCallback,errorCallback);
+        },
+        GetAnsId:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'dfmuban/getansId.do',req,successCallback,errorCallback);
         },
         UpdateMenu:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext()+'menu/update.do',req,config,successCallback,errorCallback);
@@ -201,6 +285,9 @@ layui.define(['$tool','jquery'], function (exports) {
         },
         UpdateUserInfo:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'personCenter/update.do',req,config,successCallback,errorCallback);
+        },
+        DaoChu:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'poi/daochu.do',req,successCallback,errorCallback);
         }
     };
 

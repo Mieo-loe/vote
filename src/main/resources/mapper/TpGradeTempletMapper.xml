@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.system.TpGradeTempletMapper">
+
+    <resultMap id="BaseResultMap" type="com.gameloft9.demo.dataaccess.model.system.TpGradeTemplet">
+        <id column="templet_Id" property="templet_Id" jdbcType="INTEGER"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="explains" property="explains" jdbcType="VARCHAR"/>
+        <result column="peonum" property="peonum" jdbcType="INTEGER"/>
+        <result column="res_Id" property="res_Id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+
+        templet_Id, title, explains, peonum
+
+    </sql>
+
+    <select id="findAll" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM tp_grade_templet
+        WHERE 1=1
+        <if test="templet_Id !=null and templet_Id != ''">
+            and templet_Id = #{templet_Id, jdbcType=INTEGER}
+        </if>
+        limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
+    </select>
+
+    <select id="countGetAll" resultType="Integer" parameterType="map" >
+        select count(1)
+        from tp_grade_templet
+        where 1=1
+        <if test="templet_Id !=null and templet_Id != ''">
+            and templet_Id = #{templet_Id, jdbcType=INTEGER}
+        </if>
+    </select>
+
+    <delete id="del" parameterType="java.lang.Integer">
+        delete from tp_grade_templet
+        where templet_Id = #{templet_Id, jdbcType=INTEGER}
+    </delete>
+
+    <select id="findByTemplet_Id" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tp_grade_user
+        where username = #{username, jdbcType=VARCHAR}
+    </select>
+
+    <insert id="add" parameterType="com.gameloft9.demo.dataaccess.model.system.TpGradeTemplet"
+            useGeneratedKeys="true" keyProperty="templet_Id">
+        insert into tp_grade_templet (title, explains, peonum)
+        values (#{title, jdbcType=VARCHAR}, #{explains, jdbcType=VARCHAR}, #{peonum, jdbcType=INTEGER})
+    </insert>
+
+    <insert id="addrub" parameterType="com.gameloft9.demo.dataaccess.model.system.TpGradeRubric"
+            useGeneratedKeys="true" keyProperty="rubric_Id">
+        insert into tp_grade_rubric (resId, fraction, templet_Id)
+        values (#{resId}, #{fraction}, #{templet_Id})
+    </insert>
+
+    <insert id="addans" parameterType="com.gameloft9.demo.dataaccess.model.system.TpGradeAnswer"
+            useGeneratedKeys="true" keyProperty="answer_Id">
+        insert into tp_grade_answer (resId, rubric_Id, price)
+        values (#{resId}, #{rubric_Id}, #{price})
+    </insert>
+
+    <insert id="addeva" parameterType="com.gameloft9.demo.dataaccess.model.system.TpGradeEvaluat"
+            useGeneratedKeys="true" keyProperty="evaluat_Id">
+        insert into tp_grade_evaluat (uid, templet_Id)
+        values (#{uid}, #{templet_Id})
+    </insert>
+
+    <select id="findByTid" parameterType="java.lang.Integer" resultType="com.gameloft9.demo.dataaccess.model.system.TpGradeTemplet">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM tp_grade_templet
+        WHERE
+        templet_Id = #{templet_Id, jdbcType=INTEGER}
+    </select>
+
+</mapper>
