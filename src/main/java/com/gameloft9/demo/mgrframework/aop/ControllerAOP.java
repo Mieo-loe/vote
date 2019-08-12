@@ -1,11 +1,14 @@
 package com.gameloft9.demo.mgrframework.aop;
 
+import com.gameloft9.demo.dataaccess.model.system.TpResourcesList;
 import com.gameloft9.demo.mgrframework.utils.CheckUtil;
+import com.gameloft9.demo.service.api.system.LogService;
 import com.gameloft9.demo.service.api.system.SysOperLogService;
 import com.gameloft9.demo.dataaccess.model.system.UserTest;
 import com.gameloft9.demo.mgrframework.annotation.BizOperLog;
 import com.gameloft9.demo.mgrframework.beans.response.IResult;
 import com.gameloft9.demo.mgrframework.utils.IPUtil;
+import com.gameloft9.demo.service.api.system.TpGradeLogadmService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -33,6 +36,10 @@ public class ControllerAOP {
 
 	@Autowired
 	private SysOperLogService sysOperLogServiceImpl;
+	@Autowired
+	TpGradeLogadmService tpGradeLogadmService;
+	@Autowired
+	LogService logService;
 
 	/**
 	 * 创建返回切点,这里只切返回IResult的方法，没有切返回String和void的方法。
@@ -81,7 +88,14 @@ public class ControllerAOP {
 		//从注解中获取操作类型和备注
 		String opertype =  operLog.operType().getValue();
 		String memo = operLog.memo();
+		String memos = operLog.memos();
 		sysOperLogServiceImpl.insertOperLog(userid,loginName,ipAddr,opertype,memo);
+		String operType = logService.updatememo(memos);
+		if (operType != "250"){
+			TpResourcesList resourcesList = new TpResourcesList("rizhi",Integer.parseInt(memos));
+			Integer selectid = logService.selectid(resourcesList);
+			tpGradeLogadmService.insertOperLog(loginName,ipAddr,String.valueOf(selectid));
+		}
 		log.info("记录操作日志成功");
 	}
 

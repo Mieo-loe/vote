@@ -46,7 +46,7 @@ public class SysRoleController {
      * */
     @RequestMapping(value = "/delete.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.DELETE,memo = "删除角色")
+    @BizOperLog(operType = OperType.DELETE,memo = "删除角色", memos = "21")
     public IResult deleteRole(String roleId){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Boolean>(sysRoleServiceImpl.deleteRoleById(roleId));
@@ -57,7 +57,7 @@ public class SysRoleController {
      * */
     @RequestMapping(value = "/add.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.ADD,memo = "添加角色")
+    @BizOperLog(operType = OperType.ADD,memo = "添加角色", memos = "22")
     public IResult addRole(String roleName,String isSuper){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<String>(sysRoleServiceImpl.addRole(roleName,isSuper));
@@ -68,7 +68,7 @@ public class SysRoleController {
      * */
     @RequestMapping(value = "/update.do",method = RequestMethod.POST)
     @ResponseBody
-    @BizOperLog(operType = OperType.UPDATE,memo = "更新角色")
+    @BizOperLog(operType = OperType.UPDATE,memo = "更新角色", memos = "23")
     public IResult editRole(String id,String roleName,String isSuper){
         //返回json至前端的均返回ResultBean或者PageResultBean
         return new ResultBean<Boolean>(sysRoleServiceImpl.updateRole(id,roleName,isSuper));
