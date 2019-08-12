@@ -7,214 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5031d80b-5c1f-4bb6-9f75-57bd9789e1f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueAccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueCreatingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueFrameworkController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueInvestigationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/TpQueTemplateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpQueAccountMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpQueCreatingMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpQueFrameworkMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpQueInvestigationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpQueTemplateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueCreating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueFramework.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueInvestigation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueOption.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueOrgNodeResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueResourcelist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueTemplate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueTotal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueVerification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueCreatingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueFrameworkService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueInvestigationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueTemplateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueAccountServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueCreatingServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueFrameworkServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueInvestigationServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpQueTemplateServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TpQueAccountMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TpQueCreatingMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TpQueFrameworkMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TpQueInvestigationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TpQueTemplateMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpDemVerificationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeAdmMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeAnswerMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeEvaluatMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeLogadmMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeRecordMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeRubricMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeStatisticsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeTempletMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpGradeUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpQueAccountMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpQueCreatingMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpQueFrameworkMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpQueInvestigationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/mapper/TpQueTemplateMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/PersonCenterController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/SysLogController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/SysMenuController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/SysRoleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/SysUserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradeLogadmController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradePOIController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradeRecordController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradeTempletController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpGradeUserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueAccountController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueCreatingController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueFrameworkController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueInvestigationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/TpQueTemplateController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/Tp_Grade_AdmController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpDemVerificationMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeAdmMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeAnswerMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeEvaluatMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeLogadmMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeRecordMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeRubricMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeStatisticsMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeTempletMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpGradeUserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueAccountMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueCreatingMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueFrameworkMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueInvestigationMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/TpQueTemplateMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpDemVerification.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeAdm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeAnswer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeEvaluat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeLogadm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeRubric.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeStatistics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeTemplet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGradeUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpGraderecord.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpPhotoUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueCreating.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueFramework.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueInvestigation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueOption.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueOrgNodeResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueResourcelist.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueSubject.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueTemplate.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueTotal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpQueVerification.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/model/system/TpResourcesList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/annotation/BizOperLog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/mgrframework/aop/ControllerAOP.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/LogService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeAnswerService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeEvaluatService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeLogadmService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeRecordService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeRubricService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeStatisticsService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeTempletService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpGradeUserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueAccountService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueCreatingService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueFrameworkService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueInvestigationService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/TpQueTemplateService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/Tp_Grade_AdmService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/GradeResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradeMuBan.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradePingCe.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradePingCeList.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradeTongJi.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradeUserTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/beans/system/TpGradeUserTest2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/LogServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeAnswerServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeEvaluatServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeLogadmServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeRecordServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeRubricServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeStatisticsServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeTempletServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpGradeUserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueAccountServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueCreatingServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueFrameworkServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueInvestigationServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/TpQueTemplateServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/Tp_Grade_AdmServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/utils/ExcelUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpDemVerificationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeAdmMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeAnswerMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeEvaluatMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeLogadmMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeRecordMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeRubricMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeStatisticsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeTempletMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpGradeUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueAccountMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueCreatingMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueFrameworkMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueInvestigationMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/TpQueTemplateMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/common/js/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/common/picture/放大镜调查报告.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/lib/jquery-2.2.4/jquery.cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/addLogs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/addLogs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/allLogadm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/allLogadm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/editLog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeLogadm/editLog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DaFenBiaoFB.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DaFenBiaoFB.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DaFenBiaoFB2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DafenBiao.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/DafenBiao2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/GradeRecord.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/GradeRecord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/TongJi.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/TongJi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/TongJi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/addRecord.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/addRecord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/addUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/addUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/findZH.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeRecord/findZH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/GradeUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/GradeUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/addUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/addUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/editUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/GradeUser/editUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/DaFenBiao2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/addAdm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/addAdm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/editRecord.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/editRecord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/editUser.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/editUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Grade_adm/grade_Adm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysLog/allLog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysLog/allLog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/sysMenu/allMenus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpGradeLogadmMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpGradeLogadmMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/GradeLogadm/allLogadm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/GradeLogadm/allLogadm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -263,11 +56,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueResourcelist.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="210">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpGradePhotoUser.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -525,6 +327,27 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="dataaccess" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="dataaccess" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="dataaccess" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -830,12 +653,20 @@
       <workItem from="1565531255567" duration="2823000" />
       <workItem from="1565573156829" duration="1300000" />
       <workItem from="1565574509611" duration="1693000" />
-      <workItem from="1565576278957" duration="428000" />
+      <workItem from="1565576278957" duration="1424000" />
     </task>
+    <task id="LOCAL-00001" summary="812update">
+      <created>1565576758257</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565576758257</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="747247000" />
+    <option name="totallyTimeSpent" value="748243000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -849,7 +680,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.23146747" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49756098" visible="true" weight="0.3494705" />
       <window_info id="Structure" order="1" sideWeight="0.502439" side_tool="true" weight="0.27458397" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -867,10 +698,10 @@
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.049099836" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.51664144" side_tool="true" visible="true" weight="0.34697217" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.25040916" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3289689" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.049099836" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49924356" visible="true" weight="0.25040916" />
       <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3289689" />
       <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.48335856" visible="true" weight="0.34860885" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -910,13 +741,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/common/js/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="102" column="55" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpQueFrameworkService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
@@ -1192,8 +1016,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpQueResourcelist.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="210">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpGradePhotoUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
