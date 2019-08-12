@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.system.TpGradeRubricMapper">
+
+    <resultMap id="BaseResultMap" type="com.gameloft9.demo.dataaccess.model.system.TpGradeRubric">
+        <id column="rubric_Id" property="rubric_Id" jdbcType="INTEGER"/>
+        <result column="resId" property="resId" jdbcType="INTEGER"/>
+        <result column="fraction" property="fraction" jdbcType="VARCHAR"/>
+        <result column="templet_Id" property="templet_Id" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+
+        rubric_Id, resId, fraction, templet_Id
+
+    </sql>
+
+    <select id="findResId" resultType="String">
+        select
+        resId
+        from tp_grade_rubric
+        where
+        templet_Id = #{templet_Id}
+    </select>
+
+    <select id="findFraction" resultType="String">
+        select
+        fraction
+        from tp_grade_rubric
+        where
+        templet_Id = #{templet_Id}
+    </select>
+
+    <select id="findRubId" resultType="java.lang.Integer">
+        select
+        rubric_Id
+        from tp_grade_rubric
+        where
+        templet_Id = #{templet_Id}
+    </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from tp_grade_rubric
+        where templet_Id = #{templet_Id}
+    </delete>
+
+</mapper>
