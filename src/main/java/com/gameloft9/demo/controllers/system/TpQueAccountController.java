@@ -20,7 +20,7 @@ public class TpQueAccountController {
     @Resource
     TpQueAccountService accountService;
 
-    //查询输入的用户账号
+    //查询输入的账号
     @RequestMapping(value = "/findAccount.do",method = RequestMethod.POST)
     @ResponseBody
     public IResult findAccount(@RequestBody TpQueVerification verificationQue){
