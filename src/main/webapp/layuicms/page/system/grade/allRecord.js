@@ -44,7 +44,7 @@ layui.config({
         tableIns = table.render({
             elem: '#record-data'
             , height: 415
-            , url: $tool.getContext() + 'record/findAll.do' //数据接口 3.找到路径
+            , url: $tool.getContext() + 'record2/findAll.do' //数据接口 3.找到路径
             , method: 'post'
             , page:true //开启分页
             , cols: [[ //表头

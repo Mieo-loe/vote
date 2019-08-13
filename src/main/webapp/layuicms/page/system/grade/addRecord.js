@@ -259,25 +259,9 @@ form.on('checkbox(type)',function (data) {
                 $api.addAdmKeep(JSON.stringify(req), {contentType: 'application/json;charset=utf-8'}, function () {
                     //top.layer.close(index);(关闭遮罩已经放在了ajaxExtention里面了)
                     layer.msg("添加成功！", {time: 1000}, function () {
-                        var index = layui.layer.open({
-                            title: "账号名单",
-                            type: 2,
-                            content: "IsVote.html?recordId="+data.data,
-                            success: function (layero, index) {
-                                setTimeout(function () {
-                                    layui.layer.tips('点击此处返回评测打分列表', '.layui-layer-setwin .layui-layer-close', {
-                                        tips: 3
-                                    });
-                                }, 500)
-                            }
-                        });
-                        $(window).resize(function () {
-                            layui.layer.full(index);
-                        });
-                        layui.layer.full(index);
-
+                        layer.closeAll("iframe");
                         //刷新父页面
-                        //parent.location.reload();
+                        parent.location.reload();
                     });
                 });
             });
