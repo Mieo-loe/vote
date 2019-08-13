@@ -92,7 +92,7 @@ public class SysOrgServiceImpl implements SysOrgService {
         if(StringUtils.isBlank(org.getParentId())){
             log.info("添加根机构");
             test = sysOrganizeTestMapper.getRoot();
-            CheckUtil.check(test == null,"根组织机构已经存在");
+            CheckUtil.check(test == null,"");
 
             org.setId(UUIDUtil.getUUID());
             org.setOrganizeCode(generateOrgCode(org));

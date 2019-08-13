@@ -8,6 +8,7 @@ import com.gameloft9.demo.dataaccess.model.system.TpQueTemplate;
 import com.gameloft9.demo.service.api.system.TpQueTemplateService;
 import com.gameloft9.demo.service.beans.system.PageRange;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,7 +19,7 @@ import java.util.List;
 @Service
 @Transactional
 public class TpQueTemplateServiceImpl implements TpQueTemplateService {
-    @Resource
+    @Autowired
     private TpQueTemplateMapper templateQueMapper;
 
     public List<TpQueTemplate> findAll5(String page, String limit) {

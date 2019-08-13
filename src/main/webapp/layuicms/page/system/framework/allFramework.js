@@ -34,28 +34,29 @@ layui.config({
      * */
     function initOrgTree() {
         //获取所有组织机构树
-        $api.GetAllOrg(null,function (res) {
+        $api.GetAllOrg2(null,function (res) {
             orgNodes = res.data;//保存一份
+            console.log(orgNodes);
             renderTree('#org-tree', res.data);
         });
     }
 
     /**
      * 绘制树
-     * @param id dom id
+     * @param fid dom id
      * @param nodes 树节点数据
      * */
-    function renderTree(id, nodes) {
+    function renderTree(fid, nodes) {
         //绘制前先清空
-        $(id).empty();
+        $(fid).empty();
 
         //绘制
         layui.tree({
-            elem: id
+            elem: fid
             , nodes: nodes
             , click: function (node) {//显示组织机构数据
                 console.log(node); //node即为当前点击的节点数据
-                fillOrgInfo(node.id);
+                fillOrgInfo(node.fid);
             }
         });
     }
@@ -63,32 +64,32 @@ layui.config({
     /**
      * 填充组织机构信息
      * */
-    function fillOrgInfo(id) {
-        var url = $tool.getContext() + 'org/get.do';
+    function fillOrgInfo(fid) {
+        var url = $tool.getContext() + 'wjdc/getQue.do';
         var req = {
-            id: id
+            fid: fid,
         };
-
-        $api.GetOrg(req,function (res) {
+        $api.GetOrg2(req,function (res) {
             var info = res.data;
-            $('[name="id"]').val(info.id);
-            $('[name="orgName"]').val(info.organizeName);
-            $('[name="orgCode"]').val(info.organizeCode);
-            $('[name="treePath"]').val(info.treePath);
+            $('[name="fid"]').val(info.fid);
+            $('[name="organization"]').val(info.organization);
+            // $('[name="orgCode"]').val(info.organizeCode);
+            // $('[name="treePath"]').val(info.treePath);
         });
     }
 
     //更新
     form.on("submit(editOrg)", function (data) {
-        var organizeName = data.field.orgName;
-        var id = data.field.id;
-        var url = $tool.getContext() + 'org/update.do';
+
+        var fid = data.field.fid;
+        var organization = data.field.organization;
+        var url = $tool.getContext() + 'wjdc/updateQue.do';
         var req = {
-            id: id,
-            organizeName: organizeName
+            fid: fid,
+            organization: organization
         };
 
-        $api.UpdateOrg(req,function (res) {
+        $api.UpdateOrg2(req,function (res) {
             layer.msg("更新成功！", {time: 1000}, function () {
                 window.location.reload();//刷新
             });
@@ -99,14 +100,14 @@ layui.config({
 
     //删除
     form.on("submit(delOrg)", function (data) {
-        var id = data.field.id;
+        var fid = data.field.fid;
 
-        var url = $tool.getContext() + 'org/delete.do';
+        var url = $tool.getContext() + 'wjdc/deleteQue.do';
         var req = {
-            id: id
+            fid: fid
         };
 
-        $api.DeleteOrg(req,function (res) {
+        $api.DeleteOrg2(req,function (res) {
             layer.msg("删除成功！", {time: 1000}, function () {
                 window.location.reload();//刷新
             });
@@ -117,9 +118,9 @@ layui.config({
 
     //查询
     form.on("submit(queryOrg)", function (data) {
-        var organizeName = data.field.organizeName;
+        var organization = data.field.organization;
 
-        var find = findCursively(organizeName, orgNodes);
+        var find = findCursively(organization, orgNodes);
         if (find) {
             // 设置展开
             var nodes = setExpand(find.path,orgNodes);
@@ -138,7 +139,7 @@ layui.config({
         var index = layui.layer.open({
             title: "添加机构",
             type: 2,
-            content: "addOrg.html",
+            content: "addFramework.html",
             success: function (layero, index) {
                 setTimeout(function () {
                     layui.layer.tips('点击此处返回机构列表', '.layui-layer-setwin .layui-layer-close', {
@@ -180,9 +181,9 @@ layui.config({
     /**
      * 设置展开
      * */
-    function setExpand(treePath,nodes) {
+    function setExpand(superior,nodes) {
         var resNodes = $tool.jsonClone(nodes); // 拷贝一份，避免原数组被修改
-        var paths = treePath.split('#');
+        var paths = superior.split('#');
         for(var i = 0;i<paths.length-1;i++){
             setExpandInner(paths[i],resNodes);
         }
@@ -193,9 +194,9 @@ layui.config({
     /**
      * 设置展开的递归函数
      * */
-    function setExpandInner(id,nodes){
+    function setExpandInner(fid,nodes){
         for (var i = 0; i < nodes.length; i++) {
-            if (id === nodes[i].id) {
+            if (fid === nodes[i].fid) {
                 nodes[i].spread = true;
                 return ;
             }
@@ -204,7 +205,7 @@ layui.config({
                 continue;
             }
 
-            return setExpandInner(id, nodes[i].children);//有子节点，递归
+            return setExpandInner(fid, nodes[i].children);//有子节点，递归
         }
     }
 

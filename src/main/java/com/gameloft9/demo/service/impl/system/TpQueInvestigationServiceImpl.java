@@ -6,6 +6,7 @@ import com.gameloft9.demo.dataaccess.model.system.TpQueTotal;
 import com.gameloft9.demo.service.api.system.TpQueInvestigationService;
 import com.gameloft9.demo.service.beans.system.PageRange;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,7 +18,7 @@ import java.util.Set;
 @Service
 @Transactional
 public class TpQueInvestigationServiceImpl implements TpQueInvestigationService {
-    @Resource
+    @Autowired
     private TpQueInvestigationMapper investigationQueMapper;
 
     public List<TpQueInvestigation> findAll2(String page, String limit) {

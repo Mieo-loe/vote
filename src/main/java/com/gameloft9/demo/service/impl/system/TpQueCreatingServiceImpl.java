@@ -4,6 +4,7 @@ import com.gameloft9.demo.dataaccess.dao.system.TpQueCreatingMapper;
 import com.gameloft9.demo.dataaccess.model.system.*;
 import com.gameloft9.demo.service.api.system.TpQueCreatingService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,7 +15,7 @@ import java.util.List;
 @Service
 @Transactional
 public class TpQueCreatingServiceImpl implements TpQueCreatingService {
-    @Resource
+    @Autowired
     private TpQueCreatingMapper creatingQueMapper;
 
     public Boolean add(TpQueCreating creatingQue) {
