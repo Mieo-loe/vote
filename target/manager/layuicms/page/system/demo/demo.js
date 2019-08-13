@@ -29,11 +29,11 @@ layui.config({
             ,limits:[1,2,3,4,5]
             , cols: [[ //表头
                   {type:'numbers',title:'序号',fixed: 'left'},
-                  {field: 'recordId', title: '记录id', width: '10%'}
-                , {field: 'bigTitleId', title: '历史记录', width: '10%'}
+                  {field: 'recordId', title: '记录id', width: '20%'}
+                , {field: 'bigTitleId', title: '历史记录', width: '20%'}
                 , {field: 'releaseDate', title: '发布日期', width: '20%'}
                 , {field: 'id', title: '状态',templet:'#buttonTpl', width: '20%'}
-                , {fixed: 'right', title: '操作', width: 200, align: 'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+                , {fixed: 'right', title: '操作', width: 300, align: 'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
             ]]
             , done: function (res, curr) {//请求完毕后的回调
                 //如果是异步请求数据方式，res即为你接口返回的信息.curr：当前页码
@@ -103,7 +103,7 @@ layui.config({
         });
         layui.layer.full(index);
     });
-//删除
+//关闭投票
     function guanbi(recordId){
         layer.confirm('确认取消吗？', function (confirmIndex) {
             layer.close(confirmIndex);//关闭confirm

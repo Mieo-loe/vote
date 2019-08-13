@@ -47,4 +47,9 @@ public interface Tp_Democratic_RecordService {
     int insertpralationsub(TpSubtitleid tpSubtitleid);
     //统计
     int findbysid(int substandardId);
+    //删除统计表
+    int deletetj(int substandardId);
+    //页面删除账号表
+    int deletesub(int recordId);
+
 }

@@ -21,7 +21,7 @@ var index=0;
         var queryArgs = $tool.getQueryParam();//获取查询参数
         var templateId = queryArgs['templateId'];
 
-        alert(templateId);
+
         var req = {
             templateId:templateId,
 

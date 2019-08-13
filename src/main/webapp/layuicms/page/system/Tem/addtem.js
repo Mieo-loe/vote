@@ -50,7 +50,7 @@ layui.config({
                 for(var g = 0;g<t.length;g++){
                     var uid = $($($(t[g]).children(".layui-input-block")[0]).children("input")[1]).val();
                     beice.push({uid:uid});
-                    alert(uid);
+
                 }
 
                 var bz_coll = [];//标准数组
@@ -81,7 +81,7 @@ layui.config({
                 zbt_coll.push(zbt_obj);
             }
             var data = {templateTitleId:templateTitleId, bigTitle:bigTitle, explain: explain, number: number, list:zbt_coll};
-            alert(JSON.stringify(data));//转成json对象
+
 
 
             $api.Addtemp(JSON.stringify(data),{contentType:"application/json;charset=UTF-8"},function (data) {

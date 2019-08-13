@@ -43,4 +43,8 @@ public interface Tp_Democratic_RecordMapper {
    //统计
    int findbysid(int substandardId);
 
+   //删除统计表
+   int deletetj(int substandardId);
+   //页面删除账号
+   int deletesub(int recordId);
 }

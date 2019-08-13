@@ -17,7 +17,7 @@
 <!--搜索栏-->
 <blockquote class="layui-elem-quote news_search">
     <form class="layui-form">
-        <div class="layui-inline">
+        <div class="layui-inline" style="margin-left: 1450px">
             <a class="layui-btn layui-btn-normal usersAdd_btn">创建空白模板</a>
         </div>
     </form>
@@ -32,18 +32,18 @@
 <div id="page"></div>
 <!--toolbar 模板-->
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-xs" lay-event="tongji"><i class="layui-icon">&#xe642;</i>统计</a>
+    <a style="color: #40AFFE" lay-event="tongji">统计</a>
 
     {{#  if(d.id == '发布中'){  }}
-    <a class="layui-btn layui-btn-xs" lay-event="chakan"><i class="layui-icon">&#xe642;</i>查看</a>
+    <a style="color: #40AFFE" lay-event="chakan">查看</a>
     {{#  } else{ }}
-    <a class="layui-btn layui-btn-xs" ><i class="layui-icon" >&#xe642;</i><font style="color:rgba(255,255,255,0.6)">查看</font></a>
+    <a style="color: #40AFFE"><font style="color:rgba(255,255,255,0.6)">查看</font></a>
     {{#  } }}
 
     {{#  if(d.id == '发布中'){  }}
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="guanbi"><i class="layui-icon">&#xe642;</i>关闭投票</a>
+    <a style="color: #40AFFE"  lay-event="guanbi">关闭投票</a>
     {{#  } else{ }}
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>
+    <a style="color: #40AFFE" lay-event="del">删除</a>
     {{#  } }}
 </script>
 <script type="text/html" id="buttonTpl">

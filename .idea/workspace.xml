@@ -6,9 +6,48 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f83f2db-059a-4034-949a-37cee0e8ee05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/manager/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="8f83f2db-059a-4034-949a-37cee0e8ee05" name="Default Changelist" comment="1822 update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/Tp_Democratic_RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/Tp_Democratic_RecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/Tp_Democratic_RecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/Tp_Democratic_RecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/Tp_Democratic_RecordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/Tp_Democratic_RecordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/Tp_Democratic_RecordServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/Tp_Democratic_RecordServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/Tp_Democratic_RecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Tp_Democratic_RecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/Tem.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/Tem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/Tem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/Tem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/addtem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/addtem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbc.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbcyl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbcyl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/shiyon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/shiyon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/adddemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/adddemo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/chakan.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/chakan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/chakan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/chakan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/shimzbcyl.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/shimzbcyl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/tongji.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/tongji.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/tongji.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/tongji.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/Tp_Democratic_RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/controllers/system/Tp_Democratic_RecordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/Tp_Democratic_RecordMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/dataaccess/dao/system/Tp_Democratic_RecordMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/Tp_Democratic_RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/api/system/Tp_Democratic_RecordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/Tp_Democratic_RecordServiceimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gameloft9/demo/service/impl/system/Tp_Democratic_RecordServiceimpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/Tp_Democratic_RecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/Tp_Democratic_RecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/Tp_Democratic_RecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/controllers/system/Tp_Democratic_RecordController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/Tp_Democratic_RecordMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/dataaccess/dao/system/Tp_Democratic_RecordMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/Tp_Democratic_RecordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/api/system/Tp_Democratic_RecordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/Tp_Democratic_RecordServiceimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/com/gameloft9/demo/service/impl/system/Tp_Democratic_RecordServiceimpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/Tp_Democratic_RecordMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/WEB-INF/classes/mapper/Tp_Democratic_RecordMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Tem/Tem.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Tem/Tem.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Tem/Tem.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Tem/Tem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Tem/mzbc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Tem/mzbc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/Tem/mzbcyl.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/Tem/mzbcyl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/chakan.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/chakan.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/demo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/shimzbcyl.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/shimzbcyl.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/tongji.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/manager/layuicms/page/system/demo/tongji.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,79 +75,109 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/Tprelationship.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Tp_Democratic_RecordMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="e#400#401#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpPhotoUser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="523">
+              <caret line="175" column="46" selection-start-line="175" selection-start-column="20" selection-end-line="175" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/Tp_Democratic_RecordController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="477" column="53" lean-forward="true" selection-start-line="477" selection-start-column="53" selection-end-line="477" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpphotoUserServiceimpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="28" selection-end-column="5" />
+            <state relative-caret-position="818">
+              <caret line="117" column="72" lean-forward="true" selection-start-line="117" selection-start-column="72" selection-end-line="117" selection-end-column="72" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#chakan#0;class#Tp_Democratic_RecordController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpphotoUserMapper.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+            <state relative-caret-position="469">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#blockquote#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/UserController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/shiyon.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+            <state relative-caret-position="305">
+              <caret line="351" selection-start-line="351" selection-end-line="351" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbcyl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27">
+              <caret line="32" column="50" lean-forward="true" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpGradePhotoUser.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/zhanghao1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="-868" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/Tp_Democratic_RecordMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/Tp_Democratic_RecordServiceimpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="505">
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
+              <folding>
+                <element signature="e#4252#4253#0" expanded="true" />
+                <element signature="e#4298#4299#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,6 +191,26 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/shimzbcyl.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/chakan.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/tongji.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbc.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbcyl.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/Tem.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/Tem.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/Tp_Democratic_RecordMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/adddemo.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/chakan.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/tongji.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/addtem.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/Tp_Democratic_RecordService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/Tp_Democratic_RecordServiceimpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/Tp_Democratic_RecordMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/Tp_Democratic_RecordController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/shiyon.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbc.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.html" />
       </list>
     </option>
   </component>
@@ -149,8 +238,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="304" />
-    <option name="width" value="1196" />
+    <option name="x" value="25" />
+    <option name="y" value="75" />
+    <option name="width" value="1705" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -158,7 +248,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -224,6 +313,16 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="demo" type="462c0819:PsiDirectoryNode" />
               <item name="dataaccess" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="dataaccess" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -237,10 +336,98 @@
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="layuicms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="layuicms" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="layuicms" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Vote" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Vote" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,6 +435,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -445,7 +638,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565598633756</updated>
-      <workItem from="1565598635485" duration="4448000" />
+      <workItem from="1565598635485" duration="4522000" />
+      <workItem from="1565622058357" duration="5774000" />
+      <workItem from="1565659157166" duration="7709000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1565600403938</created>
@@ -454,11 +649,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565600403938</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1822 update">
+      <created>1565605335593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565605335593</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4448000" />
+    <option name="totallyTimeSpent" value="18005000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,78 +673,77 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Capture Tool" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3062967" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" weight="0.32897604" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.291939" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.4433551" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39978212" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.18409586" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info anchor="right" id="Maven" weight="0.24546425" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" weight="0.32977587" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32897604" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.29152915" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.24546425" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32977587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Web" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.2497332" />
-      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Application Servers" order="0" weight="0.32897604" />
-      <window_info anchor="bottom" id="Spring" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" />
-      <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="5" visible="true" weight="0.38779956" />
-      <window_info anchor="bottom" id="Java Enterprise" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Message" order="9" />
-      <window_info anchor="bottom" id="Find" order="10" />
-      <window_info anchor="bottom" id="Run" order="11" weight="0.4433551" />
-      <window_info anchor="bottom" id="Debug" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="15" />
-      <window_info anchor="right" id="Maven" order="0" visible="true" weight="0.24546425" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32977587" />
-      <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Bean Validation" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4433551" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.47712418" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32897604" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.291939" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.24546425" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32977587" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,64 +751,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="1822 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="1822 update" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpphotoUserServiceimpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpphotoUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpGradePhotoUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/Tprelationship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#400#401#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpPhotoUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpSubtitleContent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -622,10 +769,324 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/Tprelationship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpPhotoUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpphotoUserServiceimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpphotoUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/model/system/TpGradePhotoUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="477" column="53" lean-forward="true" selection-start-line="477" selection-start-column="53" selection-end-line="477" selection-end-column="53" />
+        <state relative-caret-position="3117">
+          <caret line="635" column="39" lean-forward="true" selection-start-line="635" selection-start-column="39" selection-end-line="635" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TpBigtitleMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-core/4.2.3.RELEASE/spring-core-4.2.3.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpDemocraticstaandrdtService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="54" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/TpDemocraticsubstaandrdtMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/TpDemocraticsubstaandrdtMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/TpDemocraticSubstaandrdServiceimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/TpDemocraticsubstaandrdtService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/chakan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="203" column="9" selection-start-line="203" selection-start-column="9" selection-end-line="203" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/tongji.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="225" column="14" lean-forward="true" selection-start-line="225" selection-start-column="14" selection-end-line="231" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="344" column="18" selection-start-line="344" selection-start-column="18" selection-end-line="344" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbcyl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9315">
+          <caret line="345" column="14" selection-start-line="345" selection-start-column="14" selection-end-line="345" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/shimzbcyl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5130">
+          <caret line="190" column="26" selection-start-line="190" selection-start-column="26" selection-end-line="190" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/Tem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1107">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#blockquote#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/Tem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297">
+          <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/common/js/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="215" column="8" selection-start-line="215" selection-start-column="8" selection-end-line="215" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/adddemo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/chakan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/shimzbcyl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3001">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/tongji.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4131">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#span#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/addtem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/api/system/Tp_Democratic_RecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/service/impl/system/Tp_Democratic_RecordServiceimpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="e#4252#4253#0" expanded="true" />
+            <element signature="e#4298#4299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/zhanghao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1296" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/dataaccess/dao/system/Tp_Democratic_RecordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Tp_Democratic_RecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="175" column="46" selection-start-line="175" selection-start-column="20" selection-end-line="175" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/zhanghao1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1026">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/zhanghao1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-868" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbcyl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="32" column="50" lean-forward="true" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/mzbc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/Tem/shiyon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="351" selection-start-line="351" selection-end-line="351" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="33" column="64" selection-start-line="33" selection-start-column="64" selection-end-line="33" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/layuicms/page/system/demo/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#blockquote#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gameloft9/demo/controllers/system/Tp_Democratic_RecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="818">
+          <caret line="117" column="72" lean-forward="true" selection-start-line="117" selection-start-column="72" selection-end-line="117" selection-end-column="72" />
+          <folding>
+            <element signature="method#chakan#0;class#Tp_Democratic_RecordController#0" />
+          </folding>
         </state>
       </provider>
     </entry>
