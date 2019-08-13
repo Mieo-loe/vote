@@ -216,7 +216,60 @@ layui.define(['$tool','jquery'], function (exports) {
         },
         UpdateUserInfo:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'personCenter/update.do',req,config,successCallback,errorCallback);
-        }
+        },
+
+
+        DeleteRecord:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'record/delete.do',req,successCallback,errorCallback);
+        },
+        DeleteGradeUser:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'gradeUser/delete.do',req,successCallback,errorCallback);
+        },
+        DeleteAdm:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'adm/delete.do',req,successCallback,errorCallback);
+        },
+        UpdateResId:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'record/update.do',req,successCallback,errorCallback);
+        },
+        IsTopResId:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'adm/isTop.do',req,successCallback,errorCallback);
+        },
+        NoTopResId:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'adm/noTop.do',req,successCallback,errorCallback);
+        },
+        GetAdm:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'adm/findById.do',req,successCallback,errorCallback);
+        },
+        GetVer:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'record/findByIdVer.do',req,successCallback,errorCallback);
+        },
+        GetExcel:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'record/exportExcel',req,successCallback,errorCallback);
+        },
+        GetAdm2:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'adm/findById2.do',req,successCallback,errorCallback);
+        },
+        GetRecord:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'record/findByIdRecord.do',req,successCallback,errorCallback);
+        },
+        GetCount:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'record/findByIdCount.do',req,successCallback,errorCallback);
+        },
+        VerificationHao:function(req,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'record/verification.do',req,successCallback,errorCallback);
+        },
+        addTemplet:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext()+'templ/add.do',req,config,successCallback,errorCallback);
+        },
+        updateTemplet:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext()+'templ/add.do',req,config,successCallback,errorCallback);
+        },
+        addAdmKeep:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext()+'adm/add.do',req,config,successCallback,errorCallback);
+        },
+        tiRecord:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext()+'record/insertStatistics.do',req,config,successCallback,errorCallback);
+        },
     };
 
 
