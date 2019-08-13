@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public class TpBigtitle implements Serializable {
+public class TpBigTitle implements Serializable {
 
    private int bigTitleId;
    private String bigTitle;

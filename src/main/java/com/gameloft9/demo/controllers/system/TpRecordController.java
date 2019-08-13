@@ -31,7 +31,7 @@ public class TpRecordController {
     @Autowired
     TpSubstandardService tpSubstandardServiceImpl;
     @Autowired
-    TpBigtitleService tpBigtitleServiceImpl;
+    TpBigTitleService tpBigTitleServiceImpl;
     @Autowired
     TpSubtitleContentService tpSubtitleContentServiceImpl;
     @Autowired
@@ -56,7 +56,7 @@ public class TpRecordController {
     @RequestMapping(value = "/add.do",method = RequestMethod.POST)
     @ResponseBody
     @BizOperLog(operType = OperType.ADD,memo = "添加用户")
-    public IResult addbig(@RequestBody TpBigtitle big){
+    public IResult addbig(@RequestBody TpBigTitle big){
         //返回json至前端的均返回ResultBean或者PageResultBean
          int bigTitleId = tpRecordServiceImpl.addbig(big);//添加单表
         for (TpSubtitleContent tpSubtitleContent : big.getList()) {//取list里面值
@@ -97,15 +97,20 @@ public class TpRecordController {
         for (TpSubtitleContent subtitleContent : tpSubtitleContent) {
             List<TpStandard> tpStandard = tpStandardServiceImpl.findBysubtitleId(subtitleContent.getSubtitleId());
             for (TpStandard standard : tpStandard) {
+                //刪除統計表
+                List<TpSubstandard> tpSubstandards = tpSubstandardServiceImpl.findBystandardId(standard.getStandardId());
+                for (TpSubstandard tpSubstandard:tpSubstandards){
+                    tpRecordServiceImpl.deletesubstandardId(tpSubstandard.getSubstandardId());
+                }
                 tpSubstandardServiceImpl.delete(standard.getStandardId());
             }
             tpRelationshipServiceImpl.delete(subtitleContent.getSubtitleId());
             tpStandardServiceImpl.delete(subtitleContent.getSubtitleId());
         }
         tpSubtitleContentServiceImpl.delete(bigTitleId);
+        tpRecordServiceImpl.delver(recordId);
         tpRecordServiceImpl.delete(recordId);
-        tpBigtitleServiceImpl.delete(bigTitleId);
-
+        tpBigTitleServiceImpl.delete(bigTitleId);
         return new ResultBean<String>("success");
     }
     @RequestMapping(value = "/guanbi.do",method = RequestMethod.POST)
@@ -145,9 +150,9 @@ public class TpRecordController {
             subtitleContent.setBeice(tprelationship);
             subtitleContent.setBz_coll(tpStandard);
         }
-        TpBigtitle tpBigtitle = tpBigtitleServiceImpl.findbybigid(bigTitleId);
+        TpBigTitle tpBigtitle = tpBigTitleServiceImpl.findbybigid(bigTitleId);
         tpBigtitle.setList(tpSubtitleContent);
-        return new ResultBean<TpBigtitle>(tpBigtitle);
+        return new ResultBean<TpBigTitle>(tpBigtitle);
     }
     //查看提交
     @RequestMapping(value = "/submit.do",method = RequestMethod.POST)

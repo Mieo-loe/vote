@@ -31,7 +31,7 @@ public class TpTemplateController {
     @Autowired
     TpSubstandardService tpSubstandardServiceImpl;
     @Autowired
-    TpBigtitleService tpBigtitleServiceimpl;
+    TpBigTitleService tpBigTitleServiceimpl;
     @Autowired
     TpSubtitleContentService tpSubtitleContentServiceImpl;
     @Autowired
@@ -51,7 +51,7 @@ public class TpTemplateController {
     @RequestMapping(value = "/add.do", method = RequestMethod.POST)
     @ResponseBody
     @BizOperLog(operType = OperType.ADD, memo = "添加模板")
-    public IResult addbig(@RequestBody TpBigtitle big) {
+    public IResult addbig(@RequestBody TpBigTitle big) {
         //返回json至前端的均返回ResultBean或者PageResultBean
         int bigTitleId = tpTemplateServiceImpl.addbig(big);//添加单表大标题
         for (TpSubtitleContent tpSubtitleContent : big.getList()) {//取list里面值 子标题
@@ -108,7 +108,7 @@ public class TpTemplateController {
         }
         tpSubtitleContentServiceImpl.delete(bigTitleId);
         tpTemplateServiceImpl.delete(templateId);
-        tpBigtitleServiceimpl.delete(bigTitleId);
+        tpBigTitleServiceimpl.delete(bigTitleId);
 
         return new ResultBean<String>("success");
     }
@@ -138,9 +138,9 @@ public class TpTemplateController {
             subtitleContent.setBeice(tprelationship);
             subtitleContent.setBz_coll(tpStandard);
         }
-        TpBigtitle tpBigtitle = tpBigtitleServiceimpl.findbybigid(bigTitleId);
+        TpBigTitle tpBigtitle = tpBigTitleServiceimpl.findbybigid(bigTitleId);
         tpBigtitle.setList(tpSubtitleContent);
-        return new ResultBean<TpBigtitle>(tpBigtitle);
+        return new ResultBean<TpBigTitle>(tpBigtitle);
     }
 
 }

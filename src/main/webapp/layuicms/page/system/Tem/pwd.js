@@ -59,9 +59,7 @@ layui.config({
             document.body.removeChild(link);
 
             return false;
-        })
-
-
+        });
         form.render();//重新绘制表单，让修改生效
         // });
 

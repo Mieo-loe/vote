@@ -64,6 +64,14 @@ limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
         delete from tp_democratic_record
         where recordId = #{recordId,jdbcType=INTEGER}
     </delete>
+    <delete id="delver" parameterType="java.lang.Integer">
+        delete from tp_democratic_verification
+        where recordId = #{recordId,jdbcType=INTEGER}
+    </delete>
+    <delete id="deletesubstandardId" parameterType="java.lang.Integer">
+        delete from tp_democratic_subtitleid
+        where substandardId = #{substandardId,jdbcType=INTEGER}
+    </delete>
 
     <update id="guanbi" parameterType="com.gameloft9.demo.dataaccess.model.system.TpRecord">
         <!--
@@ -76,7 +84,7 @@ limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
         id = 36
         where recordId = #{recordId,jdbcType=INTEGER}
     </update>
-    <insert id="insertbig" parameterType="com.gameloft9.demo.dataaccess.model.system.TpBigtitle" useGeneratedKeys="true" keyProperty="bigTitleId">
+    <insert id="insertbig" parameterType="com.gameloft9.demo.dataaccess.model.system.TpBigTitle" useGeneratedKeys="true" keyProperty="bigTitleId">
         insert into tp_democratic_bigtitle (bigTitle,`explain`,`number`)
         values (#{bigTitle},#{explain},#{number})
     </insert>

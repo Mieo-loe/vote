@@ -20,7 +20,7 @@ public interface TpTemplateMapper {
     int delete(int templateId);
     //查看
     int selectById(int templateId);
-    int insertbig(TpBigtitle big);
+    int insertbig(TpBigTitle big);
     int intsersubtitle(TpSubtitleContent subtitle);
     int intserstandard(TpStandard stanard);
     int intsersubstandard(TpSubstandard substanard);

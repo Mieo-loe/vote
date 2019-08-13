@@ -36,7 +36,7 @@ public class TpTemplateServiceImpl implements TpTemplateService {
         return dao.counttemp();
     }
 
-    public int addbig(TpBigtitle big) {
+    public int addbig(TpBigTitle big) {
         int bigTitleId = dao.insertbig(big);
         return bigTitleId;
     }

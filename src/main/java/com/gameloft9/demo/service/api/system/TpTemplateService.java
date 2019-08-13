@@ -16,7 +16,7 @@ public interface TpTemplateService {
     //查看
     int selectById(int templateId);
     int counttemp();
-    int addbig(TpBigtitle big);
+    int addbig(TpBigTitle big);
     int addsubtitle(TpSubtitleContent subtitle);
     int addstandard(TpStandard standard);
     int addsubstandard(TpSubstandard substandard);

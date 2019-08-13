@@ -39,6 +39,10 @@ public class TpRecordServiceImpl implements TpRecordService {
         return  dao.delete(recordId);
     }
 
+    public int deletesubstandardId(int substandardId) {
+        return dao.deletesubstandardId(substandardId);
+    }
+
     public int selectByrecId(Integer recordId) {
         return dao.selectByrecId(recordId);
     }
@@ -53,7 +57,7 @@ public class TpRecordServiceImpl implements TpRecordService {
         dao.guanbi(recordId);
         return  0;
     }
-    public int addbig(TpBigtitle big) {
+    public int addbig(TpBigTitle big) {
         int bigTitleId = dao.insertbig(big);
         return bigTitleId;
     }
@@ -90,5 +94,9 @@ public class TpRecordServiceImpl implements TpRecordService {
 
     public int findbysid(int substandardId) {
         return dao.findbysid(substandardId);
+    }
+
+    public int delver(int recordId) {
+        return dao.delver(recordId);
     }
 }

@@ -18,6 +18,7 @@ public interface TpRecordService {
     int countGetAll();
     int insert(TpRecord record);
     int delete(Integer recordId);
+    int deletesubstandardId(int substandardId);
     /**
      * 获取角色
      * @param recordId 角色id
@@ -29,11 +30,12 @@ public interface TpRecordService {
 
      * */
     int guanbi(Integer recordId);
-    int addbig(TpBigtitle big);
+    int addbig(TpBigTitle big);
     int addsubtitle(TpSubtitleContent subtitle);
     int addstandard(TpStandard standard);
     int addsubstandard(TpSubstandard substandard);
     int insertpralation(TpRelationship tprelationship);
     int insertsubtitletid(TpSubtitleId tpSubtitleId);
     int findbysid(int substandardId);
+    int delver(int recordId);
 }

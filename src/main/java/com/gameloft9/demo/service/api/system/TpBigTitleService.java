@@ -5,7 +5,7 @@ import com.gameloft9.demo.dataaccess.model.system.*;
 
 import java.util.List;
 
-public interface TpBigtitleService {
+public interface TpBigTitleService {
     int delete(int bigTitleId);
-    TpBigtitle findbybigid(int bigTitleId);
+    TpBigTitle findbybigid(int bigTitleId);
 }

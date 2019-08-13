@@ -7,12 +7,12 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface TpBigtitleMapper {
+public interface TpBigTitleMapper {
 //    int insertbig(TpBigtitle big);
 //    int intsersubtitle(TpSubtitleContent subtitle);
 //    int intserstandard(TpStandard stanard);
 //    int intsersubstandard(TpSubstandard substanard);
 //
     int delete (int bigTitleId);
-    TpBigtitle findbybigid(int bigTitleId);
+    TpBigTitle findbybigid(int bigTitleId);
 }

@@ -52,7 +52,7 @@
         count(1)
         from tp_democratic_record t
     </select>
-    <insert id="insertbig" parameterType="com.gameloft9.demo.dataaccess.model.system.TpBigtitle" useGeneratedKeys="true" keyProperty="bigTitleId">
+    <insert id="insertbig" parameterType="com.gameloft9.demo.dataaccess.model.system.TpBigTitle" useGeneratedKeys="true" keyProperty="bigTitleId">
         insert into tp_democratic_bigtitle (bigTitle,`explain`,`number`)
         values (#{bigTitle},#{explain},#{number})
     </insert>
