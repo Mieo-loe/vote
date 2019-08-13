@@ -68,7 +68,7 @@ var index=0;
                      }
                             var only;
                             alert(res.data.list[i].bz_coll[j].id);
-                            if(res.data.list[i].bz_coll[j].id===78){
+                            if(res.data.list[i].bz_coll[j].id===118){
                                 only=  '<div class="layui-form-item">'+
                                     "<div class=\"layui-input-block\">\n"+
                                     '<label class="layui-form-label">选项规则</label>\n'+
@@ -179,9 +179,9 @@ var index=0;
                 var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                 var only;
                 if (id) {
-                    only = 78;
+                    only = 118;
                 } else {
-                    only = 79;
+                    only = 119;
                 }
                 //子标准
                 var f = $(e[j]).children("#zbz").children();
@@ -291,9 +291,9 @@ var index=0;
                     var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                     var only;
                     if (id) {
-                        only = 78;
+                        only = 118;
                     } else {
-                        only = 79;
+                        only = 119;
                     }
                     //子标准
                     var f = $(e[j]).children("#zbz").children();
@@ -360,9 +360,9 @@ var index=0;
                 var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                 var only;
                 if (id) {
-                    only = 78;
+                    only = 118;
                 } else {
-                    only = 79;
+                    only = 119;
                 }
                 //子标准
                 var f = $(e[j]).children("#zbz").children();
