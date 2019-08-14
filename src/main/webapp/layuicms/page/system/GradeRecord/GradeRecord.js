@@ -66,7 +66,7 @@ layui.config({
                 DeleteJiLu(row.record_Id);
             } else if (layEvent === 'edit') { //编辑
                 //do something
-                editJiLu(row.record_Id);
+                editJiLu(row.record_Id, row.resId);
             } else if (layEvent === 'editstatus') { //关闭投票
                 //do something
                 editStatus(row.record_Id);
@@ -75,7 +75,7 @@ layui.config({
                 tongji(row.record_Id);
             } else if (layEvent === 'tpzh') { //查看投票账号
                 //do something
-                tpzh(row.record_Id);
+                cktpzh(row.record_Id);
             }
         });
     }
@@ -174,8 +174,8 @@ layui.config({
     }
 
     //查看
-    function editJiLu(record_Id){
-
+    function editJiLu(record_Id, resId){
+        // console.log(resId)
         if (record_Id!=null) {
             var req = {
                 record_Id: record_Id,
@@ -208,19 +208,21 @@ layui.config({
                             }
                         });
 
-                        //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
-                        $(window).resize(function () {
-                            layui.layer.full(index);
+                                //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
+                                $(window).resize(function () {
+                                    layui.layer.full(index);
+                                });
+                                layui.layer.full(index);
+                            }
                         });
-                        layui.layer.full(index);
-                    }
-                });
-            })
+                    // }
+                })
+            }
         }
     }
 
     //查看投票账号
-    function tpzh(record_Id){
+    function cktpzh(record_Id){
 
         layui.layer.open({
             type: 2,
