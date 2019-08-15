@@ -31,8 +31,8 @@ layui.config({
                   {type:'numbers',title:'序号',fixed: 'left'},
                   {field: 'history', title: '历史记录', width: '25%'}
                 , {field: 'startTime', title: '发布时间', width: '25%'}
-                , {field: 'status', title: '状态', width: '25%' ,toolbar:'#wordsColor'}
-                , {fixed: 'right', title: '操作', width: 180, align: 'left',toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+                , {field: 'status', title: '状态', width: '20%' ,toolbar:'#wordsColor'}
+                , {fixed: 'right', title: '操作', width: '25%', align: 'left',toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
             ]]
             //, done: function () {
             //    qid = $("[data-field='qid']").val();
@@ -51,12 +51,14 @@ layui.config({
             //区分事件
             if (layEvent === 'del') { //删除
                 delRole(row.qid);
-            } else if (layEvent === 'edit') { //编辑
+            } else if (layEvent === 'edit') { //取消投票
                 editRole(row.qid);
-            }else if (layEvent === 'look') { //预览
+            }else if (layEvent === 'look') { //查看
                 preview(row.qid,row.status);
-            }else if (layEvent === 'total') { //预览
+            }else if (layEvent === 'total') { //统计
                 total(row.qid);
+            }else if (layEvent === 'lookAccount') { //查看账号
+                lookAccount(row.qid);
             }
         });
     }
@@ -101,7 +103,7 @@ layui.config({
         });
     }
 
-    //编辑
+    //取消投票
     function editRole(qid){
         layer.confirm('确认取消投票吗？', function (confirmIndex) {
            layer.close(confirmIndex);//关闭confirm
@@ -120,46 +122,67 @@ layui.config({
     }
     //查看
     function preview(qid,status){
-        var x = layer.prompt({title: '请输入账号',formType: 0}, function(content, index) {
-
-            //将账号存入域传给previewLook页面，根据content对提交过的账号进行删除
-            var con = JSON.stringify(content);//在js中把对象转为JSON字符串的语法
-            window.sessionStorage.setItem("con", con);//js中用sessionStorage.setItem("ss", ss)把JSON对象字符串存入域中
-            var req = {
-                content:content,
-                recordId:qid
-            }
-            //将输入的账号进行数据库查询
-            $api.findAccount(JSON.stringify(req),{contentType:"application/json;charset=UTF-8"},function (data) {
-                if (data.data==false){
-                    layer.msg("账号错误或非本次投票账号！", {time: 1000}, function () {
-                        layer.closeAll("iframe");
-                        //刷新父页面
-                        parent.location.reload();
-                    });
-                }else{
-                    var s = encodeURI(status);//将中文数据进行编码，否则传过去会乱码
-                    var index = layui.layer.open({
-                        title: "预览",
-                        type: 2,
-                        content: "previewLook.html?qid="+qid+"&status="+s,
-                        success: function (layero, index) {
-                            setTimeout(function () {
-                                layui.layer.tips('点击此处返回', '.layui-layer-setwin .layui-layer-close', {
-                                    tips: 3
-                                });
-                            }, 500)
-                        }
-                    });
-                    //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
-                    $(window).resize(function () {
-                        layui.layer.full(index);
-                    });
-                    layui.layer.full(index);
-                    layer.close(x);//关闭 var = x 的弹出层框
+        if (status=="已结束") {
+            var s = encodeURI(status);//将中文数据进行编码，否则传过去会乱码
+            var index = layui.layer.open({
+                title: "预览",
+                type: 2,
+                content: "previewLook.html?qid="+qid+"&status="+s,
+                success: function (layero, index) {
+                    setTimeout(function () {
+                        layui.layer.tips('点击此处返回', '.layui-layer-setwin .layui-layer-close', {
+                            tips: 3
+                        });
+                    }, 500)
                 }
             });
-        });
+            //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
+            $(window).resize(function () {
+                layui.layer.full(index);
+            });
+            layui.layer.full(index);
+            layer.close(x);//关闭 var = x 的弹出层框
+        }else {
+            var x = layer.prompt({title: '请输入账号',formType: 0}, function(content, index) {
+                //将账号存入域传给previewLook页面，根据content对提交过的账号进行删除
+                var con = JSON.stringify(content);//在js中把对象转为JSON字符串的语法
+                window.sessionStorage.setItem("con", con);//js中用sessionStorage.setItem("ss", ss)把JSON对象字符串存入域中
+                var req = {
+                    content:content,
+                    recordId:qid
+                }
+                //将输入的账号进行数据库查询
+                $api.findAccount(JSON.stringify(req),{contentType:"application/json;charset=UTF-8"},function (data) {
+                    if (data.data==false){
+                        layer.msg("账号错误或非本次投票账号！", {time: 1000}, function () {
+                            layer.closeAll("iframe");
+                            //刷新父页面
+                            parent.location.reload();
+                        });
+                    }else{
+                        var s = encodeURI(status);//将中文数据进行编码，否则传过去会乱码
+                        var index = layui.layer.open({
+                            title: "预览",
+                            type: 2,
+                            content: "previewLook.html?qid="+qid+"&status="+s,
+                            success: function (layero, index) {
+                                setTimeout(function () {
+                                    layui.layer.tips('点击此处返回', '.layui-layer-setwin .layui-layer-close', {
+                                        tips: 3
+                                    });
+                                }, 500)
+                            }
+                        });
+                        //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
+                        $(window).resize(function () {
+                            layui.layer.full(index);
+                        });
+                        layui.layer.full(index);
+                        layer.close(x);//关闭 var = x 的弹出层框
+                    }
+                });
+            });
+        }
     }
     //统计
     function total(qid){
@@ -167,6 +190,26 @@ layui.config({
             title: "统计",
             type: 2,
             content: "total.html?qid="+qid,
+            success: function (layero, index) {
+                setTimeout(function () {
+                    layui.layer.tips('点击此处返回', '.layui-layer-setwin .layui-layer-close', {
+                        tips: 3
+                    });
+                }, 500)
+            }
+        });
+        //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
+        $(window).resize(function () {
+            layui.layer.full(index);
+        });
+        layui.layer.full(index);
+    }
+    //查看账号
+    function lookAccount(qid){
+        var index = layui.layer.open({
+            title: "查看账号",
+            type: 2,
+            content: "lookAccount.html?qid="+qid,
             success: function (layero, index) {
                 setTimeout(function () {
                     layui.layer.tips('点击此处返回', '.layui-layer-setwin .layui-layer-close', {

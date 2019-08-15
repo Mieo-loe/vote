@@ -22,26 +22,30 @@ layui.config({
 
     getRandomCode();
     function getRandomCode() {
-        // var ac = window.sessionStorage.getItem("ac");
-        var ac = window.localStorage.getItem("ac");
-        var acc = JSON.parse(ac);//将域中取出的JSON字符串转化为对象
-        for (var i = 0; i < acc.accounts.length; i++) {
-            //遍历生成的账号并显示在页面
-            var vv = "<div style=\"width: 20%;display: inline-block;text-align: center\">\n" +
-                "    <input type=\"text\" class=\"layui-input\" value='"+acc.accounts[i]+"' style=\"border:none;text-align: center\" readonly=\"true\">\n" +
-                "</div>"
-            $('.account').append(vv);
-        }
+        var queryArgs = $tool.getQueryParam();//获取查询参数
+        var recordId = queryArgs['qid'];
+        var account=[];
+        $api.QueGetAccount({"recordId":recordId},function (data) {
+            account=data.data;
+            for (var i = 0; i < data.data.length; i++) {
+                //遍历生成的账号并显示在页面
+                var vv = "<div style=\"width: 20%;display: inline-block;text-align: center\">\n" +
+                    "    <input type=\"text\" class=\"layui-input\" value='"+data.data[i].content+"' style=\"border:none;text-align: center\" readonly=\"true\">\n" +
+                    "</div>"
+                $('.account').append(vv);
+            }
+        });
+
 
         //导出
         form.on("submit(daochu)", function (data) {
             const zhanghao = [];
             //遍历生成的账号
-            for (var i = 0; i < acc.accounts.length; i++) {
+            for (var i = 0; i < account.length; i++) {
                 const json =
                     {
                         num:''+(i+1)+'',
-                        content:''+acc.accounts[i]+''
+                        content:''+account[i].content+''
                     }
                 zhanghao.push(json);
             }

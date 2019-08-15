@@ -9,4 +9,10 @@
         FROM tp_democratic_verification
         WHERE tp_democratic_verification.content=#{content,jdbcType=VARCHAR}
     </select>
+    <!--根据qid查询账号-->
+    <select id="getAccount" parameterType="java.lang.String" resultType="com.gameloft9.demo.dataaccess.model.system.TpQueVerification">
+        SELECT tp_democratic_verification.content
+        FROM tp_democratic_verification
+        WHERE tp_democratic_verification.recordId=#{recordId}
+    </select>
 </mapper>

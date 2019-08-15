@@ -177,6 +177,9 @@ layui.define(['$tool','jquery'], function (exports) {
         GetAnsId:function(req,successCallback,errorCallback){
             doPost($tool.getContext()+'dfmuban/getansId.do',req,successCallback,errorCallback);
         },
+        QueGetAccount:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'wjdc/getAccount.do',req,successCallback,errorCallback);
+        },
         UpdateMenu:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext()+'menu/update.do',req,config,successCallback,errorCallback);
         },
@@ -219,6 +222,7 @@ layui.define(['$tool','jquery'], function (exports) {
         AddTotal:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'wjdc/addTotal.do',req,config,successCallback,errorCallback);
         },
+
         AddTemplateTitle:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'wjdc/add6.do',req,config,successCallback,errorCallback);
         },

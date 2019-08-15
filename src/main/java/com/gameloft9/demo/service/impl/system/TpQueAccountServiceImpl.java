@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -17,8 +18,11 @@ public class TpQueAccountServiceImpl implements TpQueAccountService {
     @Autowired
     private TpQueAccountMapper accountMapper;
 
-    public TpQueVerification findAccount(String content) {
+    public List<TpQueVerification> findAccount(String content) {
         return accountMapper.findAccount(content);
     }
 
+    public List<TpQueVerification> getAccount(String recordId) {
+        return accountMapper.getAccount(recordId);
+    }
 }

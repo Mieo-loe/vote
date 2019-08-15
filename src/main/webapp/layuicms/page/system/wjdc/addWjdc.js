@@ -68,7 +68,9 @@ layui.config({
             accounts:accounts
         };
         var ac = JSON.stringify(ac);//在js中把对象转为JSON字符串的语法
-        window.sessionStorage.setItem("ac", ac);//传给account.js
+        //sessionStorage.setItem存入缓存域，localStorage是本地域
+        window.localStorage.setItem("ac", ac);//传给account.js
+        // window.sessionStorage.setItem("ac", ac);//传给account.js
         var req = {
             title:title,
             explain:explain,

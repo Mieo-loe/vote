@@ -95,40 +95,147 @@ layui.config({
 
     //提交统计
     form.on("submit(previewSubmit_btn)", function (data) {
-        var queryArgs = $tool.getQueryParam();//获取查询参数
-        var qid = queryArgs['qid'];
-        //获取被选中的oid
-        var obj = document.getElementsByClassName("checkbox_");
-        var oids = [];
-        for (var k in obj){
-            if (obj[k].checked){
-                oids.push(obj[k].value);
+        //判断同一题的单选和多选是否被选中，选中则提交，未选中则提示：尚有未完成的题目
+        //题目全是单选
+        if($(".radio_").length>0&&$(".checkbox_").length==0){
+            if ($("input[type='radio']:checked").val()) {
+                var queryArgs = $tool.getQueryParam();//获取查询参数
+                var qid = queryArgs['qid'];
+                //获取被选中的oid
+                var obj = document.getElementsByClassName("checkbox_");
+                var oids = [];
+                for (var k in obj){
+                    if (obj[k].checked){
+                        oids.push(obj[k].value);
+                    }
+                }
+                var obj1 = document.getElementsByClassName("radio_");
+                for (var k in obj1){
+                    if (obj1[k].checked){
+                        oids.push(obj1[k].value);
+                    }
+                }
+                // 获取history传过来的账号
+                var con = window.sessionStorage.getItem("con");//在另一个页面的js中接收(获取)域中的对象
+                var content = JSON.parse(con);//将域中取出的JSON字符串转化为对象
+                var req = {
+                    qid:qid,
+                    oids:oids,
+                    content:content
+                };
+                //弹出loading(遮罩层已经统一放在了ajaxExtention里面了)
+                //var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
+                $api.AddTotal(JSON.stringify(req),{contentType:"application/json;charset=UTF-8"},function (data) {
+                    //top.layer.close(index);(关闭遮罩已经放在了ajaxExtention里面了)
+                    layer.msg("提交成功！", {time: 1000}, function () {
+                        layer.closeAll("iframe");
+                        //刷新父页面
+                        parent.location.reload();
+                    });
+                });
+            }else{
+                layer.msg("尚有未完成的题目！", {time: 1000}, function () {
+                });
             }
         }
-        var obj1 = document.getElementsByClassName("radio_");
-        for (var k in obj1){
-            if (obj1[k].checked){
-                oids.push(obj1[k].value);
+        //题目全是多选
+        if($(".checkbox_").length>0&&$(".radio_").length==0) {
+            //复选框至少选中一个
+            var flag = false;
+            for (let i = 0; i < $(".checkbox_").length; i++) {
+                if(document.getElementsByClassName("checkbox_")[i].checked){
+                    flag = true;
+                }
+            }
+            if (flag==true) {
+                var queryArgs = $tool.getQueryParam();//获取查询参数
+                var qid = queryArgs['qid'];
+                //获取被选中的oid
+                var obj = document.getElementsByClassName("checkbox_");
+                var oids = [];
+                for (var k in obj){
+                    if (obj[k].checked){
+                        oids.push(obj[k].value);
+                    }
+                }
+                var obj1 = document.getElementsByClassName("radio_");
+                for (var k in obj1){
+                    if (obj1[k].checked){
+                        oids.push(obj1[k].value);
+                    }
+                }
+                // 获取history传过来的账号
+                var con = window.sessionStorage.getItem("con");//在另一个页面的js中接收(获取)域中的对象
+                var content = JSON.parse(con);//将域中取出的JSON字符串转化为对象
+                var req = {
+                    qid:qid,
+                    oids:oids,
+                    content:content
+                };
+                //弹出loading(遮罩层已经统一放在了ajaxExtention里面了)
+                //var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
+                $api.AddTotal(JSON.stringify(req),{contentType:"application/json;charset=UTF-8"},function (data) {
+                    //top.layer.close(index);(关闭遮罩已经放在了ajaxExtention里面了)
+                    layer.msg("提交成功！", {time: 1000}, function () {
+                        layer.closeAll("iframe");
+                        //刷新父页面
+                        parent.location.reload();
+                    });
+                });
+            }else{
+                layer.msg("尚有未完成的题目！", {time: 1000}, function () {
+                });
             }
         }
-        // 获取history传过来的账号
-        var con = window.sessionStorage.getItem("con");//在另一个页面的js中接收(获取)域中的对象
-        var content = JSON.parse(con);//将域中取出的JSON字符串转化为对象
-        var req = {
-            qid:qid,
-            oids:oids,
-            content:content
-        };
-        //弹出loading(遮罩层已经统一放在了ajaxExtention里面了)
-        //var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
-        $api.AddTotal(JSON.stringify(req),{contentType:"application/json;charset=UTF-8"},function (data) {
-            //top.layer.close(index);(关闭遮罩已经放在了ajaxExtention里面了)
-            layer.msg("提交成功！", {time: 1000}, function () {
-                layer.closeAll("iframe");
-                //刷新父页面
-                parent.location.reload();
-            });
-        });
+        //题目既有单选，又有多选
+        if ($(".radio_").length>0&&$(".checkbox_").length>0){
+            //复选框至少选中一个
+            var flag = false;
+            for (let i = 0; i < $(".checkbox_").length; i++) {
+                if(document.getElementsByClassName("checkbox_")[i].checked){
+                    flag = true;
+                }
+            }
+            if ($("input[type='radio']:checked").val()&&flag==true) {
+                var queryArgs = $tool.getQueryParam();//获取查询参数
+                var qid = queryArgs['qid'];
+                //获取被选中的oid
+                var obj = document.getElementsByClassName("checkbox_");
+                var oids = [];
+                for (var k in obj){
+                    if (obj[k].checked){
+                        oids.push(obj[k].value);
+                    }
+                }
+                var obj1 = document.getElementsByClassName("radio_");
+                for (var k in obj1){
+                    if (obj1[k].checked){
+                        oids.push(obj1[k].value);
+                    }
+                }
+                // 获取history传过来的账号
+                var con = window.sessionStorage.getItem("con");//在另一个页面的js中接收(获取)域中的对象
+                var content = JSON.parse(con);//将域中取出的JSON字符串转化为对象
+                var req = {
+                    qid:qid,
+                    oids:oids,
+                    content:content
+                };
+                //弹出loading(遮罩层已经统一放在了ajaxExtention里面了)
+                //var index = top.layer.msg('数据提交中，请稍候', {icon: 16, time: false, shade: 0.8});
+                $api.AddTotal(JSON.stringify(req),{contentType:"application/json;charset=UTF-8"},function (data) {
+                    //top.layer.close(index);(关闭遮罩已经放在了ajaxExtention里面了)
+                    layer.msg("提交成功！", {time: 1000}, function () {
+                        layer.closeAll("iframe");
+                        //刷新父页面
+                        parent.location.reload();
+                    });
+                });
+            }else{
+                layer.msg("尚有未完成的题目！", {time: 1000}, function () {
+                });
+            }
+        }
         return false;
     })
 
