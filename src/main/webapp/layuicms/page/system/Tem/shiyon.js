@@ -22,7 +22,7 @@ var index=0;
         var queryArgs = $tool.getQueryParam();//获取查询参数
         var templateId = queryArgs['templateId'];
 
-        alert(templateId);
+
         var req = {
             templateId:templateId,
 
@@ -68,7 +68,7 @@ var index=0;
                      }
                             var only;
                             alert(res.data.list[i].bz_coll[j].id);
-                            if(res.data.list[i].bz_coll[j].id===78){
+                            if(res.data.list[i].bz_coll[j].id===118){
                                 only=  '<div class="layui-form-item">'+
                                     "<div class=\"layui-input-block\">\n"+
                                     '<label class="layui-form-label">选项规则</label>\n'+
@@ -167,21 +167,21 @@ var index=0;
             for(var g = 0;g<t.length;g++){
                 var uid = $($($(t[g]).children(".layui-input-block")[0]).children("input")[1]).val();
                 beice.push({uid:uid});
-                alert(uid);
+
             }
             //var uid = $($($($(a[i]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[1]).val();
             var bz_coll = [];//标准数组
             for (var j = 0; j < e.length; j++) {
                 //标准
                 var standardName = $($($($(e[j]).children(".layui-form-item")[0]).children(".layui-input-block")[0]).children("input")[0]).val();
-                alert(standardName)
+
                 //选项
                 var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                 var only;
                 if (id) {
-                    only = 78;
+                    only = 118;
                 } else {
-                    only = 79;
+                    only = 119;
                 }
                 //子标准
                 var f = $(e[j]).children("#zbz").children();
@@ -214,7 +214,7 @@ var index=0;
 
 
         var data = {bigTitle: bigTitle, explain: explain, number: number,list:zbt_coll,coll:coll};
-        alert(JSON.stringify(data));//转成json对象
+
 
 
 
@@ -281,7 +281,7 @@ var index=0;
                 for(var g = 0;g<t.length;g++){
                     var uid = $($($(t[g]).children(".layui-input-block")[0]).children("input")[1]).val();
                     beice.push({uid:uid});
-                    alert(uid);
+
                 }
                 var bz_coll = [];//标准数组
                 for (var j = 0; j < e.length; j++) {
@@ -291,9 +291,9 @@ var index=0;
                     var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                     var only;
                     if (id) {
-                        only = 78;
+                        only = 118;
                     } else {
-                        only = 79;
+                        only = 119;
                     }
                     //子标准
                     var f = $(e[j]).children("#zbz").children();
@@ -311,7 +311,7 @@ var index=0;
                 zbt_coll.push(zbt_obj);
             }
             var data = {templateTitleId:templateTitleId, bigTitle:bigTitle, explain: explain, number: number, list:zbt_coll};
-            alert(JSON.stringify(data));//转成json对象
+
 
 
             $api.Addtemp(JSON.stringify(data),{contentType:"application/json;charset=UTF-8"},function (data) {
@@ -349,7 +349,7 @@ var index=0;
                 yuland = uname.split(",")
 
                 beice.push({yuland:yuland});
-                alert(yuland);
+
             }
 
             var bz_coll = [];//标准数组
@@ -360,9 +360,9 @@ var index=0;
                 var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                 var only;
                 if (id) {
-                    only = 78;
+                    only = 118;
                 } else {
-                    only = 79;
+                    only = 119;
                 }
                 //子标准
                 var f = $(e[j]).children("#zbz").children();

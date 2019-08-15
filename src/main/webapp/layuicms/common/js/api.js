@@ -108,6 +108,9 @@ layui.define(['$tool','jquery'], function (exports) {
         LoadRY:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'pingce/loadry.do',req,successCallback,errorCallback);
         },
+        GetJIILU:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'dfmuban/getjilu.do',req,successCallback,errorCallback);
+        },
         GetAdm:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'jilu/getAdm.do',req,successCallback,errorCallback);
         },
@@ -168,14 +171,11 @@ layui.define(['$tool','jquery'], function (exports) {
         GetMenu:function(req,successCallback,errorCallback){
             doPost($tool.getContext()+'menu/get.do',req,successCallback,errorCallback);
         },
-        GetTemplet:function(req,successCallback,errorCallback){
-            doPost($tool.getContext()+'dfmuban/get.do',req,successCallback,errorCallback);
+        GetModel_Use:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'ModelHistory/get.do',req,successCallback,errorCallback);
         },
-        GetJIILU:function(req,successCallback,errorCallback){
-            doPost($tool.getContext()+'dfmuban/getjilu.do',req,successCallback,errorCallback);
-        },
-        GetAnsId:function(req,successCallback,errorCallback){
-            doPost($tool.getContext()+'dfmuban/getansId.do',req,successCallback,errorCallback);
+        GetHisitory_reading:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'photoVote/get.do',req,successCallback,errorCallback);
         },
         QueGetAccount:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'wjdc/getAccount.do',req,successCallback,errorCallback);
@@ -186,8 +186,8 @@ layui.define(['$tool','jquery'], function (exports) {
         GetAllOrg:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'org/getAll.do',req,successCallback,errorCallback);
         },
-        GetAllOrg2:function(req,successCallback,errorCallback){
-            doPost($tool.getContext() + 'wjdc/getAllQue.do',req,successCallback,errorCallback);
+        VoteSuccess:function(req,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'Sum/submit.do',req,successCallback,errorCallback);
         },
         GetOrg:function(req,successCallback,errorCallback){
             doPost($tool.getContext() + 'org/get.do',req,successCallback,errorCallback);
@@ -256,6 +256,75 @@ layui.define(['$tool','jquery'], function (exports) {
         UpdateRole:function(req,successCallback,errorCallback){
             doPost($tool.getContext()+'role/update.do',req,successCallback,errorCallback);
         },
+        AddUser11:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'UserTable/add.do',req,config,successCallback,errorCallback);
+        },
+        AddVote:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'Vote/voteadd.do',req,config,successCallback,errorCallback);
+        },
+        cheakedAccount:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'Account/cheaked.do',req,config,successCallback,errorCallback);
+        },
+        sumNumber:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'Sum/Number.do',req,config,successCallback,errorCallback);
+        },
+        AddModel:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'Vote/addmodel.do',req,config,successCallback,errorCallback);
+        },
+        DeleteUser:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'sysUser/delete.do',req,config,successCallback,errorCallback);
+        },
+        DeleteUser2:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoVote/delete.do',req,config,successCallback,errorCallback);
+        },
+        DeleteUser3:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'ModelHistory/delete.do',req,config,successCallback,errorCallback);
+        },
+        editTop1:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'ModelHistory/editTop1.do',req,config,successCallback,errorCallback);
+        },
+        editTop2:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'ModelHistory/editTop2.do',req,config,successCallback,errorCallback);
+        },
+        EditStatus:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'photoVote/editStatus.do',req,config,successCallback,errorCallback);
+        },
+        DeleteUser1:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'UserTable/delete.do',req,config,successCallback,errorCallback);
+        },
+        GetFirstPhoto:function(req,config,successCallback,errorCallback){
+            doPost($tool.getContext() + 'UserTable/getDepart.do',req,config,successCallback,errorCallback);
+        },
+        InitPwd:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'sysUser/initPwd.do',req,successCallback,errorCallback);
+        },
+        GetUser:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'sysUser/get.do',req,successCallback,errorCallback);
+        },
+        GetUserTable:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'UserTable/get.do',req,successCallback,errorCallback);
+        },
+        UpdateUser1:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'UserTable/update.do',req,config,successCallback,errorCallback);
+        },
+        GetUserInfo:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'personCenter/get.do',req,successCallback,errorCallback);
+        },
+        UpdateUserInfo:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'personCenter/update.do',req,config,successCallback,errorCallback);
+        },
+        DaoChu:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'poi/daochu.do',req,successCallback,errorCallback);
+        },
+        GetTemplet:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'dfmuban/get.do',req,successCallback,errorCallback);
+        },
+        GetAnsId:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'dfmuban/getansId.do',req,successCallback,errorCallback);
+        },
+        GetAllOrg2:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'wjdc/getAllQue.do',req,successCallback,errorCallback);
+        },
         templateUpdate:function(req,successCallback,errorCallback){
             doPost($tool.getContext()+'wjdc/update.do',req,successCallback,errorCallback);
         },
@@ -298,15 +367,6 @@ layui.define(['$tool','jquery'], function (exports) {
         AddUser:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'sysUser/add.do',req,config,successCallback,errorCallback);
         },
-        DeleteUser:function(req,config,successCallback,errorCallback){
-            doPost($tool.getContext() + 'sysUser/delete.do',req,config,successCallback,errorCallback);
-        },
-        InitPwd:function(req,successCallback,errorCallback){
-            doPost($tool.getContext() + 'sysUser/initPwd.do',req,successCallback,errorCallback);
-        },
-        GetUser:function(req,successCallback,errorCallback){
-            doPost($tool.getContext()+'sysUser/get.do',req,successCallback,errorCallback);
-        },
         GetForm:function(req,successCallback,errorCallback){
             doPost($tool.getContext()+'wjdc/getForm.do',req,successCallback,errorCallback);
         },
@@ -318,16 +378,6 @@ layui.define(['$tool','jquery'], function (exports) {
         },
         UpdateUser:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'sysUser/update.do',req,config,successCallback,errorCallback);
-        },
-
-        GetUserInfo:function(req,successCallback,errorCallback){
-            doPost($tool.getContext()+'personCenter/get.do',req,successCallback,errorCallback);
-        },
-        UpdateUserInfo:function(req,config,successCallback,errorCallback){
-            doComplexPost($tool.getContext() + 'personCenter/update.do',req,config,successCallback,errorCallback);
-        },
-        DaoChu:function(req,successCallback,errorCallback){
-            doPost($tool.getContext()+'poi/daochu.do',req,successCallback,errorCallback);
         }
     };
 

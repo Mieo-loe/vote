@@ -172,7 +172,7 @@ var index=0;
                 }
             }
         }
-        alert(JSON.stringify(updataColl));
+
         $api.TijiaoDemo(JSON.stringify(updataColl),{contentType:"application/json;charset=UTF-8"},function (updata) {
                 //top.layer.close(index);(关闭遮罩已经放在了ajaxExtention里面了)
                 layer.msg("提交成功！",{time:1000},function () {

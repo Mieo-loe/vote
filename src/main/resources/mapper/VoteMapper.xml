@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper映射-->
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photovote.VoteMapper">
+    <!--结果集映射-->
+    <insert id="addVote" parameterType="com.gameloft9.demo.dataaccess.model.photovote.VoteTest" useGeneratedKeys="true" keyProperty="vid">
+        INSERT  into tp_photo_vote (title,votingInstruction,votedNum)
+        values (#{title,jdbcType=VARCHAR},#{votingInstruction,jdbcType=VARCHAR},#{votedNum,jdbcType=INTEGER})
+    </insert>
+<delete id="delete" parameterType="integer">
+    delete from tp_photo_vote where vid=#{0}
+</delete>
+    <select id="findById" parameterType="Integer" resultType="com.gameloft9.demo.dataaccess.model.photovote.VoteTest">
+        select title,votingInstruction,votedNum from tp_photo_vote where vid=#{0}
+    </select>
+</mapper>

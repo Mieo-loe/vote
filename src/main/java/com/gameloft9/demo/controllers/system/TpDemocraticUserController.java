@@ -16,7 +16,7 @@ import java.util.Collection;
 @Slf4j
 @Controller
 @RequestMapping("/user")
-public class UserController {
+public class TpDemocraticUserController {
     @Autowired
     TpphotoUserService tpphotoUserServiceimpl;
     @RequestMapping(value = "/list.do",method = RequestMethod.POST)

@@ -122,4 +122,12 @@ public class Tp_Democratic_RecordServiceimpl implements Tp_Democratic_RecordServ
     public int findbysid(int substandardId) {
         return dao.findbysid(substandardId);
     }
+
+    public int deletetj(int substandardId) {
+        return dao.deletetj(substandardId);
+    }
+
+    public int deletesub(int recordId) {
+        return dao.deletesub(recordId);
+    }
 }

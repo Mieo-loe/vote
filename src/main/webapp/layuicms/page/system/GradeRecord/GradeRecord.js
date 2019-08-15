@@ -48,7 +48,7 @@ layui.config({
                 , {field:'templet_Id',title:'历史记录'}
                 , {field: 'r_time', title: '发布日期'}
                 , {field: 'resId', title: '状态', templet:'#barDemo1'}
-                , {fixed: 'right', title: '操作', width: 300, align: 'left', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
+                , {fixed: 'right', title: '操作', width: 500, align: 'left', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
             ]]
             , done: function (res, curr) {//请求完毕后的回调
 
@@ -66,7 +66,7 @@ layui.config({
                 DeleteJiLu(row.record_Id);
             } else if (layEvent === 'edit') { //编辑
                 //do something
-                editJiLu(row.record_Id);
+                editJiLu(row.record_Id, row.resId);
             } else if (layEvent === 'editstatus') { //关闭投票
                 //do something
                 editStatus(row.record_Id);
@@ -75,7 +75,7 @@ layui.config({
                 tongji(row.record_Id);
             } else if (layEvent === 'tpzh') { //查看投票账号
                 //do something
-                tpzh(row.record_Id);
+                cktpzh(row.record_Id);
             }
         });
     }
@@ -174,8 +174,8 @@ layui.config({
     }
 
     //查看
-    function editJiLu(record_Id){
-
+    function editJiLu(record_Id, resId){
+        // console.log(resId)
         if (record_Id!=null) {
             var req = {
                 record_Id: record_Id,
@@ -183,44 +183,61 @@ layui.config({
             $api.GetZH(req, function (res) {
                 var data = res.data;
                 zhanghao = res.data;
-
-                layer.prompt({title: '请输入投票账号',},function(val, index2){
-
-                    if ($.inArray(val, zhanghao)==-1){
-                        layer.msg("投票账号不存在,或不能进行此项投票", {time: 1000}, function () {
-                            layer.closeAll("iframe");
-                            //刷新父页面
-                            parent.location.reload();
-                        });
-                    } else {
-                        layer.close(index2);
-                        tpzh=val;
-                        var index = layui.layer.open({
-                            title: "查看投票",
-                            type: 2,
-                            content: "../../../page/system/GradeRecord/DaFenBiaoFB.html?record_Id="+record_Id+"&tpzh="+tpzh,
-                            success: function (layero, index) {
-                                setTimeout(function () {
-                                    layui.layer.tips('点击此处返回评测打分记录', '.layui-layer-setwin .layui-layer-close', {
-                                        tips: 3
-                                    });
-                                }, 500)
-                            }
-                        });
-
-                        //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
-                        $(window).resize(function () {
+                if (resId == "发布中") {
+                    layer.prompt({title: '请输入投票账号',}, function (val, index2) {
+                        if ($.inArray(val, zhanghao) == -1) {
+                            layer.msg("投票账号不存在,或不能进行此项投票", {time: 1000}, function () {
+                                layer.closeAll("iframe");
+                                //刷新父页面
+                                parent.location.reload();
+                            });
+                        } else {
+                            layer.close(index2);
+                            tpzh = val;
+                            var index = layui.layer.open({
+                                title: "查看投票",
+                                type: 2,
+                                content: "../../../page/system/GradeRecord/DaFenBiaoFB.html?record_Id=" + record_Id + "&tpzh=" + tpzh,
+                                success: function (layero, index) {
+                                    setTimeout(function () {
+                                        layui.layer.tips('点击此处返回评测打分记录', '.layui-layer-setwin .layui-layer-close', {
+                                            tips: 3
+                                        });
+                                    }, 500)
+                                }
+                            });
+                            //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
+                            $(window).resize(function () {
+                                layui.layer.full(index);
+                            });
                             layui.layer.full(index);
-                        });
-                        layui.layer.full(index);
-                    }
-                });
+                        }
+                    });
+                } else if (resId == "已结束") {
+                    var index2 = layui.layer.open({
+                        title: "查看投票",
+                        type: 2,
+                        content: "../../../page/system/GradeRecord/DaFenBiaoFB3.html?record_Id=" + record_Id + "&tpzh=" + tpzh,
+                        success: function (layero, index) {
+                            setTimeout(function () {
+                                layui.layer.tips('点击此处返回', '.layui-layer-setwin .layui-layer-close', {
+                                    tips: 3
+                                });
+                            }, 500)
+                        }
+                    });
+                    //改变窗口大小时，重置弹窗的高度，防止超出可视区域（如F12调出debug的操作）
+                    $(window).resize(function () {
+                        layui.layer.full(index2);
+                    });
+                    layui.layer.full(index2);
+                }
             })
         }
     }
 
     //查看投票账号
-    function tpzh(record_Id){
+    function cktpzh(record_Id){
 
         layui.layer.open({
             type: 2,

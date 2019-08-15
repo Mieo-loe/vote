@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper映射-->
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photovote.VerificationMapper">
+    <!--结果集映射-->
+    <insert id="add" parameterType="com.gameloft9.demo.dataaccess.model.photovote.Verification" useGeneratedKeys="true" keyProperty="yid">
+        INSERT  into tp_democratic_verification (content,recordId,isVote,id)
+        values (#{content,jdbcType=VARCHAR},#{recordId,jdbcType=INTEGER},#{isVote,jdbcType=VARCHAR},#{id,jdbcType=INTEGER})
+    </insert>
+<!--<select id="findAid" resultType="com.gameloft9.demo.dataaccess.model.photovote.AnswerTest" parameterType="INTEGER">-->
+<!--    select aid,answer from tp_photo_answer where tid=#{0}-->
+<!--</select>-->
+    <delete id="delete" parameterType="INTEGER">
+        delete from tp_democratic_verification where recordId=#{0}
+    </delete>
+<!--    <delete id="deleteByTid" parameterType="INTEGER">-->
+<!--        delete from tp_photo_answer where tid=#{0}-->
+<!--    </delete>-->
+<update id="update" parameterType="com.gameloft9.demo.dataaccess.model.photovote.Verification">
+     update tp_democratic_verification set isVote#{isVote,jdbcType=VARCHAR},id = #{id,jdbcType=INTEGER}}where
+        sid=#{sid,jdbcType=INTEGER}
+</update>
+    <select id="findByHid" parameterType="INTEGER" resultType="com.gameloft9.demo.dataaccess.model.photovote.Verification">
+        select  content FROM  tp_democratic_verification
+    </select>
+    <select id="cheakedAccount" resultType="com.gameloft9.demo.dataaccess.model.photovote.Verification" parameterType="java.lang.String">
+        select * from tp_democratic_verification where content = #{content,jdbcType=VARCHAR}
+    </select>
+    <delete id="deleteBycContent" parameterType="java.lang.String">
+        delete from tp_democratic_verification where content=#{content,jdbcType=VARCHAR}
+    </delete>
+</mapper>

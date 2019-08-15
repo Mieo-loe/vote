@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper映射-->
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photovote.AnswerMapper">
+    <!--结果集映射-->
+    <insert id="addAnswer" parameterType="com.gameloft9.demo.dataaccess.model.photovote.AnswerTest" useGeneratedKeys="true" keyProperty="aid">
+        INSERT  into tp_photo_answer (tid,answer)
+        values (#{tid,jdbcType=INTEGER},#{answer,jdbcType=VARCHAR})
+    </insert>
+<select id="findAid" resultType="com.gameloft9.demo.dataaccess.model.photovote.AnswerTest" parameterType="INTEGER">
+    select aid,answer from tp_photo_answer where tid=#{aid}
+</select>
+    <delete id="delete" parameterType="INTEGER">
+        delete from tp_photo_answer where aid=#{0}
+    </delete>
+    <delete id="deleteByTid" parameterType="INTEGER">
+        delete from tp_photo_answer where tid=#{0}
+    </delete>
+</mapper>

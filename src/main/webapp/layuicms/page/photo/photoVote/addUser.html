@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>添加</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../lib/layui/css/layui.css" media="all"/>
+    <style type="text/css">
+        .layui-form-item .layui-inline {
+            width: 33.333%;
+            float: left;
+            margin-right: 0;
+        }
+
+        @media (max-width: 1240px) {
+            .layui-form-item .layui-inline {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body class="childrenBody">
+<form class="layui-form" style="width:80%;">
+
+    <div class="layui-inline">
+        <label class="layui-form-label">姓名</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="uname" placeholder="请输入姓名">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">性别</label>
+        <div class="layui-input-block">
+            <input type="radio" class="layui-input"  name="sex" value="33" title="男">
+            <input type="radio" class="layui-input"  name="sex" value="34" title="女" checked>
+        </div>
+    </div>
+    <div class="layui-inline">
+        <label class="layui-form-label">职级</label>
+        <div class="layui-input-block">
+            <select id="classPostion" name="classOfPosition">
+                <option value="">--请选择--</option>
+                <option value="1">科员</option>
+                <option value="2">副科</option>
+                <option value="3">正科</option>
+                <option value="4">副处</option>
+                <option value="5">正处</option>
+                <option value="6">副局</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-inline">
+        <label class="layui-form-label">部门</label>
+        <div class="layui-input-block">
+            <select id="departmentId" name="departmentId">
+                <option value="">--请选择--</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="layui-inline">
+        <label class="layui-form-label">职位</label>
+        <div class="layui-input-block">
+            <select id="position" name="position">
+                <option value="">--请选择--</option>
+                <option value="7">书记员</option>
+                <option value="8">法官助理</option>
+                <option value="9">员额法官</option>
+                <option value="10">科员</option>
+                <option value="11">副主任科员</option>
+                <option value="12">主任科员</option>
+                <option value="13">院领导</option>
+                <option value="14">庭长</option>
+                <option value="15">副庭长</option>
+                <option value="16">院长</option>
+                <option value="17">副院长</option>
+                <option value="18">速录员</option>
+                <option value="19">协警</option>
+                <option value="20">职工</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-inline">
+        <label class="layui-form-label">法官等级</label>
+        <div class="layui-input-block">
+            <select id="gradeOfJudge" name="gradeOfJudge">
+                <option value="">--请选择--</option>
+                <option value="21">一级高级法官</option>
+                <option value="22">二级高级法官</option>
+                <option value="23">三级高级法官</option>
+                <option value="24">四级高级法官</option>
+                <option value="25">一级法官</option>
+                <option value="26">二级法官</option>
+                <option value="27">三级法官</option>
+                <option value="28">司机法官</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-inline">
+        <label class="layui-form-label">所属类别</label>
+        <div class="layui-input-block">
+            <select id="category" name="category">
+                <option value="">--请选择--</option>
+
+                <option value="29">院领导</option>
+                <option value="30">中层领导</option>
+                <option value="31">普通干警</option>
+                <option value="32">非编人员</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="addUser">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+
+<!--一般情况下，一个业务页面引入一个layui.js,config.js和业务js这三个js就够了-->
+<script type="text/javascript" src="../../../lib/layui/layui.js"></script>
+<script type="text/javascript" src="../../../common/js/config.js"></script>
+<script type="text/javascript" src="addUser.js"></script>
+</body>
+</html>

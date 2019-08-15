@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper映射-->
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photovote.TitleMapper">
+    <!--结果集映射-->
+    <insert id="addTitle" parameterType="com.gameloft9.demo.dataaccess.model.photovote.TitleTest" useGeneratedKeys="true" keyProperty="tid">
+        INSERT  into tp_photo_title (vid,optionRule,isChar)
+        values (#{vid,jdbcType=INTEGER},#{optionRule,jdbcType=INTEGER},#{isChar,jdbcType=INTEGER})
+    </insert>
+<select id="findTid" parameterType="INTEGER" resultType="com.gameloft9.demo.dataaccess.model.photovote.TitleTest">
+    select tid,optionRule,isChar,vid from tp_photo_title where vid=#{0}
+</select>
+    <delete id="delete" parameterType="INTEGER">
+        delete from tp_photo_title where tid=#{0}
+    </delete>
+    <delete id="deleteByVid" parameterType="INTEGER">
+        delete from tp_photo_title where vid=#{0}
+    </delete>
+</mapper>

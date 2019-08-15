@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper映射-->
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photovote.ModelHistoryMapper">
+    <!--结果集映射-->
+    <resultMap id="BaseResultMap" type="com.gameloft9.demo.dataaccess.model.photovote.ModelManagerTest">
+        <id column="mid" property="mid" jdbcType="INTEGER"/>
+        <result column="vid" property="vid" jdbcType="INTEGER"/>
+        <result column="modelTitle" property="modelTitle" jdbcType="VARCHAR"/>
+        <result column="startTime" property="startTime" jdbcType="TIMESTAMP"/>
+
+    </resultMap>
+
+    <select id="findAll" resultMap="BaseResultMap">
+SELECT
+mid,
+vid,
+modelTitle,
+startTime,
+isTop
+FROM
+tp_photo_modelmanager order  by isTop ASC limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
+    </select>
+    <select id="countGetAll" resultType="Integer">
+        select count(1) from tp_photo_modelmanager
+        where 1=1
+    </select>
+    <delete id="delete" parameterType="INTEGER">
+        delete from tp_photo_modelmanager where mid=#{mid}
+    </delete>
+<!--    <select id="findById" parameterType="INTEGER" resultType="com.gameloft9.demo.dataaccess.model.photovote.HistoryTest">-->
+<!--        select status from tp_photo_history where hid=#{0}-->
+<!--    </select>-->
+<!--    <update id="editStatus" parameterType="INTEGER">-->
+<!--        update tp_photo_history set  status=36 where hid=#{0}-->
+<!--    </update>-->
+<!--    <insert id="addHistory" parameterType="com.gameloft9.demo.dataaccess.model.photovote.HistoryTest"  useGeneratedKeys="true" keyProperty="hid">-->
+<!--        insert into tp_photo_history (vid,issueTime,status) values (#{vid,jdbcType=INTEGER},#{issueTime,jdbcType=TIMESTAMP},#{status,jdbcType=INTEGER})-->
+<!--    </insert>-->
+    <select id="getById" parameterType="INTEGER" resultType="com.gameloft9.demo.dataaccess.model.photovote.ModelManagerTest">
+        SELECT tp_photo_vote.title,tp_photo_vote.votingInstruction,tp_photo_vote.votedNum,tp_photo_modelmanager.modelTitle
+FROM tp_photo_vote,tp_photo_modelmanager WHERE tp_photo_vote.vid=tp_photo_modelmanager.mid
+    </select>
+    <insert id="addModel" parameterType="com.gameloft9.demo.dataaccess.model.photovote.ModelManagerTest">
+          insert into tp_photo_modelmanager (vid,modelTitle,startTime,isTop) values (#{vid,jdbcType=INTEGER},#{modelTitle,jdbcType=VARCHAR},
+        #{startTime,jdbcType=TIMESTAMP},#{isTop,jdbcType=INTEGER})
+    </insert>
+    <select id="findVid" parameterType="INTEGER" resultType="INTEGER">
+        select  vid from tp_photo_modelmanager where mid=#{0}
+    </select>
+    <update id="editTop1" parameterType="INTEGER">
+        update tp_photo_modelmanager set isTop=53 where mid=#{0}
+    </update>
+    <update id="editTop2" parameterType="INTEGER">
+        update tp_photo_modelmanager set isTop=52 where mid=#{0}
+    </update>
+</mapper>

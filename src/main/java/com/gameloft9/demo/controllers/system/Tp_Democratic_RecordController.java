@@ -38,6 +38,8 @@ public class Tp_Democratic_RecordController {
     TpphotoUserService tpphotoUserServiceimpl;
     @Autowired
     TpDemocraticVerfiCationService tpDemocraticVerfiCationServiceimpl;
+    @Autowired
+    TpDemocraticsubstaandrdtService tpDemocraticsubstaandrdtServiceimpl;
 //    @RequestMapping(value = "/list.do",method = RequestMethod.POST)
 //    @ResponseBody
 //    public IResult findAll(){
@@ -108,11 +110,18 @@ public class Tp_Democratic_RecordController {
         for (TpSubtitleContent subtitleContent : tpSubtitleContent) {
             List<TpStandard> tpStandard = tpDemocraticstaandrdtServiceimpl.findBysubtitleId(subtitleContent.getSubtitleId());
             for (TpStandard standard : tpStandard) {
+                //删除统计表
+                List<TpSubstandard> tpSubstandards = tpDemocraticsubstaandrdtServiceimpl.findBystandardId(standard.getStandardId());
+                for (TpSubstandard tpSubstandard : tpSubstandards) {
+                    tp_Democratic_RecordServiceimpl.deletetj(tpSubstandard.getSubstandardId());
+                }
                 substaandrdServiceimpl.delete(standard.getStandardId());
             }
+
             tprelationshipServiceimpl.delete(subtitleContent.getSubtitleId());
             tpDemocraticstaandrdtServiceimpl.delete(subtitleContent.getSubtitleId());
         }
+        tp_Democratic_RecordServiceimpl.deletesub(recordId);
         tpDemocraticSubtitleContentServiceimpl.delete(bigTitleId);
         tp_Democratic_RecordServiceimpl.delete(recordId);
         tpBigtitleServiceimpl.delete(bigTitleId);

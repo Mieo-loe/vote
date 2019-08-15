@@ -63,7 +63,7 @@ var index=0;
                                     only += '<div class="xuanxian">' +
                                         '<input type="checkbox" id="checkbox' + a + '" value="' + res.data.list[i].bz_coll[j].zbz_coll[z].substandardId + '" class="checkbox_"/>' +
                                         '<label for="checkbox' + a + '"></label>' +
-                                        '<input type="text" class="dx" name="substandardName" value="' + res.data.list[i].bz_coll[j].zbz_coll[z].substandardName + '">' +
+                                        '<input type="text" class="dx" name="substandardName" value="' + res.data.list[i].bz_coll[j].zbz_coll[z].substandardName + '" readonly="readonly">' +
                                         '</div>'
                                 }
                             }
@@ -73,7 +73,7 @@ var index=0;
                                 '                    <div class="timu">\n' +
                                 '                        <span>' + u + '</span>\n' +
                                 '                        <span>\n' +
-                                '                            <input type="text" name="standardName" class="rm" value="' + res.data.list[i].bz_coll[j].standardName + '" >\n' +
+                                '                            <input type="text" name="standardName" class="rm" value="' + res.data.list[i].bz_coll[j].standardName + '" readonly="readonly">\n' +
                                 '                        </span>\n' +
                                 '                    </div>\n' +
                                 '                        <div class="zbz">\n' +
@@ -92,7 +92,7 @@ var index=0;
                             '                        </p>\n' +
                             '                        </div>\n' +
                             '                        <div class="beic">\n' +
-                            '                            <input type="text" id="' + res.data.list[i].beice[g].uid + '" class="rm" name="uname" value="' + res.data.list[i].beice[g].tpphotoUser.uname + '">\n' +
+                            '                            <input type="text" id="' + res.data.list[i].beice[g].uid + '" class="rm" name="uname" value="' + res.data.list[i].beice[g].tpphotoUser.uname + '" readonly="readonly">\n' +
                             '                        </div>\n' +
                             '                    </div>\n' +
                             '                    <div id="bz_coll">' +
@@ -109,7 +109,7 @@ var index=0;
                         '<div class="zibiaotifenquyu2">' +
                         '                    <div class="tup"><img src="../../../common/images/img6.jpg" alt="" style=""></div>\n' +
                         '                    <div class="sub">\n' +
-                        '                        <input id="' + res.data.list[i].subtitleId + '" class="zbt" type="text"name="subtitleContent" value="' + res.data.list[i].subtitleContent + '">\n' +
+                        '                        <input id="' + res.data.list[i].subtitleId + '" class="zbt" type="text"name="subtitleContent" value="' + res.data.list[i].subtitleContent + '" readonly="readonly">\n' +
                         '                    </div>\n' +
                         '</div>' +
                         '                </div>' +
@@ -171,7 +171,7 @@ var index=0;
 
 
 
-        alert(JSON.stringify(updataColl));
+
         $api.TijiaoDemo(JSON.stringify(updataColl),{contentType:"application/json;charset=UTF-8"},function (updata) {
                 //top.layer.close(index);(关闭遮罩已经放在了ajaxExtention里面了)
                 layer.msg("提交成功！",{time:1000},function () {

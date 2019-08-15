@@ -67,7 +67,7 @@ layui.config({
                                 '                    <div class="timu">\n' +
                                 '                        <span>' + u + '</span>\n' +
                                 '                        <span>\n' +
-                                '                            <input type="text" name="standardName" class="rm" value="' + bb.list[i].bz_coll[j].standardName + '" >\n' +
+                                '                            <input type="text" name="standardName" class="rm" value="' + bb.list[i].bz_coll[j].standardName + '" readonly="readonly">\n' +
                                 '                        </span>\n' +
                                 '                    </div>\n' +
                                 '                        <div class="zbz">\n' +
@@ -88,7 +88,7 @@ layui.config({
                             '                        </p>\n' +
                             '                        </div>\n' +
                             '                        <div>\n' +
-                            '                            <input type="text" class="rm" name="uname" value="' + bb.list[i].beice[g].yuland[h] + '">\n' +
+                            '                            <input type="text" class="rm" name="uname" value="' + bb.list[i].beice[g].yuland[h] + '" readonly="readonly">\n' +
                             '                        </div>\n' +
                             '                    </div>\n' +
                             '                    <div id="bz_coll">' +
@@ -107,7 +107,7 @@ layui.config({
                     '<div class="zibiaotifenquyu2">'+
                     '                    <div class="tup"><img src="../../../common/images/img6.jpg" alt="" style=""></div>\n' +
                     '                    <div class="sub">\n' +
-                    '                        <input class="zbt" type="text"name="subtitleContent" value="'+bb.list[i].subtitleContent+'">\n' +
+                    '                        <input class="zbt" type="text"name="subtitleContent" value="'+bb.list[i].subtitleContent+'" readonly="readonly">\n' +
                     '                    </div>\n' +
                     '</div>'+
                     '                </div>'+

@@ -43,8 +43,8 @@
 <script type="text/html" id="barDemo">
     <!--通过lay-event定义事件-->
     <a class="layui-btn-sm" style="cursor: pointer" lay-event="tongji">统计</a>
-    {{# if (d.resId == "发布中"){}}
     <a class="layui-btn-sm" style="cursor: pointer" lay-event="edit">查看</a>
+    {{# if (d.resId == "发布中"){}}
     <a class="layui-btn-sm" style="cursor: pointer" lay-event="editstatus">关闭投票</a>
     {{# } else {}}
     <a class="layui-btn-sm" style="cursor: pointer" lay-event="del">删除</a>

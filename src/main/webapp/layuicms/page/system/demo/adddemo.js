@@ -43,21 +43,20 @@ layui.config({
             for(var g = 0;g<t.length;g++){
             var uid = $($($(t[g]).children(".layui-input-block")[0]).children("input")[1]).val();
                 beice.push({uid:uid});
-                alert(uid);
             }
             //var uid = $($($($(a[i]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[1]).val();
             var bz_coll = [];//标准数组
             for (var j = 0; j < e.length; j++) {
                 //标准
                 var standardName = $($($($(e[j]).children(".layui-form-item")[0]).children(".layui-input-block")[0]).children("input")[0]).val();
-                alert(standardName)
+
                 //选项
                 var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                 var only;
                 if (id) {
-                    only = 78;
+                    only = 118;
                 } else {
-                    only = 79;
+                    only = 119;
                 }
                 //子标准
                 var f = $(e[j]).children("#zbz").children();
@@ -90,7 +89,7 @@ layui.config({
 
 
         var data = {bigTitle: bigTitle, explain: explain, number: number,list:zbt_coll,coll:coll};
-        alert(JSON.stringify(data));//转成json对象
+
 
 
 
@@ -168,9 +167,9 @@ layui.config({
                     var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                     var only;
                     if (id) {
-                        only = 78;
+                        only = 118;
                     } else {
-                        only = 79;
+                        only = 119;
                     }
                     //子标准
                     var f = $(e[j]).children("#zbz").children();
@@ -237,9 +236,9 @@ layui.config({
                 var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                 var only;
                 if (id) {
-                    only = 78;
+                    only = 118;
                 } else {
-                    only = 79;
+                    only = 119;
                 }
                 //子标准
                 var f = $(e[j]).children("#zbz").children();

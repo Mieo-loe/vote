@@ -17,7 +17,7 @@
 <!--搜索栏-->
 <blockquote class="layui-elem-quote news_search">
     <form class="layui-form">
-        <div class="layui-inline">
+        <div class="layui-inline" style="margin-left: 1450px">
             <a class="layui-btn layui-btn-normal usersAdd_btn">创建空白模板</a>
         </div>
     </form>
@@ -32,14 +32,14 @@
 <div id="page"></div>
 <!--toolbar 模板-->
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-xs" lay-event="shiyon"><i class="layui-icon">&#xe642;</i>使用</a>
-    <a class="layui-btn layui-btn-xs" lay-event="yulan"><i class="layui-icon">&#xe642;</i>预览</a>
+    <a style="color: #40AFFE" lay-event="shiyon">使用</a>
+    <a style="color: #40AFFE" lay-event="yulan">预览</a>
     {{#  if(d.id == '是'){  }}
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="qxzd"><i class="layui-icon">&#xe642;</i>取消置顶</a>
+    <a style="color: #40AFFE" lay-event="qxzd"></i>取消置顶</a>
     {{#  } else{ }}
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="zd"><i class="layui-icon">&#xe640;</i>置顶</a>
+    <a style="color: #40AFFE" lay-event="zd"></i>置顶</a>
     {{#  } }}
-    <a class="layui-btn layui-btn-xs" lay-event="del"><i class="layui-icon">&#xe642;</i>删除</a>
+    <a style="color: #40AFFE" lay-event="del">删除</a>
 </script>
 <script type="text/html" id="buttonTpl">
     {{#  if(d.id == '是'){ }}
