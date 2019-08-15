@@ -19,7 +19,7 @@ public interface UserTableMapper {
    UserTable findById(int uid);
    Boolean update(UserTable userTable);
 //   Boolean add(UserTable userTable);
-   List<Department>findDepart();
+   List<Department> findDepart();
    int addUser(UserTable userTable);
    int updateUser(UserTable userTable);
     List<Department> selectdid();

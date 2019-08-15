@@ -8,5 +8,5 @@ import java.util.List;
 public interface ContentMapper {
     int addContent(ContentTest contentTest);
     int delete (int tid);
-    List<ContentTest>findByTid(int tid);
+    List<ContentTest> findByTid(int tid);
 }

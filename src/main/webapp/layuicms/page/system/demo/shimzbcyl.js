@@ -39,7 +39,7 @@ layui.config({
                             for (var z = 0; z < bb.list[i].bz_coll[j].zbz_coll.length; z++) {
                                 // alert(res.data.list[i].bz_coll[j].zbz_coll[z].substandardName);
                                 var b = a++;
-                                if (bb.list[i].bz_coll[j].id === 78) {
+                                if (bb.list[i].bz_coll[j].id === 118) {
                                     only += '<div class="xuanxian">' +
                                         '<input id="item' + b + '" type="radio" title="' + bb.list[i].bz_coll[j].zbz_coll[z].substandardName + '" name="item' + g + '" value="' + bb.list[i].bz_coll[j].id + '" class="radio_">' +
                                         '<label for="item' + b + '"></label>' +

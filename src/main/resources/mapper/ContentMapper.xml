@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper映射-->
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photovote.ContentMapper">
+    <!--结果集映射-->
+    <insert id="addContent" parameterType="com.gameloft9.demo.dataaccess.model.photovote.ContentTest">
+        INSERT  into tp_photo_content (content,tid)
+        values (#{content,jdbcType=VARCHAR},#{tid,jdbcType=INTEGER})
+    </insert>
+    <delete id="delete" parameterType="INTEGER">
+        delete from tp_photo_content where tid=#{0}
+    </delete>
+    <select id="findByTid" parameterType="Integer" resultType="com.gameloft9.demo.dataaccess.model.photovote.ContentTest">
+        SELECT content,tid from tp_photo_content
+        where tid=#{0}
+    </select>
+</mapper>

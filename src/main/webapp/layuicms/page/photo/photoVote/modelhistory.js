@@ -40,7 +40,6 @@ layui.config({
                 {type:'numbers',title:'序号',fixed: 'left'}
                 ,{field: 'modelTitle', title: '模板标题', width: '30%'}
                 , {field: 'startTime', title: '生成日期', width: '30%'}
-                , {field: 'isTop', title: '生成日期', width: '30%'}
                 , {fixed: 'right', title: '操作', width: 350, align: 'center', toolbar: '#barDemo'} //这里的toolbar值是模板元素的选择器
             ]]
             , done: function (res, curr) {//请求完毕后的回调

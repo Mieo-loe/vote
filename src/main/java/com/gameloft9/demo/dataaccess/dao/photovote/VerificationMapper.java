@@ -12,7 +12,7 @@ public interface VerificationMapper {
     int deleteBycContent(String content);
 
 //    List<AnswerTest>findAid(int aid);
-    int update (Verification verification);
+    int update(Verification verification);
     List<Verification> findByHid(int hid);
     Verification cheakedAccount(String content);
 

@@ -10,5 +10,5 @@ public interface AnswerMapper {
     int delete(int aid);
     int deleteByTid(int tid);
 
-    List<AnswerTest>findAid(int aid);
+    List<AnswerTest> findAid(int aid);
 }

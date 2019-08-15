@@ -54,9 +54,9 @@ layui.config({
                 var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                 var only;
                 if (id) {
-                    only = 78;
+                    only = 118;
                 } else {
-                    only = 79;
+                    only = 119;
                 }
                 //子标准
                 var f = $(e[j]).children("#zbz").children();
@@ -167,9 +167,9 @@ layui.config({
                     var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                     var only;
                     if (id) {
-                        only = 78;
+                        only = 118;
                     } else {
-                        only = 79;
+                        only = 119;
                     }
                     //子标准
                     var f = $(e[j]).children("#zbz").children();
@@ -236,9 +236,9 @@ layui.config({
                 var id = $($($($(e[j]).children(".layui-form-item")[1]).children(".layui-input-block")[0]).children("input")[0]).is(":checked");
                 var only;
                 if (id) {
-                    only = 78;
+                    only = 118;
                 } else {
-                    only = 79;
+                    only = 119;
                 }
                 //子标准
                 var f = $(e[j]).children("#zbz").children();

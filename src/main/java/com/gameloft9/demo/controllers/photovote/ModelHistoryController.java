@@ -42,7 +42,7 @@ public class ModelHistoryController {
         int vid = modelHistoryServiceImpl.findVid( mid );
         List<TitleTest> titleTests =titleServiceImpl.findTid( vid );
         for (TitleTest titleTest : titleTests) {
-            List<AnswerTest>answerTests = answerServiceImpl.findAid( titleTest.getTid() );
+            List<AnswerTest> answerTests = answerServiceImpl.findAid( titleTest.getTid() );
             for (AnswerTest answerTest : answerTests) {
                 answerServiceImpl.delete( answerTest.getAid() );
             }

@@ -193,7 +193,7 @@ layui.config({
                         }
                     }
                     for (var j = 0; j < res.data.list[i].answerList.length; j++) {
-                        if (res.data.list[i].optionRule == 78) {
+                        if (res.data.list[i].optionRule == 118) {
                             zbz += '<div class="answer">\n' +
                                 '                        <div name="checked' + question_Index + '"class="answer_Radio" id="' + res.data.list[i].answerList[j].aid + '"><img width="24" src="../../../page/photo/gou.png" alt=""></div>\n' +
                                 '                        <div class="answer_Content">' + res.data.list[i].answerList[j].answer + '</div>\n' +
@@ -332,9 +332,9 @@ layui.config({
     //         var isChecked = $(e.children(".layui-input")[0]).is(":checked");
     //         var rule ;
     //         if(isChecked){
-    //             rule = 78;
+    //             rule = 118;
     //         }else {
-    //             rule = 79;
+    //             rule = 119;
     //         }
     //
     //         var answer_list = [];
@@ -392,9 +392,9 @@ layui.config({
     //             var isChecked = $(e.children(".layui-input")[0]).is(":checked");
     //             var rule ;
     //             if(isChecked){
-    //                 rule = 78;
+    //                 rule = 118;
     //             }else {
-    //                 rule = 79;
+    //                 rule = 119;
     //             }
     //             // alert(isChecked);
     //             // for (var j = 0; j < e.length; j++) {

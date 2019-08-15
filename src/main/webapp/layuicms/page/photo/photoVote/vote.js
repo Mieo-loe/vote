@@ -143,9 +143,9 @@ layui.config({
             var isChecked = $(e.children(".layui-input")[0]).is(":checked");
             var rule ;
             if(isChecked){
-                rule = 78;
+                rule = 118;
             }else {
-                rule = 79;
+                rule = 119;
             }
             // alert(isChecked);
             // for (var j = 0; j < e.length; j++) {
@@ -321,9 +321,9 @@ layui.config({
                 var isChecked = $(e.children(".layui-input")[0]).is(":checked");
                 var rule ;
                 if(isChecked){
-                    rule = 78;
+                    rule = 118;
                 }else {
-                    rule = 79;
+                    rule = 119;
                 }
                 // alert(isChecked);
                 // for (var j = 0; j < e.length; j++) {
@@ -396,9 +396,9 @@ layui.config({
                 var isChecked = $(e.children(".layui-input")[0]).is(":checked");
                 var rule ;
                 if(isChecked){
-                    rule = 78;
+                    rule = 118;
                 }else {
-                    rule = 79;
+                    rule = 119;
                 }
                 // alert(isChecked);
                 // for (var j = 0; j < e.length; j++) {

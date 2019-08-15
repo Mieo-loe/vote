@@ -102,7 +102,7 @@ layui.config({
                         '    </div>';
                 }
                 var isCheck = '';
-                if (res.data.list[i].optionRule==78){
+                if (res.data.list[i].optionRule==118){
                 var isCheck =  '        <div  class="layui-input-block">\n' +
                     '            <label class="layui-form-label">选项规则</label>\n' +
                     '            <input type="radio" class="layui-input"  name="optionRule'+i+'" value="单选" title="单选" checked="checked">\n' +
@@ -321,9 +321,9 @@ layui.config({
             var isChecked = $(e.children(".layui-input")[0]).is(":checked");
             var rule ;
             if(isChecked){
-                rule = 78;
+                rule = 118;
             }else {
-                rule = 79;
+                rule = 119;
             }
             // alert(isChecked);
             // for (var j = 0; j < e.length; j++) {
@@ -419,9 +419,9 @@ layui.config({
                 var isChecked = $(e.children(".layui-input")[0]).is(":checked");
                 var rule ;
                 if(isChecked){
-                    rule = 78;
+                    rule = 118;
                 }else {
-                    rule = 79;
+                    rule = 119;
                 }
                 // alert(isChecked);
                 // for (var j = 0; j < e.length; j++) {
@@ -496,9 +496,9 @@ layui.config({
             var isChecked = $(e.children(".layui-input")[0]).is(":checked");
             var rule ;
             if(isChecked){
-                rule = 78;
+                rule = 118;
             }else {
-                rule = 79;
+                rule = 119;
             }
             // alert(isChecked);
             // for (var j = 0; j < e.length; j++) {

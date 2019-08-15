@@ -63,7 +63,7 @@ public class VoteController {
             }
         }
         for (Verification account : voteTest.getAccounts()) {
-            account.setId( 80 );
+            account.setId( 48 );
             account.setIsVote("未投票");
             account.setRecordId(historyTest.getHid());
             verificationServiceImpl.add( account );

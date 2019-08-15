@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--mapper映射-->
+<mapper namespace="com.gameloft9.demo.dataaccess.dao.photovote.UserTableMapper">
+    <!--结果集映射-->
+    <resultMap id="BaseResultMap" type="com.gameloft9.demo.dataaccess.model.photovote.UserTable">
+        <id column="uid" property="uid" jdbcType="INTEGER"/>
+        <result column="uname" property="uname" jdbcType="VARCHAR"/>
+        <result column="sex" property="sex" jdbcType="INTEGER"/>
+        <result column="departmentId" property="departmentId" jdbcType="INTEGER"/>
+        <result column="classOfPosition" property="classOfPosition" jdbcType="INTEGER"/>
+        <result column="position" property="position" jdbcType="INTEGER"/>
+        <result column="gradeOfJudge" property="gradeOfJudge" jdbcType="INTEGER"/>
+        <result column="category" property="category" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="getAll" resultMap="BaseResultMap" parameterType="INTEGER">
+        SELECT
+        pu.uid,
+        pu.uname,
+        (select resName from tp_resourcelist where id = pu.sex) as sex,
+        (select resName from tp_resourcelist where id = pu.classOfPosition) as classOfPosition,
+        (select resName from tp_resourcelist where id = pu.position) as position,
+        (select resName from tp_resourcelist where id = pu.gradeOfJudge) as gradeOfJudge,
+        (select resName from tp_resourcelist where id = pu.category) as category,
+        de.organization as departmentId
+        FROM
+        tp_photo_user as pu,
+        tp_questionnaire_framework as de
+        where 1=1
+        <if test="departmentId != null and departmentId != ''">
+            and pu.departmentId = #{departmentId,jdbcType=INTEGER}
+        </if>
+        <if test="uname != null and uname != ''">
+            and pu.uname = #{uname,jdbcType=VARCHAR}
+        </if>
+        <if test="classOfPosition != null and classOfPosition != ''">
+            and pu.classOfPosition = #{classOfPosition,jdbcType=INTEGER}
+        </if>
+        <if test="position != null and position != ''">
+            and pu.position = #{position,jdbcType=INTEGER}
+        </if>
+        <if test="gradeOfJudge != null and gradeOfJudge != ''">
+            and pu.gradeOfJudge = #{gradeOfJudge,jdbcType=INTEGER}
+        </if>
+        <if test="category != null and category != ''">
+            and pu.category = #{category,jdbcType=INTEGER}
+        </if>
+        and pu.departmentId = de.fid
+    limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
+    </select>
+    <select id="countGetAll" resultType="INTEGER" parameterType="INTEGER">
+        select count(1) from tp_photo_user as pu
+    </select>
+    <delete id="delete" parameterType="INTEGER">
+        delete from tp_photo_user where uid=#{uid}
+    </delete>
+    <select id="findById" resultType="com.gameloft9.demo.dataaccess.model.photovote.UserTable" parameterType="INTEGER">
+        select * from tp_photo_user where  uid=#{0}
+    </select>
+    <select id="findDepart" resultType="com.gameloft9.demo.dataaccess.model.photovote.Department">
+        select fid,organization from tp_questionnaire_framework
+    </select>
+    <insert id="addUser" parameterType="com.gameloft9.demo.dataaccess.model.photovote.UserTable">
+        insert into tp_photo_user (uname,sex,departmentId,classOfPosition,position,gradeOfJudge,category) values (#{uname,jdbcType=VARCHAR},#{sex,jdbcType=INTEGER},
+        #{departmentId,jdbcType=INTEGER},#{classOfPosition,jdbcType=INTEGER},#{position,jdbcType=INTEGER},#{gradeOfJudge,jdbcType=INTEGER}
+        ,#{category,jdbcType=INTEGER})
+    </insert>
+    <update id="updateUser" parameterType="com.gameloft9.demo.dataaccess.model.photovote.UserTable">
+        update tp_photo_user set uname=#{uname,jdbcType=VARCHAR},sex=#{sex,jdbcType=INTEGER},
+        departmentId=#{departmentId,jdbcType=INTEGER},classOfPosition=#{classOfPosition,jdbcType=INTEGER},`position`=#{position,jdbcType=INTEGER},gradeOfJudge=#{gradeOfJudge,jdbcType=INTEGER}
+        ,category=#{category,jdbcType=INTEGER} where
+        uid=#{uid,jdbcType=INTEGER}
+    </update>
+</mapper>

@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
 public interface ModelHistoryMapper {
-    List<ModelManagerTest>findAll(@Param("start") int start,
+    List<ModelManagerTest> findAll(@Param("start") int start,
                                   @Param("end") int end);
     int countGetAll();
     int  delete(int mid);
